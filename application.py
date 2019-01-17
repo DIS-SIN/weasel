@@ -9,4 +9,4 @@ def create_app():
 		return redirect(url_for('weasel.render_index'))
 	return app
 app = create_app()
-app.run()
+app.run(port=5050)

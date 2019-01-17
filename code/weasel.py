@@ -2,6 +2,10 @@ from flask import (Blueprint, render_template, request, Markup)
 from wit import Wit
 import json
 
+######################################################################
+#  Application routing and web end
+######################################################################
+
 bp = Blueprint('weasel', __name__, url_prefix = '/weasel')
 
 # route/render the home page
@@ -19,11 +23,21 @@ def render_process_result():
 		if not text:
 			text = "Weasel is waiting for your input"
 
-		# wit client access token
+		# wit client access token (note, client token is fine, but dont
+		# expose the server token. You can find this info on the wit dashboard
 		# See wit dash https://wit.ai/mightyweasel/
 		client = Wit("OTUZQQXJ4DTVBPRLWAXJMSZXSOROZ4PZ")
 		resp = client.message( str(text) )
 		return handle_weasel_message(resp)
+
+######################################################################
+#  Setup weasel and define helper function
+######################################################################
+
+weasel_miss_signature_json = '{"intent":"!","topic_interest":"!","impact_on":"!","key_party":"!"}'
+weasel_miss_signature = json.loads(weasel_miss_signature_json)
+weasel_all_selector = "*"
+weasel_data_folder = "static/data/can-live/"
 
 # returns None on key miss, requires error handling for odd requests
 def first_entity_value(entities, entity):
@@ -45,32 +59,31 @@ def first_entity_value_rs(entities, entity):
 
 # pull in the json file and load it for use
 def get_weasel_answers_json(answerfile):
-	with open("static/data/can-live/"+answerfile+'.json') as f:
+	with open(weasel_data_folder+answerfile+'.json') as f:
 		data = json.load(f)
 		return data
 
+# setup some weasel answers
 weasel_answers = get_weasel_answers_json('weasel-answers-en');
-weasel_miss_signature_json = '{"intent":"!","topic_interest":"!","impact_on":"!","key_party":"!"}'
-weasel_miss_signature = json.loads(weasel_miss_signature_json)
 
+# check the data point for fitness
+def check_applicability(ans,q,datapoint):
+	datapoint_applies = False
+	try:
+		if ans[datapoint] == q[datapoint] or ans[datapoint] == weasel_all_selector:
+			datapoint_applies = True
+	except:
+		pass
+	return datapoint_applies
+
+# check the answer for applicability
 def check_answer(ans,q):
 	answer_applies = False
 
-	intent_applies = False
-	if ans['intent'] == q['intent'] or ans['intent'] == "*":
-		intent_applies = True
-
-	topic_applies = False
-	if ans['topic_interest'] == q['topic_interest'] or ans['topic_interest'] == "*":
-		topic_applies = True
-
-	impact_applies = False
-	if ans['impact_on'] == q['impact_on'] or ans['impact_on'] == "*":
-		impact_applies = True
-
-	party_applies = False
-	if ans['key_party'] == q['key_party'] or ans['key_party'] == "*":
-		party_applies = True
+	intent_applies = check_applicability(ans,q,'intent')
+	topic_applies = check_applicability(ans,q,'topic_interest')
+	impact_applies = check_applicability(ans,q,'impact_on')
+	party_applies = check_applicability(ans,q,'key_party')
 	
 	answer_applies = intent_applies and topic_applies and impact_applies and party_applies
 	
@@ -84,10 +97,11 @@ def generate_weasel_answer_html(ans):
 	for wl in written_lines:
 		written += "<p>" + wl + "</p>"
 	html_snippet = "<div class='weasel_answer_reply'>" \
-		+ "<div><strong>Helpful Link:</strong></div><div><a href='" + ans['answer']['hyperlink'] +"'>"+ ans['answer']['hyperlink'] +"</a></div>" \
-		+ "<div class='weasel_written'><strong>Weasel Thinks:</strong></div><div>" + written + "</div>" \
-		+ "<div class='weasel_media'><strong>Helpful Video:</strong></div><div>" + ans['answer']['media'] + "</div>" \
+		+ "<div><strong><span class='mif-link'></span> Helpful Link:</strong></div><div><a href='" + ans['answer']['hyperlink'] +"'>"+ ans['answer']['hyperlink'] +"</a></div>" \
+		+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> Weasel Thinks:</strong></div><div>" + written + "</div>" \
+		+ "<div class='weasel_media'><strong><span class='mif-video'></span> Helpful Video:</strong></div><div><div class='video-container'>" + ans['answer']['media'] + "</div></div>" \
 		+ "<ul>" \
+			+ "<li><strong><span class='mif-cogs'></span> Weasel Message Signature</strong></li>" \
 			+ "<li>" + ans['intent'] + "</li>" \
 			+ "<li>" + ans['topic_interest'] + "</li>" \
 			+ "<li>" + ans['impact_on'] + "</li>" \
@@ -133,24 +147,3 @@ def handle_weasel_message(response):
 	html_weasel_answer = Markup( generate_weasel_answer_html(valid_answer) )	
 
 	return render_template('weasel/index.html', q=response['_text'] ,weaselanswer=html_weasel_answer, rawweaselanswer=raw_weasel_answer_json, rawjson=raw_json, rawanswerjson=raw_answer_json)
-
-# proc the message we got from wit
-def handle_message(response):
-	entities = response['entities']
-	intent = first_entity_value(entities, 'intent')
-
-	raw_json = json.dumps(response, indent=4, sort_keys=True)
-	status = "Weasel Found Something"
-	result = ""
-
-	if intent == "why is":
-		topic = first_entity_value_rs(entities, 'topic_interest')
-		impacts = first_entity_value_rs(entities, 'impact_on')
-		party = first_entity_value_rs(entities, 'key_party')
-		result = "["+intent+"]["+topic+"]["+impacts+"]["+party+"]"
-	else:
-		status = "Weasel didn't quite get it"
-		result = "Weasel doesn't know that... yet!"
-
-	return render_template('weasel/index.html', myout = result, mystatus=status, rawjson=raw_json)
-

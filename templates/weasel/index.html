@@ -20,28 +20,50 @@
 
 <form class="container" id="weaselfrm" method="get" action="{{url_for('weasel.render_process_result')}}">
     <div class="speech">
-        <input type="text" name="weasel_ask" id="transcript" placeholder="Try something like 'why does digital matter to the government'" />
+        {% if q == "Weasel Ready!" %}
+        <input 
+            type="text" 
+            name="weasel_ask" 
+            id="transcript" 
+            placeholder="Try something like 'why does digital matter to the government'" 
+        />
+        {% else %}
+        <input 
+            type="text" 
+            name="weasel_ask" 
+            id="transcript" 
+            placeholder="Try something like 'why does digital matter to the government'" 
+            value="{{q}}" 
+        />
+        {% endif %}
     </div>
 </form>
 
 <div class="container">
-    <button class="button" id="speech_icon"><span class="mif-mic"></span> Press here to Speak to Weasel!</button> | 
-    <button class="button" id="send_text"><span class="mif-pencil"></span> Press to send your text to Weasel!</button>
+    <button 
+        class="button" 
+        id="speech_icon"><span class="mif-mic"></span> Press here to Speak to Weasel!</button> | 
+    <button
+        class="button"
+        id="send_text"><span class="mif-pencil"></span> Press to send your text to Weasel!</button> |
+    <button
+        class="button"
+        id="clear_text"><span class="mif-blocked"></span> Clear</button> 
 </div>
 
 <div class="container" id="result_set">
 
     <div class="card image-header">
         <div class="card-header fg-white"><!-- style="background-image: url(https://www.canada.ca/content/dam/canada/splash/sp-bg-10.jpg)" -->
-            <span class="display2">{{q}}</span>
+            <span id="q_asked" class="display2">{{q}}</span>
         </div>
-        <div class="card-content p-2">
-            <p class="fg-gray">Weasel Console</p>
+        <div class="card-content p-2" id="weasel_console">
+            <p class="fg-gray"><span class="mif-calculator2"></span> Weasel Console</p>
             <!-- <span class='display2'></span> -->
             {{weaselanswer}}
-            Answer:<pre>{{rawweaselanswer}}</pre>
-            Wit Reply:<pre>{{rawjson}}</pre>
-            Weasel Knows:<pre>{{rawanswerjson}}</pre>
+            <span class="mif-bubbles"></span> Answer (Weasel Picked):<pre>{{rawweaselanswer}}</pre>
+            <span class="mif-settings-ethernet"></span> Wit (AI Framework) Reply:<pre>{{rawjson}}</pre>
+            <span class="mif-flow-tree"></span> Weasel Knows (All Answers):<pre>{{rawanswerjson}}</pre>
         </div>
         <div class="card-footer">
             <div class="remark primary cell-12">

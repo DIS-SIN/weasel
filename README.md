@@ -2,7 +2,7 @@
 
 Weasels are small yet very competent hunters. They can find things and retrieve things even in the most inaccessible of places. 
 
-This app is not one of those weasels... It's an app that helps you find things to help you learn. Weasel, the Web Enabled AI Support Expression Learner - helping you better understand a digital government (With Easy Available Smart E-Learning) lets you get the information that matters to you. There's a lot of great content and sites out there for us to improve and grow, but sometimes just gettign started is the hard part.
+This app (built and deployed in under 24 hours) is not one of those weasels... It's an app that helps you find things to help you learn. Weasel, the Web Enabled AI Support Expression Learner - helping you better understand a digital government (With Easy Available Smart E-Learning) lets you get the information that matters to you. There's a lot of great content and sites out there for us to improve and grow, but sometimes just gettign started is the hard part.
 
 That's where Weasel comes in. You ask weasel "why is digital important for goverment", or "why does open source matter to treasury board" and weasel will find you online learning tools (and some guiding information to help you get rolling). We don't want to just give you a list, that doesn't help as much as people hope. We aim to give you knowledge, what you can do, how you'd learn, if there are any hints from the experts in the industry.
 
@@ -25,6 +25,8 @@ Since all the data is raw JSON, getting the data is as simple as loading the lin
 
 
 ### Building the Stylesheets
+
+> Note: The alpha currently just has a small CSS file, sass updates coming soon. But when it's ready the process with be as described below
 
 * Install [Sass](http://sass-lang.com/):
 * If you are on windows without make, just directly use sass

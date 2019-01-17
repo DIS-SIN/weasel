@@ -1,0 +1,72 @@
+{
+      "data": [
+         {
+            "active_visitors": 3534,
+            "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/campagnes/biometrie/faits.html",
+            "page_title": "La biom\u00e9trie : Faciliter les d\u00e9placements des voyages sans compromettre la s\u00e9curit\u00e9 du Canada"
+         },
+         {
+            "active_visitors": 2592,
+            "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/video/ne-gaspillez-temps-envoyez-demande-complete.html",
+            "page_title": "Ne gaspillez pas de temps. Envoyez une demande compl\u00e8te."
+         },
+         {
+            "active_visitors": 2208,
+            "page": "https://www.canada.ca/fr/services/sante/campagnes/cannabis/effets-sante.html",
+            "page_title": "Le cannabis : r\u00e9ponses \u00e0 vos questions - Une plante nocive?"
+         },
+         {
+            "active_visitors": 1051,
+            "page": "https://www.canada.ca/fr/services/sante/campagnes/cannabis/effets-sante.html",
+            "page_title": "Le cannabis : r\u00e9ponses \u00e0 vos questions : Le cannabis c'est risqu\u00e9?"
+         },
+         {
+            "active_visitors": 994,
+            "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/video/autorisation-voyage-electronique-vous-devez-savoir.html",
+            "page_title": "Autorisation de voyage \u00e9lectronique (AVE)\u00a0: Ce que vous devez savoir"
+         },
+         {
+            "active_visitors": 539,
+            "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/organisation/publications-guides/decouvrir-canada.html",
+            "page_title": "Vid\u00e9o\u00a0: Ce que vous devez savoir avant l\u2019exam de citoyennet\u00e9"
+         },
+         {
+            "active_visitors": 491,
+            "page": "https://www.canada.ca/fr/ministere-defense-nationale/services/emplois-fac/options-carriere/domaines-travail/specialistes-combat/soldat-dinfanterie.html",
+            "page_title": "Soldat d'infanterie"
+         },
+         {
+            "active_visitors": 409,
+            "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/visiter-canada/ave/soumettre-documents.html",
+            "page_title": "Vid\u00e9o 3 : Lier sa demande d\u2019autorisation de voyage \u00e9lectronique \u00e0 son compte s\u00e9curis\u00e9"
+         },
+         {
+            "active_visitors": 408,
+            "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/video/programme-pilote-immigration-processus-designation-employeur.html",
+            "page_title": "Vid\u00e9o\u00a0: Utilisation du Portail des employeurs \u2013 Programme de mobilit\u00e9 internationale"
+         },
+         {
+            "active_visitors": 381,
+            "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/visiter-canada/ave/soumettre-documents.html",
+            "page_title": "Vid\u00e9o 1 : Cr\u00e9er une Cl\u00e9GC"
+         }
+      ],
+      "meta": {
+         "description": "Chart that displays Most played French videos measured from tracker data",
+         "name": "Most played French videos"
+      },
+      "name": "videos-fr",
+      "query": {
+         "dimensions": "rt:pagePath,rt:pageTitle",
+         "max-results": 20,
+         "metrics": [
+            "rt:activeUsers"
+         ],
+         "sort": [
+            "-rt:activeUsers"
+         ]
+      },
+      "sampling": {},
+      "taken_at": "2019-01-12 20:04:59.828326",
+      "totals": {}
+   }

@@ -1,0 +1,72 @@
+{
+   "data": [
+      {
+         "active_visitors": 4874424,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",
+         "page_title": "Create an account or sign in  \u2013  Immigration and citizenship"
+      },
+      {
+         "active_visitors": 3937921,
+         "page": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx",
+         "page_title": "My Service Canada Account"
+      },
+      {
+         "active_visitors": 3921122,
+         "page": "https://www.canada.ca/en/services/immigration-citizenship.html",
+         "page_title": "Immigration and citizenship"
+      },
+      {
+         "active_visitors": 3195106,
+         "page": "https://www.canada.ca/en/employment-social-development/services/my-account/access.html",
+         "page_title": "Access My Service Canada Account"
+      },
+      {
+         "active_visitors": 3190145,
+         "page": "https://www.canada.ca/en/revenue-agency.html",
+         "page_title": "Canada Revenue Agency"
+      },
+      {
+         "active_visitors": 3016435,
+         "page": "https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html",
+         "page_title": "My Account for Individuals"
+      },
+      {
+         "active_visitors": 2542743,
+         "page": "https://www.canada.ca/en/employment-social-development/services/my-account.html",
+         "page_title": "My Service Canada Account (MSCA)"
+      },
+      {
+         "active_visitors": 2378528,
+         "page": "https://www.canada.ca/en.html",
+         "page_title": "Home"
+      },
+      {
+         "active_visitors": 1629429,
+         "page": "https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html",
+         "page_title": "Service Canada"
+      },
+      {
+         "active_visitors": 815354,
+         "page": "https://www.canada.ca/en/revenue-agency/search.html",
+         "page_title": "Search"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays Most viewed English pages measured from tracker data",
+      "name": "Most viewed English pages"
+   },
+   "name": "pages-en",
+   "query": {
+      "dimensions": "rt:pagePath,rt:pageTitle",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-14 17:40:47.770226",
+   "totals": {}
+}

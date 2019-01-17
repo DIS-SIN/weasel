@@ -1,0 +1,62 @@
+{
+   "data": [
+      {
+         "active_visitors": 3136027,
+         "page_title": "Benefits"
+      },
+      {
+         "active_visitors": 2759072,
+         "page_title": "Immigration and Citizenship"
+      },
+      {
+         "active_visitors": 743224,
+         "page_title": "Jobs and the Workplace"
+      },
+      {
+         "active_visitors": 697874,
+         "page_title": "Taxes"
+      },
+      {
+         "active_visitors": 269667,
+         "page_title": "Health"
+      },
+      {
+         "active_visitors": 192892,
+         "page_title": "Business and Industry"
+      },
+      {
+         "active_visitors": 60926,
+         "page_title": "Environment and Natural Resources"
+      },
+      {
+         "active_visitors": 38227,
+         "page_title": "National Security and Defence"
+      },
+      {
+         "active_visitors": 32036,
+         "page_title": "Money and Finances"
+      },
+      {
+         "active_visitors": 26588,
+         "page_title": "Policing, Justice and Emergencies"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays Most visited sections (Visits to English content) measured from tracker data",
+      "name": "Most visited sections (Visits to English content)"
+   },
+   "name": "sections-en",
+   "query": {
+      "dimensions": "rt:pagePath,rt:pageTitle",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-11 20:14:12.533754",
+   "totals": {}
+}

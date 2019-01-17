@@ -1,0 +1,21 @@
+{
+   "data": [
+      {
+         "active_visitors": "45.67"
+      }
+   ],
+   "meta": {
+      "description": "Metric that displays Mobile users measured from tracker data",
+      "name": "Mobile users"
+   },
+   "name": "mobileusers",
+   "query": {
+      "max-results": 10000,
+      "metrics": [
+         "rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-14 17:40:47.692066",
+   "totals": {}
+}

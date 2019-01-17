@@ -1,0 +1,62 @@
+{
+   "data": [
+      {
+         "active_visitors": 805929,
+         "page_title": "Prestations"
+      },
+      {
+         "active_visitors": 329067,
+         "page_title": "Immigration et citoyennet\u00e9"
+      },
+      {
+         "active_visitors": 107868,
+         "page_title": "Emplois et milieu de travail"
+      },
+      {
+         "active_visitors": 92750,
+         "page_title": "Imp\u00f4ts"
+      },
+      {
+         "active_visitors": 56951,
+         "page_title": "Sant\u00e9"
+      },
+      {
+         "active_visitors": 36034,
+         "page_title": "Entreprises et industrie"
+      },
+      {
+         "active_visitors": 8319,
+         "page_title": "Environnement et ressources naturelles"
+      },
+      {
+         "active_visitors": 7794,
+         "page_title": "Argent et finances"
+      },
+      {
+         "active_visitors": 6251,
+         "page_title": "S\u00e9curit\u00e9 nationale et d\u00e9fense"
+      },
+      {
+         "active_visitors": 3833,
+         "page_title": "Culture, histoire et sport"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays Most visited sections(Visits to French content) measured from tracker data",
+      "name": "Most visited sections(Visits to French content)"
+   },
+   "name": "sections-fr",
+   "query": {
+      "dimensions": "rt:pagePath,rt:pageTitle",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-11 20:14:12.549376",
+   "totals": {}
+}

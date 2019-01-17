@@ -1,0 +1,21 @@
+{
+  "name": "snapshot",
+  "sampling": {},
+  "query": {
+    "metrics": [
+      "rt:activeUsers"
+    ],
+    "max-results": 10000
+  },
+  "meta": {
+    "name": "Visits",
+    "description": "Number of times pages have been accessed across all sites."
+  },
+  "data": [
+    {
+      "active_visitors": 38501452
+    }
+  ],
+  "totals": {},
+  "taken_at": "2019-01-11T17:26:38.033Z"
+}

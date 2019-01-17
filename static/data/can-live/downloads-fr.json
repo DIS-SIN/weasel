@@ -1,0 +1,72 @@
+{
+   "data": [
+      {
+         "active_visitors": 42420,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/passeports-canadiens/formulaires.html",
+         "page_title": "Trouver un formulaire de passeport"
+      },
+      {
+         "active_visitors": 27114,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/demande/formulaires-demande-guides/demande-citoyennete-canadienne-adultes.html",
+         "page_title": "Demande de citoyennet\u00e9 canadienne \u2013 Adultes \u2013 paragraphe 5(1)"
+      },
+      {
+         "active_visitors": 22075,
+         "page": "https://www.cic.gc.ca/francais/information/demandes/visa.asp",
+         "page_title": "Demande de visa de visiteur (visa de r\u00e9sident temporaire - VRT)"
+      },
+      {
+         "active_visitors": 20922,
+         "page": "https://www.canada.ca/fr/agence-revenu/services/formulaires-publications/retenues-paie/t4032-tables-retenues-paie/t4032qc.html",
+         "page_title": "T4032QC Tables de retenues sur la paie - Qu\u00e9bec - En vigueur le 1er janvier 2019"
+      },
+      {
+         "active_visitors": 16709,
+         "page": "https://www.canada.ca/fr/agence-revenu/services/formulaires-publications/td1-declarations-credits-impot-personnels/formulaires-td1-paies-recues-1er-janvier-apres/td1.html",
+         "page_title": "TD1 D\u00e9claration des cr\u00e9dits d'imp\u00f4t personnels pour 2019"
+      },
+      {
+         "active_visitors": 12922,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/passeports-canadiens/enfants/demande.html",
+         "page_title": "Comment pr\u00e9senter une demande de passeport pour un enfant"
+      },
+      {
+         "active_visitors": 11642,
+         "page": "https://www.cic.gc.ca/francais/information/demandes/conjoint.asp",
+         "page_title": "Parrainage d\u2019un \u00e9poux, conjoint de fait, partenaire conjugal ou enfant \u00e0 charge"
+      },
+      {
+         "active_visitors": 11587,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/demande/formulaires-demande-guides/trousse-demande-travailleurs-qualifies-selectionnes-quebec.html",
+         "page_title": "Trousse de demande\u00a0: Travailleurs qualifi\u00e9s s\u00e9lectionn\u00e9s par le Qu\u00e9bec"
+      },
+      {
+         "active_visitors": 10710,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/demande/formulaires-demande-guides/guide-5256-presenter-demande-visa-visiteur-visa-resident-temporaire.html",
+         "page_title": "Pr\u00e9senter une demande de Visa de visiteur (Visa de r\u00e9sident temporaire \u2013 IMM\u00a05256)"
+      },
+      {
+         "active_visitors": 10697,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/passeports-canadiens/nouveau-passeport-adulte/demande.html",
+         "page_title": "Comment demander un nouveau passeport"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays French pages with the most downloads measured from tracker data",
+      "name": "French pages with the most downloads"
+   },
+   "name": "downloads-fr",
+   "query": {
+      "dimensions": "rt:pagePath,rt:pageTitle",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-14 17:40:47.802524",
+   "totals": {}
+}

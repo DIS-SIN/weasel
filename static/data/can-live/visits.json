@@ -1,0 +1,174 @@
+{
+   "data": [
+      {
+         "date": "2018-12-15",
+         "hour": "00",
+         "visits": 789400
+      },
+      {
+         "date": "2018-12-16",
+         "hour": "00",
+         "visits": 810020
+      },
+      {
+         "date": "2018-12-17",
+         "hour": "00",
+         "visits": 1668705
+      },
+      {
+         "date": "2018-12-18",
+         "hour": "00",
+         "visits": 1629751
+      },
+      {
+         "date": "2018-12-19",
+         "hour": "00",
+         "visits": 1570803
+      },
+      {
+         "date": "2018-12-20",
+         "hour": "00",
+         "visits": 1438924
+      },
+      {
+         "date": "2018-12-21",
+         "hour": "00",
+         "visits": 1244457
+      },
+      {
+         "date": "2018-12-22",
+         "hour": "00",
+         "visits": 700204
+      },
+      {
+         "date": "2018-12-23",
+         "hour": "00",
+         "visits": 631736
+      },
+      {
+         "date": "2018-12-24",
+         "hour": "00",
+         "visits": 750111
+      },
+      {
+         "date": "2018-12-25",
+         "hour": "00",
+         "visits": 549439
+      },
+      {
+         "date": "2018-12-26",
+         "hour": "00",
+         "visits": 775129
+      },
+      {
+         "date": "2018-12-27",
+         "hour": "00",
+         "visits": 1208453
+      },
+      {
+         "date": "2018-12-28",
+         "hour": "00",
+         "visits": 1290516
+      },
+      {
+         "date": "2018-12-29",
+         "hour": "00",
+         "visits": 881425
+      },
+      {
+         "date": "2018-12-30",
+         "hour": "00",
+         "visits": 824795
+      },
+      {
+         "date": "2018-12-31",
+         "hour": "00",
+         "visits": 1074924
+      },
+      {
+         "date": "2019-01-01",
+         "hour": "00",
+         "visits": 929144
+      },
+      {
+         "date": "2019-01-02",
+         "hour": "00",
+         "visits": 1764468
+      },
+      {
+         "date": "2019-01-03",
+         "hour": "00",
+         "visits": 1795587
+      },
+      {
+         "date": "2019-01-04",
+         "hour": "00",
+         "visits": 1779022
+      },
+      {
+         "date": "2019-01-05",
+         "hour": "00",
+         "visits": 1040433
+      },
+      {
+         "date": "2019-01-06",
+         "hour": "00",
+         "visits": 1030299
+      },
+      {
+         "date": "2019-01-07",
+         "hour": "00",
+         "visits": 2009225
+      },
+      {
+         "date": "2019-01-08",
+         "hour": "00",
+         "visits": 1972028
+      },
+      {
+         "date": "2019-01-09",
+         "hour": "00",
+         "visits": 1938161
+      },
+      {
+         "date": "2019-01-10",
+         "hour": "00",
+         "visits": 1937527
+      },
+      {
+         "date": "2019-01-11",
+         "hour": "00",
+         "visits": 1891885
+      },
+      {
+         "date": "2019-01-12",
+         "hour": "00",
+         "visits": 1137923
+      },
+      {
+         "date": "2019-01-13",
+         "hour": "00",
+         "visits": 1141689
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays  Visits measured from tracker data",
+      "name": " Visits"
+   },
+   "name": "visits",
+   "query": {
+      "dimensions": "ga:date",
+      "end-date": "2019-01-13",
+      "max-results": 10000,
+      "metrics": [
+         "ga:sessions"
+      ],
+      "samplingLevel": "HIGHER_PRECISION",
+      "start-date": "2018-12-15",
+      "start-index": 1
+   },
+   "sampling": {
+      "containsSampledData": false
+   },
+   "taken_at": "2019-01-14 17:40:47.707688"
+}

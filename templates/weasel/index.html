@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>alpha | weasel | Using ai to better understand the digital government.</title>
+
+<!-- Metro 4 -->
+<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+<link rel="stylesheet" href="{{url_for('static', filename='weasel/css/weasel.css')}}">
+</head>
+<body>
+
+<h1 class="container">
+<a class="splash_link" href="{{url_for('weasel.render_index')}}"><strong>alpha</strong></a> | weasel 
+<span><span class="weaseltitle"><strong>W</strong>eb <strong>E</strong>nabled <strong>A</strong>I <strong>S</strong>upport <strong>E</strong>xpression <strong>L</strong>earner</span> <strong>helping you better understand a digital government</strong></span>
+</h1>
+
+<form class="container" id="weaselfrm" method="get" action="{{url_for('weasel.render_process_result')}}">
+    <div class="speech">
+        <input type="text" name="weasel_ask" id="transcript" placeholder="Try something like 'why does digital matter to the government'" />
+    </div>
+</form>
+
+<div class="container">
+    <button class="button" id="speech_icon"><span class="mif-mic"></span> Press here to Speak to Weasel!</button> | 
+    <button class="button" id="send_text"><span class="mif-pencil"></span> Press to send your text to Weasel!</button>
+</div>
+
+<div class="container" id="result_set">
+
+    <div class="card image-header">
+        <div class="card-header fg-white"><!-- style="background-image: url(https://www.canada.ca/content/dam/canada/splash/sp-bg-10.jpg)" -->
+            <span class="display2">{{q}}</span>
+        </div>
+        <div class="card-content p-2">
+            <p class="fg-gray">Weasel Console</p>
+            <!-- <span class='display2'></span> -->
+            {{weaselanswer}}
+            Answer:<pre>{{rawweaselanswer}}</pre>
+            Wit Reply:<pre>{{rawjson}}</pre>
+            Weasel Knows:<pre>{{rawanswerjson}}</pre>
+        </div>
+        <div class="card-footer">
+            Weasel knows about disruptive technology and how it matters to the Canadian government. And it learns with us, the more we try and teach it, the better its going to get. There's two sides to this. One is getting it to understand us (everyones working on that... recogniton). But we want to focus on something a little different. We care more about learning moments. Each interaction we have is a chance to teach each other something. You teach weasel to behave. Weasel will tell you about new ideas in the private and public sectors which might inspire you. We want to give you the story behind it all, make AI, disruptive tech, biohacking, etc understandable to more than the techies and researchers. These new things are popping up out of the ground every day, creating a brand new digital landscape. We want to make it approachable. Get to the reasons things matter to you where you are. The impact of the digital changes coming our way are vast, but if we work together to demystify the magic... Well, pop goes the weasel?<!--<button class="button secondary">Read More</button>-->
+        </div>
+    </div>
+
+</div>
+<!-- jQuery first, then Metro UI JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+<script src="{{url_for('static', filename='weasel/js/index.js')}}"></script>
+</body>
+</html>

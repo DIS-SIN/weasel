@@ -1,0 +1,40 @@
+{
+	"answers": [
+		{
+			"intent": "why is",
+			"topic_interest": "digital",
+			"impact_on": "important to",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "<iframe width='958' height='539' src='https://www.youtube.com/embed/0MZvkWhAoEo' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+				"hyperlink":"https://en.busrides-trajetsenbus.ca/episode-5/",
+				"written": "Put users first, make services simpler to use In the early 2000s, the government got 'on the internet'. The intention was to modernize government services, but the follow-through largely resulted in the digitalization of processes that already existed (the form is online in PDF format, you may print it). The world has changed and so have people's expectations. It is time to re-imagine government and our services to meet these high standards.\nDigital provides us with wonderful opportunities to get closer to citizen-users. We can design services with that are convenient, easy to understand and simple to use. For those of us inside government, it is easy to forget that we are not the user. We need to make our services more accessible, understandable and efficient. The recently released Government of Canada digital standards point the way and show how we can make this happen.\nWe have no more excuses. The government is taking big steps towards building technology, techniques and skills that will allow us to meet user needs.\nFind different ways of working for better results\nThe work methods that we usually associate with digital (experimentation, agile, open) provide better results for users. They are also more effective in the use of public funds. They also shed a new light on how we can work: collaboratively, in multidisciplinary teams, open, engaged and authentic.\nDigital is a state of mind: we need to ask different and new questions and find solutions to problems, and involve people with different perspectives. Digital is not only for our IT teams, it's also for teams in charge of policies, legislation, operations and support services.\nYou also told us we need to focus on better using our data, use and support open source projects and ensure government data is open data.\nWe loved hearing your responses and seeing the energy and passion you put into your work. This government has taken a huge leap forwards in the recent years and you are all a part of this. There is a lot of work still to do.\nThe Digital Academy is happy to be here as a partner and support as you continue to chart new courses for government and Canada. Let us know how we can help."                
+			}
+		},
+		{
+			"intent": "why is",
+			"topic_interest": "open-source",
+			"impact_on": "important to",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/CQpUmRdJWRw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+				"hyperlink":"https://github.com/CSPS-EFPC-DAAN",
+				"written": "Open-source software (OSS) is a type of computer software in which source code is released under a license in which the copyright holder grants users the rights to study, change, and distribute the software to anyone and for any purpose.[1] Open-source software may be developed in a collaborative public manner. According to scientists who have studied it, open-source software is a prominent example of open collaboration.[2] The term is often written without a hyphen as 'open source software'.[3][4][5]\nOpen-source software development, or collaborative development between multiple independent contributors, generates an increasingly more diverse scope of design perspective than any company is capable of developing and sustaining long term.[citation needed] A 2008 report by the Standish Group states that adoption of open-source software models has resulted in savings of about $60 billion (£48 billion) per year to consumers."
+			}
+		},
+		{
+			"intent": "!",
+			"topic_interest": "!",
+			"impact_on": "!",
+			"key_party": "!",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/7H4Zy4fWpmA' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+				"hyperlink":"http://canada.ca",
+				"written": "Weasel is sorry. It doesn't know the answer to that yet. Maybe it didn't quite understand the question. Weasel is still learning."                
+			}
+		}
+	]
+}

@@ -1,0 +1,62 @@
+{
+   "data": [
+      {
+         "active_visitors": "72.98",
+         "country": "Canada"
+      },
+      {
+         "active_visitors": "5.46",
+         "country": "United States"
+      },
+      {
+         "active_visitors": "4.15",
+         "country": "India"
+      },
+      {
+         "active_visitors": "1.45",
+         "country": "France"
+      },
+      {
+         "active_visitors": "1.07",
+         "country": "United Kingdom"
+      },
+      {
+         "active_visitors": "0.81",
+         "country": "Nigeria"
+      },
+      {
+         "active_visitors": "0.73",
+         "country": "China"
+      },
+      {
+         "active_visitors": "0.59",
+         "country": "Mexico"
+      },
+      {
+         "active_visitors": "0.57",
+         "country": "United Arab Emirates"
+      },
+      {
+         "active_visitors": "0.56",
+         "country": "Philippines"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays By country  measured from tracker data",
+      "name": "By country "
+   },
+   "name": "visitor-location-country",
+   "query": {
+      "dimensions": "rt:country",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-14 17:40:47.849389",
+   "totals": {}
+}

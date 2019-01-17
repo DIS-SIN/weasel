@@ -1,0 +1,62 @@
+{
+   "data": [
+      {
+         "active_visitors": 1785910,
+         "page_title": "Emploi et D\u00e9veloppement social Canada"
+      },
+      {
+         "active_visitors": 1406591,
+         "page_title": "Immigration, R\u00e9fugi\u00e9s et Citoyennet\u00e9 Canada"
+      },
+      {
+         "active_visitors": 945588,
+         "page_title": "Agence du revenu du Canada"
+      },
+      {
+         "active_visitors": 801677,
+         "page_title": "Service Canada"
+      },
+      {
+         "active_visitors": 439745,
+         "page_title": "Gouvernement du Canada; Immigration, R\u00e9fugi\u00e9s et Citoyennet\u00e9 Canada"
+      },
+      {
+         "active_visitors": 262905,
+         "page_title": "Sant\u00e9 Canada"
+      },
+      {
+         "active_visitors": 169550,
+         "page_title": "Agence de la sant\u00e9 publique du Canada"
+      },
+      {
+         "active_visitors": 149820,
+         "page_title": "Gouvernement du Canada, Statistique Canada"
+      },
+      {
+         "active_visitors": 88049,
+         "page_title": "D\u00e9fense nationale"
+      },
+      {
+         "active_visitors": 88009,
+         "page_title": "Secr\u00e9tariat du Conseil du Tr\u00e9sor du Canada"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays Most visited departments(Visits to French content) measured from tracker data",
+      "name": "Most visited departments(Visits to French content)"
+   },
+   "name": "departments-fr",
+   "query": {
+      "dimensions": "rt:pageTitle",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-14 17:40:47.754567",
+   "totals": {}
+}

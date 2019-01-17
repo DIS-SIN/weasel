@@ -1,0 +1,62 @@
+{
+  "name": "visitor-location-country",
+  "sampling": {},
+  "query": {
+    "dimensions": "rt:country",
+    "metrics": [
+      "rt:activeUsers"
+    ],
+    "sort": [
+      "-rt:activeUsers"
+    ],
+    "max-results": 20
+  },
+  "meta": {
+    "name": "Top Countries (Live)",
+    "description": "Top country for active onsite users."
+  },
+  "data": [
+    {
+      "country": "Canada",
+      "active_visitors": "73.32"
+    },
+    {
+      "country": "United States",
+      "active_visitors": "5.50"
+    },
+    {
+      "country": "India",
+      "active_visitors": "4.25"
+    },
+    {
+      "country": "France",
+      "active_visitors": "1.43"
+    },
+    {
+      "country": "United Kingdom",
+      "active_visitors": "1.02"
+    },
+    {
+      "country": "Nigeria",
+      "active_visitors": "0.81"
+    },
+    {
+      "country": "China",
+      "active_visitors": "0.76"
+    },
+    {
+      "country": "Mexico",
+      "active_visitors": "0.55"
+    },
+    {
+      "country": "United Arab Emirates",
+      "active_visitors": "0.55"
+    },
+    {
+      "country": "Philippines",
+      "active_visitors": "0.54"
+    }
+  ],
+  "totals": {},
+  "taken_at": "2019-01-11T21:26:42.615Z"
+}

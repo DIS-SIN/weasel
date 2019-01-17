@@ -1,0 +1,72 @@
+{
+   "data": [
+      {
+         "active_visitors": 131595,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/pgp-2019-details-coming-soon.html",
+         "page_title": "Details of 2019 Parents and Grandparents Program coming soon"
+      },
+      {
+         "active_visitors": 100403,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices.html",
+         "page_title": "Notices \u2014 Immigration, Refugees and Citizenship Canada"
+      },
+      {
+         "active_visitors": 33414,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/impaired-driving-cannabis-penalties-affect-immigration-status.html",
+         "page_title": "New impaired driving and marijuana-related penalties could affect immigration status for permanent and temporary residents"
+      },
+      {
+         "active_visitors": 26667,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/video/express-entry-immigrate-canada-skilled-worker.html",
+         "page_title": "Express Entry \u2013 Immigrate to Canada as a Skilled Worker"
+      },
+      {
+         "active_visitors": 23120,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/video/save-time-send-complete-application.html",
+         "page_title": "Save Time: Send a Complete Application"
+      },
+      {
+         "active_visitors": 19459,
+         "page": "https://www.canada.ca/en/revenue-agency/news/newsroom/tax-tips/tax-tips-2018/what-to-expect-cra-contacts-you.html",
+         "page_title": "What to expect when the Canada Revenue Agency contacts you"
+      },
+      {
+         "active_visitors": 12999,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/video/electronic-travel-authorization-what-you-need-know.html",
+         "page_title": "Electronic Travel Authorization (eTA): What you need to know"
+      },
+      {
+         "active_visitors": 12753,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/2017/03/claiming_asylum_incanadawhathappens.html",
+         "page_title": "Claiming asylum in Canada \u2013 what happens?"
+      },
+      {
+         "active_visitors": 12327,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/more-invitations-parents-grandparents.html",
+         "page_title": "More invitations to sponsor parents and grandparents going out this week"
+      },
+      {
+         "active_visitors": 11671,
+         "page": "https://www.canada.ca/en/news/advanced-news-search.html",
+         "page_title": "Advanced News Search"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays Most viewed  English news measured from tracker data",
+      "name": "Most viewed  English news"
+   },
+   "name": "news-en",
+   "query": {
+      "dimensions": "rt:pagePath,rt:pageTitle",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-11 20:14:12.549376",
+   "totals": {}
+}

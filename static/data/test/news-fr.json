@@ -1,0 +1,72 @@
+{
+   "data": [
+      {
+         "active_visitors": 8314,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/avis/pgp-2019-details-bientot-disponibles.html",
+         "page_title": "Programme de parrainage des parents et des grands parents de 2019 : d\u00e9tails \u00e0 venir"
+      },
+      {
+         "active_visitors": 6160,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/video/ne-gaspillez-temps-envoyez-demande-complete.html",
+         "page_title": "Ne gaspillez pas de temps. Envoyez une demande compl\u00e8te."
+      },
+      {
+         "active_visitors": 3957,
+         "page": "https://www.canada.ca/fr/nouvelles/recherche-avancee-de-nouvelles/resultats-de-nouvelles.html",
+         "page_title": "R\u00e9sultats de nouvelles"
+      },
+      {
+         "active_visitors": 3409,
+         "page": "https://www.canada.ca/fr/agence-revenu/nouvelles/salle-presse/conseils-fiscaux/conseils-fiscaux-2018/quoi-attendre-arc-communique-avec-vous.html",
+         "page_title": "\u00c0 quoi vous attendre lorsque l\u2019ARC communique avec vous"
+      },
+      {
+         "active_visitors": 3228,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/2018/08/davantage-de-familles-seront-reunies-au-canada.html",
+         "page_title": "Davantage de familles seront r\u00e9unies au Canada"
+      },
+      {
+         "active_visitors": 2710,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/2018/06/services-de-collecte-des-donnees-biometriques-temporairement-disponibles-a-certaines-missions-a-partir-du-31juillet2018.html",
+         "page_title": "Services de collecte des donn\u00e9es biom\u00e9triques temporairement disponibles \u00e0 certaines missions, \u00e0 partir du 31\u00a0juillet\u00a02018"
+      },
+      {
+         "active_visitors": 2656,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/2019/01/success-choisie-comme-fournisseur-de-services-avant-larrivee.html",
+         "page_title": "S.U.C.C.E.S.S. choisie comme fournisseur de services avant l\u2019arriv\u00e9e"
+      },
+      {
+         "active_visitors": 2446,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/video/entree-express-immigrer-canada-travailleur-qualifie.html",
+         "page_title": "Entr\u00e9e express \u2013 Immigrer au Canada \u00e0 titre de travailleur qualifi\u00e9"
+      },
+      {
+         "active_visitors": 2368,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/avis/peines-conduite-affaiblies-cannabis-incidence-statut-immigrant.html",
+         "page_title": "Les nouvelles peines pour conduite avec facult\u00e9s affaiblies et infractions li\u00e9es au cannabis sont susceptibles d\u2019avoir une incidence sur le statut d\u2019immigrant des r\u00e9sidents permanents et temporaires"
+      },
+      {
+         "active_visitors": 1821,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/nouvelles/video/autorisation-voyage-electronique-vous-devez-savoir.html",
+         "page_title": "Autorisation de voyage \u00e9lectronique (AVE)\u00a0: Ce que vous devez savoir"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays Most viewed  French news measured from tracker data",
+      "name": "Most viewed  French news"
+   },
+   "name": "news-fr",
+   "query": {
+      "dimensions": "rt:pagePath,rt:pageTitle",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-11 20:14:12.549376",
+   "totals": {}
+}

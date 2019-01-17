@@ -1,0 +1,62 @@
+{
+  "name": "visitor-location-city",
+  "sampling": {},
+  "query": {
+    "dimensions": "rt:city",
+    "metrics": [
+      "rt:activeUsers"
+    ],
+    "sort": [
+      "-rt:activeUsers"
+    ],
+    "max-results": 20
+  },
+  "meta": {
+    "name": "Top Cities (Live)",
+    "description": "Top cities for active onsite users."
+  },
+  "data": [
+    {
+      "city": "Toronto (Ontario, Canada)",
+      "active_visitors": "6.78"
+    },
+    {
+      "city": "Montreal (Quebec, Canada)",
+      "active_visitors": "4.43"
+    },
+    {
+      "city": "Ottawa (Ontario, Canada)",
+      "active_visitors": "3.88"
+    },
+    {
+      "city": "Calgary (Alberta, Canada)",
+      "active_visitors": "3.20"
+    },
+    {
+      "city": "Vancouver (British Columbia, Canada)",
+      "active_visitors": "2.79"
+    },
+    {
+      "city": "Edmonton (Alberta, Canada)",
+      "active_visitors": "2.79"
+    },
+    {
+      "city": "Winnipeg (Manitoba, Canada)",
+      "active_visitors": "1.90"
+    },
+    {
+      "city": "Mississauga (Ontario, Canada)",
+      "active_visitors": "1.48"
+    },
+    {
+      "city": "Brampton (Ontario, Canada)",
+      "active_visitors": "1.45"
+    },
+    {
+      "city": "North York (Ontario, Canada)",
+      "active_visitors": "1.43"
+    }
+  ],
+  "totals": {},
+  "taken_at": "2019-01-11T21:26:42.615Z"
+}

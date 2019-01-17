@@ -1,0 +1,72 @@
+{
+   "data": [
+      {
+         "active_visitors": 972643,
+         "page": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx",
+         "page_title": "Mon dossier Service Canada"
+      },
+      {
+         "active_visitors": 885954,
+         "page": "https://www.canada.ca/fr/emploi-developpement-social/services/mon-dossier/acceder.html",
+         "page_title": "Acc\u00e9der \u00e0 Mon dossier Service Canada"
+      },
+      {
+         "active_visitors": 614588,
+         "page": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/demande/compte.html",
+         "page_title": "Ouvrir une session ou cr\u00e9er un compte \u2013 Immigration et citoyennet\u00e9"
+      },
+      {
+         "active_visitors": 592403,
+         "page": "https://www.canada.ca/fr/emploi-developpement-social/services/mon-dossier.html",
+         "page_title": "Mon dossier Service Canada (MDSC)"
+      },
+      {
+         "active_visitors": 524245,
+         "page": "https://www.canada.ca/fr.html",
+         "page_title": "Accueil"
+      },
+      {
+         "active_visitors": 504098,
+         "page": "https://www.canada.ca/fr/services/prestations/ae/assurance-emploi-declaration-internet.html",
+         "page_title": "Le Service de d\u00e9claration par Internet"
+      },
+      {
+         "active_visitors": 488618,
+         "page": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/ei-correspondence.jspx",
+         "page_title": "Plus r\u00e9cent \u00e9tat de la demande"
+      },
+      {
+         "active_visitors": 458704,
+         "page": "https://www.canada.ca/fr/services/immigration-citoyennete.html",
+         "page_title": "Immigration et citoyennet\u00e9"
+      },
+      {
+         "active_visitors": 454732,
+         "page": "https://www.canada.ca/fr/services/prestations/ae.html",
+         "page_title": "Prestations d\u2019assurance-emploi"
+      },
+      {
+         "active_visitors": 399636,
+         "page": "https://www.canada.ca/fr/agence-revenu/services/services-electroniques/services-electroniques-particuliers/dossier-particuliers.html",
+         "page_title": "Mon dossier pour les particuliers"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays Most viewed  French pages measured from tracker data",
+      "name": "Most viewed  French pages"
+   },
+   "name": "pages-fr",
+   "query": {
+      "dimensions": "rt:pagePath,rt:pageTitle",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-14 17:40:47.770226",
+   "totals": {}
+}

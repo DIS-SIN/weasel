@@ -1,0 +1,21 @@
+{
+  "name": "pageviews",
+  "sampling": {},
+  "query": {
+    "metrics": [
+      "rt:activeUsers"
+    ],
+    "max-results": 10000
+  },
+  "meta": {
+    "name": "Page Views",
+    "description": "Number of times pages have been accessed across all sites."
+  },
+  "data": [
+    {
+      "active_visitors": 149142247
+    }
+  ],
+  "totals": {},
+  "taken_at": "2019-01-11T17:26:38.033Z"
+}

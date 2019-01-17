@@ -1,0 +1,62 @@
+{
+   "data": [
+      {
+         "active_visitors": "30.83",
+         "region": "Ontario (Canada)"
+      },
+      {
+         "active_visitors": "12.94",
+         "region": "Quebec (Canada)"
+      },
+      {
+         "active_visitors": "10.20",
+         "region": "British Columbia (Canada)"
+      },
+      {
+         "active_visitors": "8.78",
+         "region": "Alberta (Canada)"
+      },
+      {
+         "active_visitors": "2.51",
+         "region": "Manitoba (Canada)"
+      },
+      {
+         "active_visitors": "2.21",
+         "region": "Nova Scotia (Canada)"
+      },
+      {
+         "active_visitors": "2.12",
+         "region": "Saskatchewan (Canada)"
+      },
+      {
+         "active_visitors": "1.63",
+         "region": "New Brunswick (Canada)"
+      },
+      {
+         "active_visitors": "1.19",
+         "region": "Newfoundland and Labrador (Canada)"
+      },
+      {
+         "active_visitors": "1.03",
+         "region": "California (United States)"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays By region  measured from tracker data",
+      "name": "By region "
+   },
+   "name": "visitor-location-region",
+   "query": {
+      "dimensions": "rt:region",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-14 17:40:47.849389",
+   "totals": {}
+}

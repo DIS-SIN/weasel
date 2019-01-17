@@ -1,0 +1,62 @@
+{
+  "name": "visitor-location-region",
+  "sampling": {},
+  "query": {
+    "dimensions": "rt:region",
+    "metrics": [
+      "rt:activeUsers"
+    ],
+    "sort": [
+      "-rt:activeUsers"
+    ],
+    "max-results": 20
+  },
+  "meta": {
+    "name": "Top Countries (Live)",
+    "description": "Top country for active onsite users."
+  },
+  "data": [
+    {
+      "region": "Ontario (Canada)",
+      "active_visitors": "31.15"
+    },
+    {
+      "region": "Quebec (Canada)",
+      "active_visitors": "12.98"
+    },
+    {
+      "region": "British Columbia (Canada)",
+      "active_visitors": "10.28"
+    },
+    {
+      "region": "Alberta (Canada)",
+      "active_visitors": "8.72"
+    },
+    {
+      "region": "Manitoba (Canada)",
+      "active_visitors": "2.51"
+    },
+    {
+      "region": "Nova Scotia (Canada)",
+      "active_visitors": "2.20"
+    },
+    {
+      "region": "Saskatchewan (Canada)",
+      "active_visitors": "2.11"
+    },
+    {
+      "region": "New Brunswick (Canada)",
+      "active_visitors": "1.63"
+    },
+    {
+      "region": "Newfoundland and Labrador (Canada)",
+      "active_visitors": "1.18"
+    },
+    {
+      "region": "California (United States)",
+      "active_visitors": "1.04"
+    }
+  ],
+  "totals": {},
+  "taken_at": "2019-01-11T21:26:42.615Z"
+}

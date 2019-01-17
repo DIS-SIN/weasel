@@ -1,0 +1,72 @@
+{
+      "data": [
+         {
+            "active_visitors": 13133,
+            "page": "https://www.canada.ca/en/immigration-refugees-citizenship/campaigns/biometrics/facts.html",
+            "page_title": "Biometrics: Making travel easier while keeping Canada safe"
+         },
+         {
+            "active_visitors": 10966,
+            "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/video/save-time-send-complete-application.html",
+            "page_title": "Save Time: Send a Complete Application"
+         },
+         {
+            "active_visitors": 6324,
+            "page": "https://www.nrcan.gc.ca/energy/efficiency/transportation/21006",
+            "page_title": "Factors That Impact Fuel Efficiency"
+         },
+         {
+            "active_visitors": 4617,
+            "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/video/express-entry-immigrate-canada-skilled-worker.html",
+            "page_title": "Express Entry \u2013 Immigrate to Canada as a Skilled Worker"
+         },
+         {
+            "active_visitors": 4051,
+            "page": "https://www.canada.ca/en/environment-climate-change/services/top-ten-weather-stories/2018.html",
+            "page_title": "Canada\u2019s Top Ten Weather Stories of 2018"
+         },
+         {
+            "active_visitors": 3860,
+            "page": "https://www.canada.ca/en/immigration-refugees-citizenship/news/video/electronic-travel-authorization-what-you-need-know.html",
+            "page_title": "Electronic Travel Authorization (eTA): What you need to know"
+         },
+         {
+            "active_visitors": 3796,
+            "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/become-canadian-citizen/citizenship-test.html",
+            "page_title": "What you need to know about the citizenship test"
+         },
+         {
+            "active_visitors": 2397,
+            "page": "https://www.canada.ca/en/department-national-defence/services/caf-jobs/career-options/fields-work/combat-specialists/infantry-soldier.html",
+            "page_title": "Infantry Soldier"
+         },
+         {
+            "active_visitors": 2253,
+            "page": "https://www.canada.ca/en/services/health/campaigns/cannabis.html",
+            "page_title": "Canada's New Cannabis Act"
+         },
+         {
+            "active_visitors": 1599,
+            "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/become-canadian-citizen/citizenship-ceremony.html",
+            "page_title": "The Canadian Citizenship Ceremony: What you need to know"
+         }
+      ],
+      "meta": {
+         "description": "Chart that displays Most played English videos measured from tracker data",
+         "name": "Most played English videos"
+      },
+      "name": "videos-en",
+      "query": {
+         "dimensions": "rt:pagePath,rt:pageTitle",
+         "max-results": 20,
+         "metrics": [
+            "rt:activeUsers"
+         ],
+         "sort": [
+            "-rt:activeUsers"
+         ]
+      },
+      "sampling": {},
+      "taken_at": "2019-01-12 20:04:59.828326",
+      "totals": {}
+   }

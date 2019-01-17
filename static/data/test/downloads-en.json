@@ -1,0 +1,72 @@
+{
+   "data": [
+      {
+         "active_visitors": 161820,
+         "page": "https://www.cic.gc.ca/english/information/applications/visa.asp",
+         "page_title": "Application for Visitor Visa (Temporary Resident Visa - TRV)"
+      },
+      {
+         "active_visitors": 160519,
+         "page": "https://www.canada.ca/en/revenue-agency/services/forms-publications/td1-personal-tax-credits-returns/td1-forms-pay-received-on-january-1-later/td1.html",
+         "page_title": "TD1 2019 Personal Tax Credits Return"
+      },
+      {
+         "active_visitors": 149620,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/application-canadian-citizenship-adults.html",
+         "page_title": "Application for Canadian Citizenship: Adults - Subsection 5(1)"
+      },
+      {
+         "active_visitors": 119696,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/forms.html",
+         "page_title": "Find a passport form"
+      },
+      {
+         "active_visitors": 97548,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/application-renew-replace-permanent-resident-card.html",
+         "page_title": "Application to get, renew or replace a Permanent Resident Card (PR\u00a0Card)"
+      },
+      {
+         "active_visitors": 76395,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5256-applying-visitor-visa-temporary-resident-visa.html",
+         "page_title": "Applying for Visitor Visa (Temporary Resident Visa \u2013 IMM\u00a05256)"
+      },
+      {
+         "active_visitors": 74346,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/new-adult-passport/apply.html",
+         "page_title": "How to apply for a new passport"
+      },
+      {
+         "active_visitors": 70415,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/sponsorship-parents-grandparents.html",
+         "page_title": "Sponsorship of Parents and Grandparents"
+      },
+      {
+         "active_visitors": 68353,
+         "page": "https://www.cic.gc.ca/english/information/applications/spouse.asp",
+         "page_title": "Sponsoring your spouse, partner or dependent child"
+      },
+      {
+         "active_visitors": 63452,
+         "page": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/children/apply.html",
+         "page_title": "How to apply for a child\u2019s passport"
+      }
+   ],
+   "meta": {
+      "description": "Chart that displays English pages with the most downloads measured from tracker data",
+      "name": "English pages with the most downloads"
+   },
+   "name": "downloads-en",
+   "query": {
+      "dimensions": "rt:pagePath,rt:pageTitle",
+      "max-results": 20,
+      "metrics": [
+         "rt:activeUsers"
+      ],
+      "sort": [
+         "-rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-11 20:14:12.549376",
+   "totals": {}
+}

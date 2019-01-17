@@ -1,0 +1,21 @@
+{
+   "data": [
+      {
+         "active_visitors": 38125360
+      }
+   ],
+   "meta": {
+      "description": "Metric that displays Visits-metric measured from tracker data",
+      "name": "Visits-metric"
+   },
+   "name": "snapshot",
+   "query": {
+      "max-results": 10000,
+      "metrics": [
+         "rt:activeUsers"
+      ]
+   },
+   "sampling": {},
+   "taken_at": "2019-01-14 17:40:47.692066",
+   "totals": {}
+}

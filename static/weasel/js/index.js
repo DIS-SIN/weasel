@@ -1,7 +1,10 @@
 $(function() {
-	//startDictation
+	var clear_text = function() {
+		$("#transcript").val('');
+		$("#weasel_console").html('');
+		$("#q_asked").html('Weasel Ready!');
+	};
 	var send_speech_text = function() {
-		//alert( "Going to send: " + $("#transcript").val());
 		document.getElementById('weaselfrm').submit();
 	};
 	var recognize_speech = function() {
@@ -30,4 +33,5 @@ $(function() {
 
 	$("#speech_icon").on("click", recognize_speech);
 	$("#send_text").on("click", send_speech_text);
+	$("#clear_text").on("click", clear_text);
 });

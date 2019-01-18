@@ -64,10 +64,23 @@
 				"spoken": "Access My Account for Individuals",
 				"written": "Access My Account for Individuals"
 			}
+		},
+		{
+			"intent": "renew account",
+			"topic_interest": "my passport",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "3016435 visitors have accessed the link I found",
+				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/forms.html",
+				"spoken": "Renew a canadian passport",
+				"written": "Renew a canadian passport"
+			}
 		},		
 		{
-			"intent": "create immigration account",
-			"topic_interest": "*",
+			"intent": "create account",
+			"topic_interest": "immigration account",
 			"impact_on": "*",
 			"key_party": "*",
 			"answer": {

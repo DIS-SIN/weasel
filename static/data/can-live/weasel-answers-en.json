@@ -27,6 +27,97 @@
 			}
 		},
 		{
+			"intent": "access site",
+			"topic_interest": "my service canada",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "<ul><li><a href='https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx'>https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account/access.html'>https://www.canada.ca/en/employment-social-development/services/my-account/access.html</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account.html'>https://www.canada.ca/en/employment-social-development/services/my-account.html</a></li><li><a href='https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html'>https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html</a></li></ul>",
+				"hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx",
+				"spoken": "My Service Canada Account",
+				"written": "My Service Canada Account"
+			}
+		},
+		{
+			"intent": "access site",
+			"topic_interest": "my account for individuals",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "3016435 visitors have accessed the link I found",
+				"hyperlink": "https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html",
+				"spoken": "Access My Account for Individuals",
+				"written": "Access My Account for Individuals"
+			}
+		},		
+		{
+			"intent": "create immigration account",
+			"topic_interest": "*",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "4874424 visitors have accessed the link I found",
+				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",
+				"spoken": "Create an account or sign in to Immigration and citizenship with this link",
+				"written": "Create an account or sign in to Immigration and citizenship with this link"
+			}
+		},		
+		{
+			"intent": "become a citizen",
+			"topic_interest": "*",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "3921122 visitors have accessed the link I found",
+				"hyperlink": "https://www.canada.ca/en/services/immigration-citizenship.html",
+				"spoken": "Become a Canadian citizen, Immigration and citizenship",
+				"written": "Become a Canadian citizen, Immigration and citizenship"
+			}
+		},
+		{
+			"intent": "access site",
+			"topic_interest": "CRA",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "3190145 weasel visitors have accessed the link I found",
+				"hyperlink": "https://www.canada.ca/en/revenue-agency.html",
+				"spoken": "Access Canada Revenue Agency",
+				"written": "Access Canada Revenue Agency"
+			}
+		},
+		{
+			"intent": "search site",
+			"topic_interest": "CRA",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "815354 visitors have accessed the link I found",
+				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html",
+				"spoken": "Search Canada Revenue Agency",
+				"written": "Search Canada Revenue Agency"
+			}
+		},		
+		{
+			"intent": "access site",
+			"topic_interest": "canada.ca",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "2378528 visitors have accessed the link I found",
+				"hyperlink": "https://www.canada.ca/en.html",
+				"spoken": "Access Canada.ca Home page",
+				"written": "Access Canada.ca Home page"
+			}
+		},
+		{
 			"intent": "!",
 			"topic_interest": "!",
 			"impact_on": "!",

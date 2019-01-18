@@ -51,10 +51,10 @@
 <div class="container" id="result_set">
 
     <div class="card image-header">
-        <div class="card-header fg-white"><!-- style="background-image: url(https://www.canada.ca/content/dam/canada/splash/sp-bg-10.jpg)" -->
-            <span id="q_asked" class="display2">{{q}}</span>
+        <div class="card-header fg-white" style="background-image: url({{url_for('static', filename='weasel/image/weasel.jpg')}})">
+            <span id="q_asked" class="display2" style="color:white;">{{q}}</span>
         </div>
-        <div class="card-content p-2" id="weasel_console">
+        <div class="card-content p-2" id="weasel_console" {% if q == "Weasel Ready!" %} style="display: none;" {% endif %}>
             <p class="fg-gray"><span class="mif-calculator2"></span> Weasel Console</p>
             <!-- <span class='display2'></span> -->
             {{weaselanswer}}
@@ -64,6 +64,9 @@
         </div>
         <div class="card-footer">
             <div class="remark primary cell-12">
+                <p>
+                    Suggested Weasel Queries: <strong>"why does open souce matter to me"</strong>, <strong>"access my service canada account"</strong>, <strong>"I want to become a citizen"</strong>, <strong>"why does digital matter to my department"</strong>
+                </p>
                 <p>
                     Want to see how we built the weasel? Check out our <a href="https://github.com/CSPS-EFPC-DAAN/weasel">github repository for the code</a>. It's only about 3k lines of code. And we built the first working version in just under 24 hours.
                 </p>

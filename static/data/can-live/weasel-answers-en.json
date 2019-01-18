@@ -41,6 +41,19 @@
 		},
 		{
 			"intent": "access site",
+			"topic_interest": "latest claim status",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"media": "1725987 visitors have accessed the following link",
+				"hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/ei-correspondence.jspx",
+				"spoken": "access lastest claim status",
+				"written": "access lastest claim status"				
+			}
+		},
+		{
+			"intent": "access site",
 			"topic_interest": "my account for individuals",
 			"impact_on": "*",
 			"key_party": "*",

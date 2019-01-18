@@ -100,7 +100,7 @@ def generate_weasel_answer_html(ans):
 		+ "<div id='weasel_spoken'>"+ans['answer']['spoken']+"</div>" \
 		+ "<div><strong><span class='mif-link'></span> Helpful Link:</strong></div><div><a href='" + ans['answer']['hyperlink'] +"'>"+ ans['answer']['hyperlink'] +"</a></div>" \
 		+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> Weasel Thinks:</strong></div><div>" + written + "</div>" \
-		+ "<div class='weasel_media'><strong><span class='mif-video'></span> Helpful Video:</strong></div><div><div class='video-container'>" + ans['answer']['media'] + "</div></div>" \
+		+ "<div class='weasel_media'><strong><span class='mif-video'></span> Helpful Media:</strong></div><div><div class='video-container'>" + ans['answer']['media'] + "</div></div>" \
 		+ "<ul>" \
 			+ "<li><strong><span class='mif-cogs'></span> Weasel Message Signature</strong></li>" \
 			+ "<li>" + ans['intent'] + "</li>" \

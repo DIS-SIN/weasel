@@ -1,4 +1,38 @@
 $(function() {
+	var synth = window.speechSynthesis;
+	var pitchValue = 1;
+	var rateValue = 1.3;
+
+	var speak_back = function(inputTxt){
+	    try {
+		    if (synth.speaking) {
+		        console.error('speechSynthesis.speaking');
+		        return;
+		    }
+		    if (inputTxt !== '') {
+			    var utterThis = new SpeechSynthesisUtterance(inputTxt);
+			    utterThis.pitch = pitchValue;
+			    utterThis.rate = rateValue;
+			    synth.speak(utterThis);
+			}
+		} catch(error) {
+			// do nothing, not all weasels squeak
+		}
+	};
+	
+	var weasel_speak = function() {
+		if($('#weasel_spoken').length) { 
+			speak_back( $('#weasel_spoken').text() );
+		} else {
+			speak_back( "Weasel ready!" );
+		}
+	};
+	var weasel_dont_speak = function() { // no doubt: i know what you're thinking, I don't need your reasons
+		synth.cancel();
+	};
+	weasel_speak();
+	//speak_back( $("#q_asked").text() );
+
 	var clear_text = function() {
 		$("#transcript").val('');
 		$("#weasel_console").html('');
@@ -34,4 +68,8 @@ $(function() {
 	$("#speech_icon").on("click", recognize_speech);
 	$("#send_text").on("click", send_speech_text);
 	$("#clear_text").on("click", clear_text);
+	$("#talk_back").on("click", weasel_speak);
+	$("#dont_talk_back").on("click", weasel_dont_speak);
 });
+
+

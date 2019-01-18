@@ -2,31 +2,35 @@
 
 Weasels are small yet very competent hunters. They can find things and retrieve things even in the most inaccessible of places. 
 
-This app (built and deployed in under 24 hours) is not one of those weasels... It's an app that helps you find things to help you learn. Weasel, the Web Enabled AI Support Expression Learner - helping you better understand a digital government (With Easy Available Smart E-Learning) lets you get the information that matters to you. There's a lot of great content and sites out there for us to improve and grow, but sometimes just gettign started is the hard part.
+This app is kind of like one of those weasels... It's an app that helps you find things to help you learn stuff or do stuff. Weasel, the Web Enabled AI Support Expression Learner - helping you better understand a digital government (With Easy Available Smart E-Learning) lets you get the information that matters to you. There's a lot of great content and sites out there for us to improve and grow, but sometimes just gettign started is the hard part.
 
-That's where Weasel comes in. You ask weasel "why is digital important for goverment", or "why does open source matter to treasury board" and weasel will find you online learning tools (and some guiding information to help you get rolling). We don't want to just give you a list, that doesn't help as much as people hope. We aim to give you knowledge, what you can do, how you'd learn, if there are any hints from the experts in the industry.
+That's where Weasel comes in. You ask weasel "why is digital important for goverment", or "why should TBS care about open source" and weasel will find you online learning tools (and some guiding information to help you get rolling). We don't want to just give you a list, that doesn't help as much as people hope. We aim to give you knowledge, what you can do, how you'd learn, if there are any hints from the experts in the industry.
 
 Our goal is to get you learning by clearing the weeds and critters in your path. That's what Weasel is for.
+
+But it doesn't end there. With the right training the Weasel can play fetch, even help you renew your passport or checkout your benefits. 
+
+The only limitations are how well we treat the Weasel.
 
 ### Tools and Technology
 
 The experimental apps here are built on the following stack:
 
 * Weasel is built with HTML, [SASS](http://sass-lang.com/), JS / [jQuery](https://jquery.com/), [Metro4](https://metroui.org.ua/index.html)
+* As our ai framework we are using [wit.ai](http://wit.ai/), but aim to support multiple frameworks
 * The data is all JSON files, we curated it from various assets across the web
 * The server-side is an [Azure](https://azure.microsoft.com/en-ca/) cloud running an [Ubuntu VM](https://www.ubuntu.com/), [Python 3](https://www.python.org/downloads/release/python-370/), [Flask](http://flask.pocoo.org/), and [nginx](https://www.nginx.com/)
 * We automate our deploys with crontab and [pm2](https://pm2.io/doc/)
 
-> Note: Our long term aspiration goal here is to have you be able to physically speak to weasel. You'd ask a question and the weasel would find you the best way to move forward. Our goal is to experiment with the AI platforms out there to see if we can make really compelling experiences for the user. We also want to try and stay as AI system agnostic as possible, while still making the data we generate open and modular.
+> Note: Our long term aspiration goal here is to have you be able to naturally speak to weasel about work related stuff and it would actually be useful. You'd ask a question and the weasel would find you the best way to move forward. Our goal is to experiment with the AI platforms out there to see if we can make really compelling experiences for the humans. We also want to try and stay as AI system agnostic as possible, while still making the data we generate open and modular.
 
 ### Getting/Refreshing the Data
 
 Since all the data is raw JSON, getting the data is as simple as loading the link. The data was generated manually by doing some legwork for the learner and building an easy to navigate hot list of content.
 
+> Note: The aspirational goal here is to have a crowd sourced feed in from people who find nice treats on the web or their own expert brains and feed it to the Weasel. As the answer knowledge increases, and we refine the understanding of the model... It could be truly great.
 
 ### Building the Stylesheets
-
-> Note: The alpha currently just has a small CSS file, sass updates coming soon. But when it's ready the process with be as described below
 
 * Install [Sass](http://sass-lang.com/):
 * If you are on windows without make, just directly use sass
@@ -102,16 +106,9 @@ git push
  logout
  ```
 
-Since the weasel is essentially just html/js/css at it's heart, you can drop the code on basically any webserver with minimal edits and be off to the races.
+### Thanks and mentions
 
-If you are developing locally, you can do what we did during our initial sprint and run a simple python http server. We started this entirely offline, and then made it into a Flask app when we got closer to an alpha version. In a shell run the following in your development directory where this code lives:
-
-```bash
-cd wheremystufflives/development/ # weasel folder is here
-python -m http.server
-```
-
-You should then be able to view the dashboard on `localhost:8000/weasel/`
+The entire team at CSPS both DIS and DAT - you are all an inspiration.
 
 ### Public domain
 

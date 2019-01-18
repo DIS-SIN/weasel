@@ -25,14 +25,14 @@
             type="text" 
             name="weasel_ask" 
             id="transcript" 
-            placeholder="Try something like 'why does digital matter to the government'" 
+            placeholder="Try something like 'why should I care about digital'" 
         />
         {% else %}
         <input 
             type="text" 
             name="weasel_ask" 
             id="transcript" 
-            placeholder="Try something like 'why does digital matter to the government'" 
+            placeholder="Try something like 'why should I care about digital'" 
             value="{{q}}" 
         />
         {% endif %}
@@ -40,17 +40,14 @@
 </form>
 
 <div class="container">
-    <button 
-        class="button" 
-        id="speech_icon"><span class="mif-mic"></span> Press here to Speak to Weasel!</button> | 
-    <button
-        class="button"
-        id="send_text"><span class="mif-pencil"></span> Press to send your text to Weasel!</button> |
-    <button
-        class="button"
-        id="clear_text"><span class="mif-blocked"></span> Clear</button> 
+<ul class="h-menu">
+    <li><a href="#" id="speech_icon"><span class="mif-mic"></span> Press here to Speak to Weasel!</a></li>
+    <li><a href="#" id="send_text"><span class="mif-pencil"></span> Press to send your text to Weasel!</a></li>
+    <li><a href="#" id="clear_text"><span class="mif-blocked"></span> Clear</a></li>
+    <li><a href="#" id="talk_back"><span class="mif-volume-medium"></span>Say it again Weasel</a></li> 
+    <li><a href="#" id="dont_talk_back"><span class="mif-volume-mute2"></span>Weasel, Silence!</a></li> 
+</ul>
 </div>
-
 <div class="container" id="result_set">
 
     <div class="card image-header">

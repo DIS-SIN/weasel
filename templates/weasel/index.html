@@ -54,10 +54,14 @@
         <div class="card-header fg-white" style="background-image: url({{url_for('static', filename='weasel/image/weasel.jpg')}})">
             <span id="q_asked" class="display2" style="color:white;">{{q}}</span>
         </div>
-        <div class="card-content p-2" id="weasel_console" {% if q == "Weasel Ready!" %} style="display: none;" {% endif %}>
-            <p class="fg-gray"><span class="mif-calculator2"></span> Weasel Console</p>
-            <!-- <span class='display2'></span> -->
+        <div class="card-content p-2" id="toggle_weasel_console">
+            <button class="button secondary"><span class="mif-file-code"></span> Toggle Weasel Console (techy stuff, check it out!)</button>
+        </div>
+        <div class="card-content p-2" id="weasel_return">
             {{weaselanswer}}
+        </div>
+        <div class="card-content p-2" id="weasel_console" style="display: none;">
+            <p class="fg-gray"><span class="mif-calculator2"></span> Weasel Console</p>
             <span class="mif-bubbles"></span> Answer (Weasel Picked):<pre>{{rawweaselanswer}}</pre>
             <span class="mif-settings-ethernet"></span> Wit (AI Framework) Reply:<pre>{{rawjson}}</pre>
             <span class="mif-flow-tree"></span> Weasel Knows (All Answers):<pre>{{rawanswerjson}}</pre>
@@ -71,7 +75,7 @@
                     Want to see how we built the weasel? Check out our <a href="https://github.com/CSPS-EFPC-DAAN/weasel">github repository for the code</a>. It's only about 3k lines of code. And we built the first working version in just under 24 hours.
                 </p>
                 <p>
-                    Weasel knows about disruptive technology and how it matters to the Canadian government. And it learns with us, the more we try and teach it, the better its going to get. There's two sides to this. One is getting it to understand us (everyones working on that... recogniton). But we want to focus on something a little different. We care more about learning moments. Each interaction we have is a chance to teach each other something. You teach weasel to behave. Weasel will tell you about new ideas in the private and public sectors which might inspire you. We want to give you the story behind it all, make AI, disruptive tech, biohacking, etc understandable to more than the techies and researchers. These new things are popping up out of the ground every day, creating a brand new digital landscape. We want to make it approachable. Get to the reasons things matter to you where you are. The impact of the digital changes coming our way are vast, but if we work together to demystify the magic... Well, pop goes the weasel?<!--<button class="button secondary">Read More</button>-->
+                    Weasel knows about disruptive technology and how it matters to the Canadian government. And it learns with us, the more we try and teach it, the better its going to get. There's two sides to this. One is getting it to understand us (everyones working on that... recogniton). But we want to focus on something a little different. We care more about learning moments. Each interaction we have is a chance to teach each other something. You teach weasel to behave. Weasel will tell you about new ideas in the private and public sectors which might inspire you. We want to give you the story behind it all, make AI, disruptive tech, biohacking, etc understandable to more than the techies and researchers. These new things are popping up out of the ground every day, creating a brand new digital landscape. We want to make it approachable. Get to the reasons things matter to you where you are. The impact of the digital changes coming our way are vast, but if we work together to demystify the magic... Well, pop goes the weasel?
                 </p>
             </div>
         </div>

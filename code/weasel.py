@@ -96,19 +96,20 @@ def generate_weasel_answer_html(ans):
 	written_lines = ans['answer']['written'].splitlines()
 	for wl in written_lines:
 		written += "<p>" + wl + "</p>"
-	html_snippet = "<div class='weasel_answer_reply'>" \
-		+ "<div id='weasel_spoken'>"+ans['answer']['spoken']+"</div>" \
-		+ "<div><strong><span class='mif-link'></span> Helpful Link:</strong></div><div><a href='" + ans['answer']['hyperlink'] +"'>"+ ans['answer']['hyperlink'] +"</a></div>" \
-		+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> Weasel Thinks:</strong></div><div>" + written + "</div>" \
-		+ "<div class='weasel_media'><strong><span class='mif-video'></span> Helpful Media:</strong></div><div><div class='video-container'>" + ans['answer']['media'] + "</div></div>" \
-		+ "<ul>" \
-			+ "<li><strong><span class='mif-cogs'></span> Weasel Message Signature</strong></li>" \
-			+ "<li>" + ans['intent'] + "</li>" \
-			+ "<li>" + ans['topic_interest'] + "</li>" \
-			+ "<li>" + ans['impact_on'] + "</li>" \
-			+ "<li>" + ans['key_party'] + "</li>" \
-			+ "<li>" + ans['answer']['type'] + "</li>" \
-		+ "</ul>" \
+	html_snippet = "" \
+		+ "<div class='weasel_answer_reply'>" \
+			+ "<div id='weasel_spoken'>"+ans['answer']['spoken']+"</div>" \
+			+ "<div><strong><span class='mif-link'></span> Helpful Link:</strong></div><div><a href='" + ans['answer']['hyperlink'] +"'>"+ ans['answer']['hyperlink'] +"</a></div>" \
+			+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> Weasel Thinks:</strong></div><div>" + written + "</div>" \
+			+ "<div class='weasel_media'><strong><span class='mif-video'></span> Helpful Media:</strong></div><div><div class='video-container'>" + ans['answer']['media'] + "</div></div>" \
+			+ "<div class='weasel_message_signature'>" \
+				+ "<strong><span class='mif-cogs'></span> Weasel Message Signature:</strong>" \
+				+ "" + ans['intent'] + "" \
+				+ " | " + ans['topic_interest'] + "" \
+				+ " | " + ans['impact_on'] + "" \
+				+ " | " + ans['key_party'] + "" \
+				+ " | " + ans['answer']['type'] + "" \
+			+ "</div>" \
 		+ "</div>"
 	return html_snippet
 

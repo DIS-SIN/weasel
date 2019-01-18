@@ -65,11 +65,16 @@ $(function() {
 		}
 	};
 
+	var weasel_console_display = function() {
+		$("#weasel_console").toggle();
+	};
+
 	$("#speech_icon").on("click", recognize_speech);
 	$("#send_text").on("click", send_speech_text);
 	$("#clear_text").on("click", clear_text);
 	$("#talk_back").on("click", weasel_speak);
 	$("#dont_talk_back").on("click", weasel_dont_speak);
+	$("#toggle_weasel_console").on("click", weasel_console_display)
 });
 
 

@@ -96,4 +96,8 @@ h1 span {
   height: 100%;
 }
 
+#weasel_spoken {
+  display: none;
+}
+
 /*# sourceMappingURL=weasel.css.map */

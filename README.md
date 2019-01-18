@@ -4,7 +4,9 @@ Weasels are small yet very competent hunters. They can find things and retrieve 
 
 This app is kind of like one of those weasels... It's an app that helps you find things to help you learn stuff or do stuff. Weasel, the Web Enabled AI Support Expression Learner - helping you better understand a digital government (With Easy Available Smart E-Learning) lets you get the information that matters to you. There's a lot of great content and sites out there for us to improve and grow, but sometimes just gettign started is the hard part.
 
-That's where Weasel comes in. You ask weasel "why is digital important for goverment", or "why should TBS care about open source" and weasel will find you online learning tools (and some guiding information to help you get rolling). We don't want to just give you a list, that doesn't help as much as people hope. We aim to give you knowledge, what you can do, how you'd learn, if there are any hints from the experts in the industry.
+That's where Weasel comes in. 
+
+You ask weasel things like **"why is digital important for goverment"**, **"why should TBS care about open source"**, Suggested Weasel Queries: **"why does open souce matter to me"**, **"access my service canada account"**, **"I want to become a citizen"**, **"why does digital matter to my department"**, **"I want to learn french"**, **"Renew my passport"**, **"what skills do I need for digital"** and weasel will find you online learning tools (and some guiding information to help you get rolling). We don't want to just give you a list, that doesn't help as much as people hope. We aim to give you knowledge, what you can do, how you'd learn, if there are any hints from the experts in the industry.
 
 Our goal is to get you learning by clearing the weeds and critters in your path. That's what Weasel is for.
 

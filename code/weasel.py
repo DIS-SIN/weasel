@@ -1,4 +1,4 @@
-from flask import (Blueprint, render_template, request, Markup, jsonify)
+from flask import (Blueprint, render_template, request, redirect, Markup, jsonify)
 from wit import Wit
 import json
 
@@ -23,7 +23,7 @@ def serve_api_request():
 @bp.route('/weasel-index', methods = ('GET', 'POST'))
 def render_index():
 	if request.method == 'GET':
-		return render_template('weasel/index.html',q="Weasel Ready!", weaselanswer=Markup("<p><strong>Weasel Ready</strong></p>"), rawweaselanswer="", rawjson="", rawanswerjson="")
+		return render_template('weasel/index.html',q="Weasel Ready!", a="home", weaselanswer=Markup("<p><strong>Weasel Ready</strong></p>"), rawweaselanswer="", rawjson="", rawanswerjson="")
 
 # route and render the results (we're subbing back to the index with extra data)
 # might want to consider changing this to a template on its own down the road
@@ -158,12 +158,16 @@ def intuit_valid_answer(response):
 def handle_weasel_message(response):
 	valid_answer = intuit_valid_answer(response)
 
+	action = valid_answer['answer']['action']
+	if action == "access":
+		return redirect( valid_answer['answer']['hyperlink'] )
+
 	raw_json = json.dumps(response, indent=4, sort_keys=True)
 	raw_answer_json = json.dumps(weasel_answers, indent=4, sort_keys=True)
 	raw_weasel_answer_json = json.dumps(valid_answer, indent=4, sort_keys=True)	
 	html_weasel_answer = Markup( generate_weasel_answer_html(valid_answer) )	
 
-	return render_template('weasel/index.html', q=response['_text'] ,weaselanswer=html_weasel_answer, rawweaselanswer=raw_weasel_answer_json, rawjson=raw_json, rawanswerjson=raw_answer_json)
+	return render_template('weasel/index.html', q=response['_text'], a=action, weaselanswer=html_weasel_answer, rawweaselanswer=raw_weasel_answer_json, rawjson=raw_json, rawanswerjson=raw_answer_json)
 
 # the api return as json response, this can be used for whatever application you like
 def api_handle_weasel_message(response):

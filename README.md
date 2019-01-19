@@ -38,6 +38,30 @@ http://localhost:5050/weasel/api?weasel_ask=why+does+open+source+matter+to+gover
 
 > Note: The aspirational goal here is to have a crowd sourced feed in from people who find nice treats on the web or their own expert brains and feed it to the Weasel. As the answer knowledge increases, and we refine the understanding of the model... It could be truly great.
 
+### Weasel answer JSON
+
+The JSON is standard, but we use hints to help serve to best content in the best way. The answer intuition uses a direct match or a * match to determine applicability. Then the action (currently there are display and access) will trigger weasel to do what is needed.
+
+* "display" is used for returning an html answer card with the details available to the user
+* "access" will use the hyperlink and redirect the human to the appropriate link 
+
+```json
+{
+	"intent": "access site",
+	"topic_interest": "canada.ca",
+	"impact_on": "*",
+	"key_party": "*",
+	"answer": {
+		"type": "weasel-answer",
+		"action": "access",
+		"media": "2378528 visitors have accessed the link I found",
+		"hyperlink": "https://www.canada.ca/en.html",
+		"spoken": "Access Canada.ca Home page",
+		"written": "Access Canada.ca Home page"
+	}
+},
+```
+
 ### Building the Stylesheets
 
 * Install [Sass](http://sass-lang.com/):

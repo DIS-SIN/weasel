@@ -7,6 +7,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "display",
 				"media": "<iframe width='958' height='539' src='https://www.youtube.com/embed/0MZvkWhAoEo' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink":"https://en.busrides-trajetsenbus.ca/episode-5/",
 				"spoken":"Digital is collaborative, multidisciplinary, open, engaged and authentic. Digital enables citizen-users. With digital we can design services that are convenient, easy to understand and simple to use. The work methods that we usually associate with digital such as experimentation, agile, and open source provide better results for users. They are also more effective in the use of public funds.",
@@ -20,6 +21,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "display",
 				"media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/CQpUmRdJWRw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink":"https://github.com/CSPS-EFPC-DAAN",
 				"spoken":"Weasel is open source. Open-source software development, or collaborative development between multiple independent contributors, generates an increasingly more diverse scope of design perspective than any company is capable of developing and sustaining long term on their own.",
@@ -33,6 +35,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "access",
 				"media": "<ul><li><a href='https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx'>https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account/access.html'>https://www.canada.ca/en/employment-social-development/services/my-account/access.html</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account.html'>https://www.canada.ca/en/employment-social-development/services/my-account.html</a></li><li><a href='https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html'>https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html</a></li></ul>",
 				"hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx",
 				"spoken": "My Service Canada Account",
@@ -46,6 +49,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "access",
 				"media": "1725987 visitors have accessed the following link",
 				"hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/ei-correspondence.jspx",
 				"spoken": "access lastest claim status",
@@ -59,6 +63,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "access",
 				"media": "3016435 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html",
 				"spoken": "Access My Account for Individuals",
@@ -72,6 +77,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "access",
 				"media": "3016435 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/forms.html",
 				"spoken": "Renew a canadian passport",
@@ -85,6 +91,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "access",
 				"media": "4874424 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",
 				"spoken": "Create an account or sign in to Immigration and citizenship with this link",
@@ -98,6 +105,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "access",
 				"media": "3921122 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/services/immigration-citizenship.html",
 				"spoken": "Become a Canadian citizen, Immigration and citizenship",
@@ -111,6 +119,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "access",
 				"media": "3190145 weasel visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency.html",
 				"spoken": "Access Canada Revenue Agency",
@@ -124,6 +133,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "access",
 				"media": "815354 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html",
 				"spoken": "Search Canada Revenue Agency",
@@ -137,6 +147,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "access",
 				"media": "2378528 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en.html",
 				"spoken": "Access Canada.ca Home page",
@@ -150,6 +161,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "display",
 				"media": "<iframe width='1280' height='720' src='https://www.youtube.com/embed/AdfwQXJ0ZVM' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/new-life-canada/improve-english-french.html",
 				"spoken": "Weasel want everyone to be bilingual. Lets learn a language.",
@@ -163,6 +175,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "display",
 				"media": "<iframe width='1280' height='720' src='https://www.youtube.com/embed/Y9FOyoS3Fag' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink": "https://www.canada.ca/en.html",
 				"spoken": "Digital skills include the ability to find, evaluate, utilize, share, and create content using information technologies and the Internet. Digital skills are any skills related to being digitally literate. Anything from the ability to find out your high-score on your favorite game to coding a website counts as a digital skill.",
@@ -176,6 +189,7 @@
 			"key_party": "!",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "display",
 				"media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/7H4Zy4fWpmA' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink":"http://canada.ca",
 				"spoken":"Weasel is sorry.",

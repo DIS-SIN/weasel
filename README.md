@@ -36,6 +36,12 @@ There's also an api baked in which returns json answers. This can be used to emb
 http://localhost:5050/weasel/api?weasel_ask=why+does+open+source+matter+to+government
 ```
 
+And the weaseliest of them all, the action-api. This returns JSON and performs weasel actions (like routing searches and getting results)
+
+```bash
+http://localhost:5050/weasel/action-api?weasel_ask=renew+passport
+```
+
 > Note: The aspirational goal here is to have a crowd sourced feed in from people who find nice treats on the web or their own expert brains and feed it to the Weasel. As the answer knowledge increases, and we refine the understanding of the model... It could be truly great.
 
 ### Weasel answer JSON

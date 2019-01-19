@@ -1,6 +1,7 @@
-from flask import (Blueprint, render_template, request, redirect, Markup, jsonify)
+from flask import (Blueprint, render_template, render_template_string, request, redirect, Markup, jsonify)
 from wit import Wit
 import json
+from urllib.parse import quote
 
 ######################################################################
 #  Application routing and web end
@@ -8,38 +9,43 @@ import json
 
 bp = Blueprint('weasel', __name__, url_prefix = '/weasel')
 
-# api requests, returns json
-@bp.route('/api', methods = ('GET', 'POST'))
-def serve_api_request():
-	if request.method == 'GET':
-		text = request.args.get('weasel_ask', False)
-		if not text:
-			text = "Weasel is waiting for your input"
-		client = Wit("OTUZQQXJ4DTVBPRLWAXJMSZXSOROZ4PZ")
-		resp = client.message( str(text) )	
-		return jsonify( api_handle_weasel_message(resp) )
-	
+# configs, setup, get the weasel ready
+def wake_the_weasel(request):
+	text = request.args.get('weasel_ask', False)
+	if not text:
+		text = "Weasel is waiting for your input"
+	# wit client access token (note, client token is fine, but dont
+	# expose the server token. You can find this info on the wit dashboard and docs
+	# See wit dash https://wit.ai/mightyweasel/
+	client = Wit("OTUZQQXJ4DTVBPRLWAXJMSZXSOROZ4PZ")
+	resp = client.message( str(text) )	
+	return resp
+
+
 # route/render the home page
 @bp.route('/weasel-index', methods = ('GET', 'POST'))
 def render_index():
 	if request.method == 'GET':
-		return render_template('weasel/index.html',q="Weasel Ready!", a="home", weaselanswer=Markup("<p><strong>Weasel Ready</strong></p>"), rawweaselanswer="", rawjson="", rawanswerjson="")
+		return render_template('weasel/index.html',q="Weasel Ready!", weaselanswer=Markup("<p><strong>Weasel Ready</strong></p>"), rawweaselanswer="", rawjson="", rawanswerjson="")
+
+# api requests, returns json
+@bp.route('/api', methods = ('GET', 'POST'))
+def serve_api_request():
+	if request.method == 'GET':
+		return jsonify( api_handle_weasel_message( wake_the_weasel( request ) ) )
+	
+# api requests, returns json
+@bp.route('/action-api', methods = ('GET', 'POST'))
+def serve_action_api_request():
+	if request.method == 'GET':
+		return action_api_handle_weasel_message( wake_the_weasel( request ) )
 
 # route and render the results (we're subbing back to the index with extra data)
 # might want to consider changing this to a template on its own down the road
 @bp.route('/weasel-answer', methods = ('GET', 'POST'))
 def render_answer():
 	if request.method == 'GET':
-		text = request.args.get('weasel_ask', False)
-		if not text:
-			text = "Weasel is waiting for your input"
-
-		# wit client access token (note, client token is fine, but dont
-		# expose the server token. You can find this info on the wit dashboard
-		# See wit dash https://wit.ai/mightyweasel/
-		client = Wit("OTUZQQXJ4DTVBPRLWAXJMSZXSOROZ4PZ")
-		resp = client.message( str(text) )
-		return handle_weasel_message(resp)
+		return handle_weasel_message( wake_the_weasel( request ) )
 
 ######################################################################
 #  Setup weasel and define helper function
@@ -102,12 +108,14 @@ def check_answer(ans,q):
 		return ans
 	return None
 
-# make the html fragment (consider a better solution, template string)
+# make the html fragment (consider a better solution, template string) something
+# like html_snippet = render_template_string('hello {{ what }}', what='world')
 def generate_weasel_answer_html(ans):
 	written = ""
 	written_lines = ans['answer']['written'].splitlines()
 	for wl in written_lines:
 		written += "<p>" + wl + "</p>"
+	
 	html_snippet = "" \
 		+ "<div class='weasel_answer_reply'>" \
 			+ "<div id='weasel_spoken'>"+ans['answer']['spoken']+"</div>" \
@@ -133,7 +141,7 @@ def intuit_valid_answer(response):
 	q['intent'] = first_entity_value_rs(entities, 'intent')
 	q['topic_interest'] = first_entity_value_rs(entities, 'topic_interest')
 	q['impact_on'] = first_entity_value_rs(entities, 'impact_on')
-	q['key_party'] = first_entity_value(entities, 'key_party')
+	q['key_party'] = first_entity_value_rs(entities, 'key_party')
 
 	# look for valid answer
 	valid_answer = None
@@ -154,23 +162,40 @@ def intuit_valid_answer(response):
 			break
 	return valid_answer
 
-# regular response, returns html to the render
-def handle_weasel_message(response):
-	valid_answer = intuit_valid_answer(response)
-
+# do a weasel war dance
+def do_weasel_action(valid_answer,response):
 	action = valid_answer['answer']['action']
 	if action == "access":
 		return redirect( valid_answer['answer']['hyperlink'] )
-
-	raw_json = json.dumps(response, indent=4, sort_keys=True)
-	raw_answer_json = json.dumps(weasel_answers, indent=4, sort_keys=True)
-	raw_weasel_answer_json = json.dumps(valid_answer, indent=4, sort_keys=True)	
-	html_weasel_answer = Markup( generate_weasel_answer_html(valid_answer) )	
-
-	return render_template('weasel/index.html', q=response['_text'], a=action, weaselanswer=html_weasel_answer, rawweaselanswer=raw_weasel_answer_json, rawjson=raw_json, rawanswerjson=raw_answer_json)
+	if action == "weasel-search":
+		entities = response['entities']
+		extracted_q = first_entity_value_rs(entities, 'message_subject')
+		search_q = quote(extracted_q,safe='')
+		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
+		return redirect( search_target )
+	return None
 
 # the api return as json response, this can be used for whatever application you like
 def api_handle_weasel_message(response):
 	valid_answer = intuit_valid_answer(response)
-
 	return valid_answer
+
+# the action api, executes weasel war dances (actions like redirection), returns json for everything else
+def action_api_handle_weasel_message(response):
+	valid_answer = intuit_valid_answer(response)
+	action = do_weasel_action(valid_answer,response)
+	if action is None:
+		return jsonify(valid_answer)
+	return action
+
+# regular response, returns html to the render
+def handle_weasel_message(response):
+	valid_answer = intuit_valid_answer(response)
+	action = do_weasel_action(valid_answer,response)
+	if action is None:
+		raw_json = json.dumps(response, indent=4, sort_keys=True)
+		raw_answer_json = json.dumps(weasel_answers, indent=4, sort_keys=True)
+		raw_weasel_answer_json = json.dumps(valid_answer, indent=4, sort_keys=True)	
+		html_weasel_answer = Markup( generate_weasel_answer_html(valid_answer) )	
+		return render_template('weasel/index.html', q=response['_text'], weaselanswer=html_weasel_answer, rawweaselanswer=raw_weasel_answer_json, rawjson=raw_json, rawanswerjson=raw_answer_json)
+	return action

@@ -133,9 +133,9 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
-				"action": "access",
-				"media": "815354 visitors have accessed the link I found",
-				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html",
+				"action": "weasel-search",
+				"media": "Weasel will look",
+				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
 				"spoken": "Search Canada Revenue Agency",
 				"written": "Search Canada Revenue Agency"
 			}

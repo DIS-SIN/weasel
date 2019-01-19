@@ -1,7 +1,7 @@
 $(function() {
 	var synth = window.speechSynthesis;
 	var pitchValue = 1;
-	var rateValue = 1.3;
+	var rateValue = 1.3; // cross browser note, this isn't consistent across them. This might be too fast, consider user settable
 
 	var speak_back = function(inputTxt){
 	    try {
@@ -27,20 +27,22 @@ $(function() {
 			speak_back( "Weasel ready!" );
 		}
 	};
+
 	var weasel_dont_speak = function() { // no doubt: i know what you're thinking, I don't need your reasons
 		synth.cancel();
 	};
 	weasel_speak();
-	//speak_back( $("#q_asked").text() );
 
 	var clear_text = function() {
 		$("#transcript").val('');
 		$("#weasel_console").html('');
 		$("#q_asked").html('Weasel Ready!');
 	};
+
 	var send_speech_text = function() {
 		document.getElementById('weaselfrm').submit();
 	};
+
 	var recognize_speech = function() {
 		if (window.hasOwnProperty('webkitSpeechRecognition')) {
 			var recognition = new webkitSpeechRecognition();

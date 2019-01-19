@@ -172,6 +172,8 @@ def do_weasel_action(valid_answer,response):
 	if action == "weasel-search-lucky":
 		entities = response['entities']
 		extracted_q = first_entity_value_rs(entities, 'message_subject')
+		# Ca-na-da-dot-see-eh is hard for the ai to grok, help it out
+		search_q = extracted_q.replace('Canada. CA','canada.ca') 
 		search_q = extracted_q.replace(' ','+') 
 		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
 		# weasel the page down 
@@ -193,6 +195,9 @@ def do_weasel_action(valid_answer,response):
 	if action == "weasel-search":
 		entities = response['entities']
 		extracted_q = first_entity_value_rs(entities, 'message_subject')
+		
+		# Ca-na-da-dot-see-eh is hard for the ai to grok, help it out
+		search_q = extracted_q.replace('Canada. CA','canada.ca') 
 		
 		#python 3
 		#search_q = quote(extracted_q,safe='')

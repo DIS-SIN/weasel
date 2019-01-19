@@ -54,7 +54,7 @@ $(function() {
 			recognition.start();
 
 			recognition.onresult = function(e) {
-				document.getElementById('transcript').value = e.results[0][0].transcript;
+				document.getElementById('transcript').value = e.results[0][0].transcript; // consider ca-na-da-dot-see-eh here
 				recognition.stop();
 				document.getElementById('weaselfrm').submit();
 			};

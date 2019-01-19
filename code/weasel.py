@@ -58,6 +58,15 @@ weasel_miss_signature = json.loads(weasel_miss_signature_json)
 weasel_all_selector = "*"
 weasel_data_folder = "static/data/can-live/"
 
+# returns None on key miss, returns the array of matched items
+def get_matched_entity_list(entities, entity):
+	if entity not in entities:
+		return None
+	elist = entities[entity]
+	if not elist:
+		return None
+	return elist
+
 # returns None on key miss, requires error handling for odd requests
 def first_entity_value(entities, entity):
 	if entity not in entities:
@@ -164,17 +173,86 @@ def intuit_valid_answer(response):
 			break
 	return valid_answer
 
+##################################################################
+# SHIMS - hacks for reducing complexity of what we send to wit
+# definitely want to revist this, because we both know this isn't
+# how we should do things long terms. This is spaghetti waiting to
+# happen. But my model wont finish re-training until 9:33PM, and it
+# is only 3:49pm. I'm impatient. That's way too long to wait to make
+# progress. So forgive me dear reader. Trust that this pains me 
+##################################################################
+
+# sometimes we get arrays of content back from weasel
+# for now, let's just smash them together
+def shim_implode_message_subject(response):
+	utterance = ""
+	entities = response['entities']
+	mse = get_matched_entity_list(entities, 'message_subject')		
+	if not mse:
+		return utterance
+	for ms in mse:
+		if not ms['value']:
+			utterance += ""
+		utterance += ms['value'] + " "
+	return utterance
+
+# string inferrence, hardcode transliteration
+# aka siht aka this.backwards() aka this is not an example of long term code
+# The message passes us back the raw text before it gives us confidence values
+# we're going to use the raw and just snip out the unhelpful parts of the query
+# (side note, we're straight up ignoring confidence for now, but we could
+# easily use those as proper replacements for these shims. anthing less than .79
+# we can assume is a miss. But we can probably improve our chances by removing
+# known safe keyword phrases from the input. Downside there is languification.
+# so if you're in a bilingual environment that hack wont cut it (well it could)
+# but the effort you'd invest into a bad solution could have been spent doing it right)
+def shim_siht_message_subject(response):
+	utterance = ""
+	siht = response['_text']
+	if not siht:
+		return utterance
+	utterance = siht			
+	return utterance
+
+# more hacks to send good queries to canada.ca search
+def shim_knock_en_common_words(utterance):
+	out = ['search','Search','lucky','Lucky','into', 'will', "won't ", 'who', 'what', 'when', 'where', 'why', 'how', \
+		'is', 'the', 'we', 'my', 'your', 'a', 'an', 'and', 'of', 'that', 'this', \
+		'these', 'those', 'can', 'could', 'should', 'may', 'might', 'must', 'for', 'I', "'s" \
+	]
+	for knock in out:
+		utterance = utterance.replace(' '+knock+' ',' ')
+	return utterance
+	 
+# help out the baby weasel get better food to eat
+def shim_assist_weasel_comprehension(utterance):
+	# wit/message_subject seems to be a bit greedy in it's matching. Reduce the problem domain a bit
+	# Ca-na-da-dot-see-eh is hard for the ai to grok, help it out
+	utterance = shim_knock_en_common_words( ' ' + utterance )
+	utterance = utterance.replace('Canada. CA','canada.ca') 
+	utterance = utterance.replace('Canada .CA','canada.ca') 
+	utterance = utterance.replace('canada. CA','canada.ca') 
+	utterance = utterance.replace('canada .CA','canada.ca') 
+	# knockouts
+	utterance = ' '.join(utterance.split()[1:])
+	utterance = utterance.strip()
+	return utterance
+
 # do a weasel war dance
 def do_weasel_action(valid_answer,response):
 	action = valid_answer['answer']['action']
 	if action == "access":
 		return redirect( valid_answer['answer']['hyperlink'] )
-	if action == "weasel-search-lucky":
-		entities = response['entities']
-		extracted_q = first_entity_value_rs(entities, 'message_subject')
-		# Ca-na-da-dot-see-eh is hard for the ai to grok, help it out
-		search_q = extracted_q.replace('Canada. CA','canada.ca') 
-		search_q = extracted_q.replace(' ','+') 
+	if action == "weasel-search-lucky":	
+		# ideally this should be:
+		# search_q = response['entities']['message_body']['value']
+		# search_q = quote(search_q,safe='') # python 3 warning, doesnt work in 2
+	
+		search_q = urllib.parse.quote( shim_assist_weasel_comprehension( shim_siht_message_subject( response ) ), safe='')  # could also use shim_implode
+		#debug
+		#if True:
+		#	return render_template_string("a:{{searchq}} b:{{r}}", searchq=search_q,r=response)
+
 		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
 		# weasel the page down 
 		page = requests.get( search_target )
@@ -190,26 +268,17 @@ def do_weasel_action(valid_answer,response):
 			for a in anchors:
 				search_target = a.attrs['href']
 				break
-			break
+			break		
+		#debug
+		#if True:
+		#	return render_template_string("a:{{searchq}} b:{{r}}", searchq=search_target,r=response)
 		return redirect( search_target )
 	if action == "weasel-search":
-		entities = response['entities']
-		extracted_q = first_entity_value_rs(entities, 'message_subject')
-		
 		# Ca-na-da-dot-see-eh is hard for the ai to grok, help it out
-		search_q = extracted_q.replace('Canada. CA','canada.ca') 
-		
-		#python 3
-		#search_q = quote(extracted_q,safe='')
-		#python 2
-		#search_q = pathname2url(extracted_q,safe='')
-		#aaaaand the super hacky fix that resolved the 502 at 1am.
-		#remember kids. Just because it works locally and you're sure the server was on Python3
-		#its not always the case. question everything. question this comment.
-		#question the question itself
-		#just dont question me on this hack. I wanna fix it. and I will.
-		search_q = extracted_q.replace(' ','+') 
-		
+		# ideally this should be:
+		# search_q = response['entities']['message_body']['value']
+		# search_q = quote(search_q,safe='') # python 3 warning, doesnt work in 2
+		search_q = urllib.parse.quote( shim_assist_weasel_comprehension( shim_siht_message_subject( response ) ), safe='') # could also use shim_implode
 		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
 		return redirect( search_target )
 	return None

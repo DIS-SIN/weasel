@@ -133,11 +133,54 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"action": "weasel-search",
+				"media": "Weasel will look",
+				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
+				"spoken": "Search Canada Revenue Agency",
+				"written": "Search Canada Revenue Agency"
+			}
+		},	
+		{
+			"intent": "search site lucky",
+			"topic_interest": "CRA",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
 				"action": "weasel-search-lucky",
 				"media": "Weasel will look",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
 				"spoken": "Search Canada Revenue Agency",
 				"written": "Search Canada Revenue Agency"
+			}
+		},		
+
+		{
+			"intent": "search site",
+			"topic_interest": "canada.ca",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"action": "weasel-search",
+				"media": "Weasel will look",
+				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
+				"spoken": "Search Canada.ca",
+				"written": "Search Canada.ca"
+			}
+		},	
+		{
+			"intent": "search site lucky",
+			"topic_interest": "canada.ca",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"action": "weasel-search-lucky",
+				"media": "Weasel will look",
+				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
+				"spoken": "Search Canada.ca",
+				"written": "Search Canada.ca"
 			}
 		},		
 		{

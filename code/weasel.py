@@ -174,7 +174,7 @@ def do_weasel_action(valid_answer,response):
 		#python 3
 		#search_q = quote(extracted_q,safe='')
 		#python 2
-		search_q = pathname2url(extracted_q,safe='')
+		search_q = extracted_q.replace(' ','+') #pathname2url(extracted_q,safe='')
 		
 		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
 		return redirect( search_target )

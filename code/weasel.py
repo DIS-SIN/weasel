@@ -1,7 +1,9 @@
 from flask import (Blueprint, render_template, render_template_string, request, redirect, Markup, jsonify)
 from wit import Wit
+from bs4 import BeautifulSoup
 import json
 import urllib
+import requests
 
 ######################################################################
 #  Application routing and web end
@@ -167,6 +169,27 @@ def do_weasel_action(valid_answer,response):
 	action = valid_answer['answer']['action']
 	if action == "access":
 		return redirect( valid_answer['answer']['hyperlink'] )
+	if action == "weasel-search-lucky":
+		entities = response['entities']
+		extracted_q = first_entity_value_rs(entities, 'message_subject')
+		search_q = extracted_q.replace(' ','+') 
+		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
+		# weasel the page down 
+		page = requests.get( search_target )
+		if page.status_code == requests.codes.ok:
+			page_text = page.text
+		else:
+			page_text = ""
+		# were using bs4 here to chew through the tags and give us workable data
+		soup = BeautifulSoup(page_text, 'lxml')
+		datapoints = soup.find_all('article')
+		for dp in datapoints:
+			anchors = dp.find_all('a')
+			for a in anchors:
+				search_target = a.attrs['href']
+				break
+			break
+		return redirect( search_target )
 	if action == "weasel-search":
 		entities = response['entities']
 		extracted_q = first_entity_value_rs(entities, 'message_subject')
@@ -174,7 +197,13 @@ def do_weasel_action(valid_answer,response):
 		#python 3
 		#search_q = quote(extracted_q,safe='')
 		#python 2
-		search_q = extracted_q.replace(' ','+') #pathname2url(extracted_q,safe='')
+		#search_q = pathname2url(extracted_q,safe='')
+		#aaaaand the super hacky fix that resolved the 502 at 1am.
+		#remember kids. Just because it works locally and you're sure the server was on Python3
+		#its not always the case. question everything. question this comment.
+		#question the question itself
+		#just dont question me on this hack. I wanna fix it. and I will.
+		search_q = extracted_q.replace(' ','+') 
 		
 		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
 		return redirect( search_target )

@@ -133,7 +133,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
-				"action": "weasel-search",
+				"action": "weasel-search-lucky",
 				"media": "Weasel will look",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
 				"spoken": "Search Canada Revenue Agency",

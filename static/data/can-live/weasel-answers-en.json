@@ -154,7 +154,34 @@
 				"written": "Search Canada Revenue Agency"
 			}
 		},		
-
+		{
+			"intent": "search site",
+			"topic_interest": "GEDS",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"action": "weasel-search",
+				"media": "Weasel will look",
+				"hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
+				"spoken": "Search GEDS",
+				"written": "Search GES"
+			}
+		},						
+		{
+			"intent": "search site lucky",
+			"topic_interest": "GEDS",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"action": "weasel-search",
+				"media": "Weasel will look",
+				"hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
+				"spoken": "Search GEDS",
+				"written": "Search GES"
+			}
+		},
 		{
 			"intent": "search site",
 			"topic_interest": "canada.ca",
@@ -252,7 +279,7 @@
 				"spoken": "Search Lucky Canada.ca Catch All",
 				"written": "Search Lucky Canada.ca Catch All"
 			}
-		},				
+		},							
 		{
 			"intent": "!",
 			"topic_interest": "!",

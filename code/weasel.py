@@ -154,6 +154,10 @@ def intuit_valid_answer(response):
 	q['impact_on'] = first_entity_value_rs(entities, 'impact_on')
 	q['key_party'] = first_entity_value_rs(entities, 'key_party')
 
+	intuit_topic_interest = shim_intuit_search_provider( response['_text'] )
+	if intuit_topic_interest is not None:
+		q['topic_interest'] = intuit_topic_interest
+
 	# look for valid answer
 	valid_answer = None
 	for ans in weasel_answers['answers']:
@@ -182,6 +186,13 @@ def intuit_valid_answer(response):
 # progress. So forgive me dear reader. Trust that this pains me 
 ##################################################################
 
+def shim_intuit_search_provider(raw_text_query):
+	raw_text_query = raw_text_query.replace('lucky ','')
+	if 'search GEDS ' in raw_text_query:
+		return "GEDS"
+	if 'search CRA ' in raw_text_query:
+		return "CRA"
+	return None	
 # sometimes we get arrays of content back from weasel
 # for now, let's just smash them together
 def shim_implode_message_subject(response):
@@ -280,6 +291,11 @@ def do_weasel_action(valid_answer,response):
 		# search_q = quote(search_q,safe='') # python 3 warning, doesnt work in 2
 		search_q = urllib.parse.quote( shim_assist_weasel_comprehension( shim_siht_message_subject( response ) ), safe='') # could also use shim_implode
 		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
+		
+		#debug
+		#if True:
+		#	return render_template_string("a:{{searchq}} b:{{r}}", searchq=search_target,r=response)
+
 		return redirect( search_target )
 	return None
 

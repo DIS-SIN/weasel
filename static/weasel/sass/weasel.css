@@ -100,4 +100,9 @@ h1 span {
   display: none;
 }
 
+#suggested_queries {
+  padding: 1em;
+  background: #eeeeee;
+}
+
 /*# sourceMappingURL=weasel.css.map */

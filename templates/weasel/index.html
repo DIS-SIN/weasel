@@ -14,11 +14,11 @@
 <body>
 
 <h1 class="container">
-<a class="splash_link" href="{{url_for('weasel.render_index')}}"><strong>alpha</strong></a> | weasel 
+<a class="splash_link" href="{{url_for('weasel.render_index')}}"><strong>alpha</strong></a> | weasel::belette 
 <span><span class="weaseltitle"><strong>W</strong>eb <strong>E</strong>nabled <strong>A</strong>I <strong>S</strong>upport <strong>E</strong>xpression <strong>L</strong>earner</span> <strong>helping you better understand a digital government</strong></span>
 </h1>
 
-<form class="container" id="weaselfrm" method="get" action="{{url_for('weasel.render_process_result')}}">
+<form class="container" id="weaselfrm" method="get" action="{{url_for('weasel.render_answer')}}">
     <div class="speech">
         {% if q == "Weasel Ready!" %}
         <input 
@@ -48,17 +48,23 @@
     <li><a href="#" id="dont_talk_back"><span class="mif-volume-mute2"></span>Weasel, Silence!</a></li> 
 </ul>
 </div>
+<div class="container" id="suggested_queries">
+    <h3>What should I ask?</h3>
+    <p>
+    <strong>"why does open souce matter to me"</strong>, <strong>"access my service canada account"</strong>, <strong>"I want to become a citizen"</strong>, <strong>"why does digital matter to my department"</strong>, <strong>"I want to learn french"</strong>, <strong>"Renew my passport"</strong>, <strong>"Search the Canada revenue agency"</strong>, <strong>"what skills do I need for digital"</strong>
+    </p>
+</div>
 <div class="container" id="result_set">
 
     <div class="card image-header">
         <div class="card-header fg-white" style="background-image: url({{url_for('static', filename='weasel/image/weasel.jpg')}})">
             <span id="q_asked" class="display2" style="color:white;">{{q}}</span>
         </div>
-        <div class="card-content p-2" id="toggle_weasel_console">
-            <button class="button secondary"><span class="mif-file-code"></span> Toggle Weasel Console (techy stuff, check it out!)</button>
-        </div>
         <div class="card-content p-2" id="weasel_return">
             {{weaselanswer}}
+        </div>
+        <div class="card-content p-2" id="toggle_weasel_console">
+            <button class="button secondary"><span class="mif-file-code"></span> Toggle Weasel Console</button>
         </div>
         <div class="card-content p-2" id="weasel_console" style="display: none;">
             <p class="fg-gray"><span class="mif-calculator2"></span> Weasel Console</p>

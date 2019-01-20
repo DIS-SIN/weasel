@@ -26,6 +26,8 @@ The experimental apps here are built on the following stack:
 
 > Note: Our long term aspiration goal here is to have you be able to naturally speak to weasel about work related stuff and it would actually be useful. You'd ask a question and the weasel would find you the best way to move forward. Our goal is to experiment with the AI platforms out there to see if we can make really compelling experiences for the humans. We also want to try and stay as AI system agnostic as possible, while still making the data we generate open and modular.
 
+> Note: Canada has two official languages. If you want something to resonate with Canadians, you better be able to talk to them. Weasel currently supports listening/reading in French, but only can answer in english. This isn't a limitation of the code, just the human writing it. Je travaille à améliorer ma capacité de parler français. And so will weasel.
+
 ### Getting/Refreshing the Data
 
 All the data is raw JSON, getting the data is as simple as loading the link. The data was generated manually by doing some legwork for the learner and building an easy to navigate hot list of content. 
@@ -59,6 +61,7 @@ The JSON is standard, but we use hints to help serve to best content in the best
 	"key_party": "*",
 	"answer": {
 		"type": "weasel-answer",
+		"authority":"core",
 		"action": "access",
 		"media": "2378528 visitors have accessed the link I found",
 		"hyperlink": "https://www.canada.ca/en.html",
@@ -67,6 +70,21 @@ The JSON is standard, but we use hints to help serve to best content in the best
 	}
 },
 ```
+
+### Im a human how do I interact with the Weasel?
+
+Weasel understands a few things but they can get a lot done:
+
+* why is [a:topic] good for [b:thing]
+* access [a:webpage]
+* search [a:thing] [statement]
+* search lucky [a:thing] [statement]
+* create [a:accountthing]
+* learn [a:thing]
+* what skills do I need for [a:thing]
+* and a bunch more!
+
+You can say things like "search lucky cra the audit process for charities" and weasel will send you to the first result it find after searching cra for you.
 
 ### Building the Stylesheets
 

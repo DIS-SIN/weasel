@@ -43,6 +43,17 @@ $(function() {
 		document.getElementById('weaselfrm').submit();
 	};
 
+	var recognition_lang = "en-US";
+	var set_recog_en = function() {
+		recognition_lang = "en-US";
+		$("#recognition_language").val(recognition_lang);
+		$("#weasel_listening_for").html( "Weasel is listening in English: " + ($("#recognition_language").val()) );
+	};
+	var set_recog_fr = function() {
+		recognition_lang = "fr-CA";
+		$("#recognition_language").val(recognition_lang);
+		$("#weasel_listening_for").html( "Weasel écoute Français: " + ($("#recognition_language").val()) );
+	};
 	var recognize_speech = function() {
 		if (window.hasOwnProperty('webkitSpeechRecognition')) {
 			var recognition = new webkitSpeechRecognition();
@@ -50,7 +61,7 @@ $(function() {
 			recognition.continuous = false;
 			recognition.interimResults = false;
 
-			recognition.lang = "en-US";
+			recognition.lang = recognition_lang;
 			recognition.start();
 
 			recognition.onresult = function(e) {
@@ -70,6 +81,9 @@ $(function() {
 	var weasel_console_display = function() {
 		$("#weasel_console").toggle();
 	};
+
+	$("#speech_icon_en").on("click", set_recog_en);
+	$("#speech_icon_fr").on("click", set_recog_fr);
 
 	$("#speech_icon").on("click", recognize_speech);
 	$("#send_text").on("click", send_speech_text);

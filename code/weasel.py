@@ -11,11 +11,34 @@ import requests
 
 bp = Blueprint('weasel', __name__, url_prefix = '/weasel')
 
+def weasel_translate_request(utterance):
+	translation_service = "https://translate.google.com/#view=home&op=translate&sl=es&tl=fr&text={ws}"
+	search_target = translation_service.replace('{ws}', utterance.replace(' ','%20'))
+		
+   #<span class="tlid-translation translation"><span title="" class="">search lucky canada.ca</span></span>
+	page = requests.get( search_target )
+	if page.status_code == requests.codes.ok:
+		page_text = page.text
+	else:
+		page_text = ""		
+	soup = BeautifulSoup(page_text, 'lxml')
+	datapoints = soup.find_all('span', class_='tlid-translation translation')
+	for a in datapoints:
+		search_target = a.attrs['text']
+		break
+	return search_target	
+
 # configs, setup, get the weasel ready
 def wake_the_weasel(request):
 	text = request.args.get('weasel_ask', False)
+	lang = request.args.get('recognition_language', False)
 	if not text:
 		text = "Weasel is waiting for your input"
+	if not lang:
+		lang = "en-US"
+	
+	if lang == "fr-CA":
+		text = weasel_translate_request(text)
 	# wit client access token (note, client token is fine, but dont
 	# expose the server token. You can find this info on the wit dashboard and docs
 	# See wit dash https://wit.ai/mightyweasel/

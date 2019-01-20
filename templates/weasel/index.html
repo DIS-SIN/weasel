@@ -17,9 +17,12 @@
 <a class="splash_link" href="{{url_for('weasel.render_index')}}"><strong>alpha</strong></a> | weasel/belette 
 <span><span class="weaseltitle"><strong>W</strong>eb <strong>E</strong>nabled <strong>A</strong>I <strong>S</strong>upport <strong>E</strong>xpression <strong>L</strong>earner</span> <strong>this weasel knows government / cette belette connaît le gouvernement</strong></span>
 </h1>
-
+<div class="container" style="color:red;">
+    <span class="mif-multitrack-audio"></span><span id="weasel_listening_for">Weasel is listening in English</span></li>
+</div>
 <form class="container" id="weaselfrm" method="get" action="{{url_for('weasel.render_answer')}}">
     <div class="speech">
+        <input type="hidden" id="recognition_language" name="recognition_language" value="en-US" />
         {% if q == "Weasel Ready!" %}
         <input 
             type="text" 
@@ -41,10 +44,12 @@
 
 <div class="container">
 <ul class="h-menu">
+    <li><a href="#" id="speech_icon_en"><span class="mif-multitrack-audio"></span> Recognize English</a></li>
+    <li><a href="#" id="speech_icon_fr"><span class="mif-multitrack-audio"></span> Reconnaître Français</a></li>
     <li><a href="#" id="speech_icon"><span class="mif-mic"></span> Press here to Speak to Weasel!</a></li>
     <li><a href="#" id="send_text"><span class="mif-pencil"></span> Press to send your text to Weasel!</a></li>
-    <li><a href="#" id="clear_text"><span class="mif-blocked"></span> Clear</a></li>
-    <li><a href="#" id="talk_back"><span class="mif-volume-medium"></span>Say it again Weasel</a></li> 
+    <li><a href="#" id="clear_text"><span class="mif-blocked"></span> Clear Search</a></li>
+    <li><a href="#" id="talk_back"><span class="mif-volume-medium"></span>Weasel, Read!</a></li> 
     <li><a href="#" id="dont_talk_back"><span class="mif-volume-mute2"></span>Weasel, Silence!</a></li> 
 </ul>
 </div>
@@ -56,7 +61,7 @@
     <li>access my service canada account</li>
     <li>access canada.ca, access CRA</li>
     <li>I want to learn french, I want to become a citizen, I want to move to canada</li>
-    <li>Renew my passport, I want to renew my passport</li>
+    <li>Renew my passport, I want to renew my passport, trouvez une form du passport</li>
     <li>watch my government in action on climate change</li>
     <li>most popular pages, most popular downloads, most popular news</li>
     <hr style="color:#ddd;background:#ddd;"/>

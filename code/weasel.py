@@ -299,7 +299,9 @@ def shim_siht_message_subject(response):
 # more hacks to send good queries to canada.ca search
 def shim_knock_en_common_words(utterance):
 	out = ['search','Search','lucky','Lucky','into', 'will', "won't ", 'who', 'what', 'when', 'where', 'why', 'how', \
-		'is', 'the', 'we', 'my', 'your', 'a', 'an', 'and', 'of', 'that', 'this', \
+		'is', 'the', 'we', 'my', 'your', 'a', 'an', 'and', \
+		#'of', \
+		'that', 'this', \
 		'these', 'those', 'can', 'could', 'should', 'may', 'might', 'must', 'for', 'I', "'s" \
 	]
 	for knock in out:

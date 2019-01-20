@@ -12,15 +12,16 @@ import requests
 bp = Blueprint('weasel', __name__, url_prefix = '/weasel')
 
 def weasel_translate_request(utterance):
+	# this is a temporary shim to test if translation services would be beneficial to us
+	# warning: replace this asap with gcloud translation api or microsoft azure cognitive
+	# this is only a proof of concept. Do not use as actual solution.
 	translation_service = "https://translate.google.com/#view=home&op=translate&sl=es&tl=fr&text={ws}"
 	search_target = translation_service.replace('{ws}', utterance.replace(' ','%20'))
-		
-   #<span class="tlid-translation translation"><span title="" class="">search lucky canada.ca</span></span>
 	page = requests.get( search_target )
 	if page.status_code == requests.codes.ok:
 		page_text = page.text
 	else:
-		page_text = ""		
+		return utterance		
 	soup = BeautifulSoup(page_text, 'lxml')
 	datapoints = soup.find_all('span', class_='tlid-translation translation')
 	for a in datapoints:
@@ -32,13 +33,21 @@ def weasel_translate_request(utterance):
 def wake_the_weasel(request):
 	text = request.args.get('weasel_ask', False)
 	lang = request.args.get('recognition_language', False)
+	tlx = request.args.get('recognition_lang_tlxd', False)
 	if not text:
 		text = "Weasel is waiting for your input"
 	if not lang:
 		lang = "en-US"
+	if not tlx:
+		tlx = "disabled"
 	
 	if lang == "fr-CA":
-		text = weasel_translate_request(text)
+		if tlx == "enabled":
+			pass 
+			# note: dont call the google page on prod.
+			# they have a cloud api exactly for this
+			# find a good cloud solution and replace this with that
+			#text = weasel_translate_request(text)
 	# wit client access token (note, client token is fine, but dont
 	# expose the server token. You can find this info on the wit dashboard and docs
 	# See wit dash https://wit.ai/mightyweasel/

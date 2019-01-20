@@ -45,15 +45,45 @@ $(function() {
 	};
 
 	var recognition_lang = "en-US";
+	var recognition_lang_tlxd = "enabled";
+	var set_recog_notlx = function() {
+		recognition_lang_tlxd = "disabled";
+		$("#recognition_lang_tlxd").val(recognition_lang_tlxd);
+		var rl = $("#recognition_language").val();
+		if(recognition_lang == "en-US") {
+			rl = "Weasel is listening in English: " + ($("#recognition_language").val()) + " | " + "Auto-translate: " + "<span class='mif-blocked'></span>";
+		}
+		if(recognition_lang == "fr-CA"){
+			rl = "Bellete écoute Français: " + ($("#recognition_language").val()) + " | " + "Traduire automatiquement: " + "<span class='mif-blocked'></span>";
+		}
+		$("#weasel_listening_for").html( rl + " <small>[Note: Auto-translate hardcoded off]</small>");
+	};
+
+	var set_recog_yestlx = function() {
+		recognition_lang_tlxd = "enabled";
+		$("#recognition_lang_tlxd").val(recognition_lang_tlxd);
+		var rl = $("#recognition_language").val();
+		if(recognition_lang == "en-US") {
+			rl = "Weasel is listening in English: " + ($("#recognition_language").val()) + " | " + "Auto-translate: " + "<span class='mif-checkmark'></span>";
+		}
+		if(recognition_lang == "fr-CA"){
+			rl = "Bellete écoute Français: " + ($("#recognition_language").val()) + " | " + "Traduire automatiquement: " + "<span class='mif-blocked'></span>";
+		}
+		$("#weasel_listening_for").html( rl  + " <small>[Note: Auto-translate hardcoded off]</small>");
+	};
 	var set_recog_en = function() {
 		recognition_lang = "en-US";
+		recognition_lang_tlxd = "enabled";
+		$("#recognition_lang_tlxd").val(recognition_lang);
 		$("#recognition_language").val(recognition_lang);
-		$("#weasel_listening_for").html( "Weasel is listening in English: " + ($("#recognition_language").val()) );
+		$("#weasel_listening_for").html( "Weasel is listening in English: " + ($("#recognition_language").val()) +  " | " + "Auto-translate: " +"<span class='mif-checkmark'></span>"  + " <small>[Note: Auto-translate hardcoded off]</small>");
 	};
 	var set_recog_fr = function() {
 		recognition_lang = "fr-CA";
+		recognition_lang_tlxd = "enabled";
+		$("#recognition_lang_tlxd").val(recognition_lang);
 		$("#recognition_language").val(recognition_lang);
-		$("#weasel_listening_for").html( "Weasel écoute Français: " + ($("#recognition_language").val()) );
+		$("#weasel_listening_for").html( "Weasel écoute Français: " + ($("#recognition_language").val()) +  " | " + "Traduire automatiquement: " +"<span class='mif-checkmark'></span>"  + " <small>[Note: Auto-translate hardcoded off]</small>");
 	};
 	var recognize_speech = function() {
 		if (window.hasOwnProperty('webkitSpeechRecognition')) {
@@ -85,6 +115,8 @@ $(function() {
 
 	$("#speech_icon_en").on("click", set_recog_en);
 	$("#speech_icon_fr").on("click", set_recog_fr);
+	$("#speech_icon_no_tlx").on("click", set_recog_notlx);
+	$("#speech_icon_yes_tlx").on("click", set_recog_yestlx);
 
 	$("#speech_icon").on("click", recognize_speech);
 	$("#send_text").on("click", send_speech_text);

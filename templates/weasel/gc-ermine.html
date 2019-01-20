@@ -13,18 +13,38 @@
 <link rel="stylesheet" href="{{url_for('static', filename='weasel/css/ermine.css')}}">
 </head>
 <body style="background: rgb(249,249,249);">
-
-<h1 class="container" style="margin-bottom-bottom: -0.5em;">
-    <a class="splash_link" href="{{url_for('weasel.render_ermine')}}"><strong>alpha</strong></a> | ermine
-    <span><strong>it's weasel in a suit</strong></span>
-</h1>
+<div class="container" style="margin-bottom-bottom: -0.5em;">
+    <div class="row">
+        <div class="cell-sm-full cell-md-8">
+            <h1>
+                <a class="splash_link" href="{{url_for('weasel.render_ermine')}}"><strong>alpha</strong></a> | ermine
+                <span><strong>it's weasel in a suit</strong></span>
+            </h1>
+        </div>
+        <div class="cell-sm-full cell-md-4">
+            <div class="row">
+                <ul class="h-menu">
+                    <li><a href="#" id="speech_icon_en"><span class="mif-multitrack-audio"></span> Recognize English</a></li> 
+                    <li><a href="#" id="speech_icon_fr"><span class="mif-multitrack-audio"></span> Reconnaître Français</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <span id="tlx_msg"><small>This page uses auto-translations. When the desired term is not available from the application in your language of choice, the application will attempt to translate results automatically. Autotranslations are a convenience feature, official bilingual content is our desired standard. 
+            </div>
+            <div class="row">
+                <a href="#" id="speech_icon_yes_tlx"><span class="mif-sync-disabled"></span>Enable Auto-translate</a></span> | <a href="#" id="speech_icon_no_tlx"><span class="mif-sync-disabled"></span>Disable Auto-translate</a></small></span>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container" style="background: rgb(51,80,117);padding:1.3em;">
     <div class="container" style="color:#afafaf;padding-bottom: 1em;">
         <span class="mif-multitrack-audio"></span><span id="weasel_listening_for">Weasel is listening in English</span></li>
     </div>
     <form class="container" id="weaselfrm" method="get" action="{{url_for('weasel.render_ermine_answer')}}" style="padding-bottom:1.3em;">
         <div class="speech">
-            <input type="hidden" id="recognition_language" name="recognition_language" value="en-US" />
+            <input type="hidden" id="recognition_language" name="recognition_language" value="{{recognition_language}}" />
+            <input type="hidden" id="recognition_lang_tlxd" name="recognition_lang_tlxd" value="{{recognition_lang_tlxd}}" />
             {% if q == "Weasel Ready!" %}
             <input 
                 type="text" 
@@ -44,8 +64,6 @@
         </div>
     </form>
     <ul class="h-menu">
-        <li><a href="#" id="speech_icon_en"><span class="mif-multitrack-audio"></span> Recognize English</a></li>
-        <li><a href="#" id="speech_icon_fr"><span class="mif-multitrack-audio"></span> Reconnaître Français</a></li>
         <li><a href="#" id="speech_icon"><span class="mif-mic"></span> Press here to Speak to Weasel!</a></li>
         <li><a href="#" id="send_text"><span class="mif-pencil"></span> Press to send your text to Weasel!</a></li>
         <li><a href="#" id="clear_text"><span class="mif-blocked"></span> Clear Search</a></li>
@@ -54,48 +72,70 @@
     </ul>
 </div>
 <div style="background: white;" class="container" id="suggested_queries">
-<div class="row" class="cell-12">
-<div id="result_set" style="padding:1em;"><div id="weasel_return">{{weaselanswer}}</div></div>
-<div class="row">
-    <div class="cell-7">
-        <h3>What should I ask?</h3>
-        <ul>
-        <li>why should I care about open source, why does digital matter to my department</li>
-        <li>what skills do I need for digital</li>
-        <li>access my service canada account</li>
-        <li>access canada.ca, access CRA</li>
-        <li>I want to learn french, I want to become a citizen, I want to move to canada</li>
-        <li>Renew my passport, I want to renew my passport, trouvez une form du passport</li>
-        <li>watch my government in action on climate change</li>
-        <li>most popular pages, most popular downloads, most popular news</li>
-        <li>contact minister of finance</li>
-        <hr style="color:#ddd;background:#ddd;"/>
-        <li>search lucky canada.ca all services</li>
-        <li>search lucky canada.ca who is the prime minister</li>
-        <li>search GEDS treasury board</li>
-        <li>search GEDS justin trudeau, contact justin trudeau</li>
-        <li>search lucky CPAC national defence</li>
-        <li>search CPAC climate change</li>
-        <li>search lucky CRA the audit process for charities</li>
-        <li>search lucky Canada Revenue Agency T4</li>
-        </ul>
-    </div>
-    <div class="cell-5">
-        <h3>Why should I care?</h3>
-        <p>
-            This is a new way to engage with the government of canada and the public service. It's not meant to replace anything. It's meant to support everything. It doesn't want to own anything, it wants to ask others what they think and do its best to tell the human the reply. its like a search engine. its like an alexa. its like your colleague you always ask for that link to that file. its a way to watch the house of commons.
-            its a way to get your T4 form. its a way to find the path make canada your home. 
-        </p>
-        <h3 style="padding-top: 1em;">How does this work?</h3>
-        <p>
-            It all starts with a question with intent. You can speak/type this into the weasel. It takes your words and through an AI framework figures out what you meant. Then it takes that intent and the bits it found and searches against it's know how. If it knows what to do it just does it. You want your T4? Here's the download page from CRA. You want to see your government in action on climate change. Here's CPAC for the recent session.
-        </p>
-        <p>
-            What Weasel recognizes and what it knows will only grow with time.
-        </p>
+    <div class="row" class="cell-12">
+        <div id="result_set" style="padding:1em;"><div id="weasel_return">{{weaselanswer}}</div></div>
+        <div class="container">
+            <div class="row">
+                <div class="cell-md-4 cell-sm-full" style="padding:0.5em;">
+                    <h3>What should I ask?</h3>
+                    <ul>
+                    <li>why should I care about open source</li>
+                    <li>why does digital matter to my department</li>
+                    <li>what skills do I need for digital</li>
+                    <hr style="color:#ddd;background:#ddd;"/>
+                    <li>access my service canada account</li>
+                    <li>access canada.ca</li>
+                    <li>access CRA</li>
+                    <hr style="color:#ddd;background:#ddd;"/>
+                    <li>I want to learn french</li>
+                    <li>I want to become a citizen</li>
+                    <li>I want to move to canada</li>
+                    <hr style="color:#ddd;background:#ddd;"/>
+                    <li>Renew my passpor</li><li>I want to renew my passport</li>
+                    <li>trouvez une form du passport</li>
+                    <hr style="color:#ddd;background:#ddd;"/>
+                    <li>watch my government in action on climate change</li>
+                    <li>most popular pages</li><li>most popular downloads</li><li>most popular news</li>
+                    <li>contact minister of finance</li>
+                    </ul>
+                </div>
+                <div class="cell-md-4 cell-sm-full" style="padding:0.5em;">
+                    <h3>Deeper searches?</h3>
+                    <ul>
+                    <li>search canada.ca all canada day celebrations</li>
+                    <li>search lucky canada.ca all services</li>
+                    <li>search lucky canada.ca who is the prime minister</li>
+                    <hr style="color:#ddd;background:#ddd;"/>
+                    <li>search GEDS treasury board</li>
+                    <li>search GEDS justin trudeau</li>
+                    <li>search GEDS minister of finance</li>
+                    <hr style="color:#ddd;background:#ddd;"/>
+                    <li>search lucky CPAC national defence</li>
+                    <li>search CPAC climate change</li>
+                    <hr style="color:#ddd;background:#ddd;"/>
+                    <li>search lucky CRA the audit process for charities</li>
+                    <li>search lucky Canada Revenue Agency T4</li>
+                    </ul>
+                </div>                
+                <div class="cell-md-4 cell-sm-full"  style="padding:0.5em;">
+                    <h3>Why should I care?</h3>
+                    <p>
+                        This is a new way to engage with the government of canada and the public service. It's not meant to replace anything. It's meant to support everything. It doesn't want to own anything, it wants to ask others what they think and do its best to tell the human the reply. its like a search engine. its like an alexa. its like your colleague you always ask for that link to that file. its a way to watch the house of commons.
+                        its a way to get your T4 form. its a way to find the path make canada your home. 
+                    </p>
+                    <h3 style="padding-top: 1em;">How does this work?</h3>
+                    <p>
+                        It all starts with a question with intent. You can speak/type this into the weasel. It takes your words and through an AI framework figures out what you meant. Then it takes that intent and the bits it found and searches against it's know how. If it knows what to do it just does it. You want your T4? Here's the download page from CRA. You want to see your government in action on climate change. Here's CPAC for the recent session.
+                    </p>
+                    <p>
+                        What Weasel recognizes and what it knows will only grow with time.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-</div>
+
 <footer>
     <div class="remark primary cell-12" style="background: rgb(225,228,231);padding-bottom: 3em;">
         <span id="q_asked" style="color:white;">{{q}}</span>

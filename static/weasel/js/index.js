@@ -36,6 +36,7 @@ $(function() {
 	var clear_text = function() {
 		$("#transcript").val('');
 		$("#weasel_console").html('');
+		$("#weasel_return").html('');
 		$("#q_asked").html('Weasel Ready!');
 	};
 

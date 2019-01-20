@@ -53,6 +53,12 @@ def render_index():
 	if request.method == 'GET':
 		return render_template('weasel/index.html',q="Weasel Ready!", weaselanswer=Markup("<p><strong>Weasel Ready</strong></p>"), rawweaselanswer="", rawjson="", rawanswerjson="")
 
+# route/render the home page
+@bp.route('/ermine', methods = ('GET', 'POST'))
+def render_ermine():
+	if request.method == 'GET':
+		return render_template('weasel/gc-ermine.html',q="Weasel Ready!", weaselanswer=Markup("<p><strong>Weasel Ready</strong></p>"), rawweaselanswer="", rawjson="", rawanswerjson="")
+
 # api requests, returns json
 @bp.route('/api', methods = ('GET', 'POST'))
 def serve_api_request():
@@ -71,6 +77,11 @@ def serve_action_api_request():
 def render_answer():
 	if request.method == 'GET':
 		return handle_weasel_message( wake_the_weasel( request ) )
+
+@bp.route('/ermine-answer', methods = ('GET', 'POST'))
+def render_ermine_answer():
+	if request.method == 'GET':
+		return handle_ermine_message( wake_the_weasel( request ) )
 
 ######################################################################
 #  Setup weasel and define helper function
@@ -387,9 +398,10 @@ def action_api_handle_weasel_message(response):
 	return action
 
 # regular response, returns html to the render
-def handle_weasel_message(response):
+def handle_weasel_message(response,render_template_target):
 	valid_answer = intuit_valid_answer(response)
-
+	if render_template_target is None:
+		render_template_target = 'weasel/index.html'
 	#debug
 	if app_set_debug_mode == 1:
 		if valid_answer is None:
@@ -401,5 +413,9 @@ def handle_weasel_message(response):
 		raw_answer_json = json.dumps(weasel_answers, indent=4, sort_keys=True)
 		raw_weasel_answer_json = json.dumps(valid_answer, indent=4, sort_keys=True)	
 		html_weasel_answer = Markup( generate_weasel_answer_html(valid_answer) )	
-		return render_template('weasel/index.html', q=response['_text'], weaselanswer=html_weasel_answer, rawweaselanswer=raw_weasel_answer_json, rawjson=raw_json, rawanswerjson=raw_answer_json)
+		return render_template(render_template_target, q=response['_text'], weaselanswer=html_weasel_answer, rawweaselanswer=raw_weasel_answer_json, rawjson=raw_json, rawanswerjson=raw_answer_json)
 	return action
+
+# ermine dashboard style render
+def handle_ermine_message(response):
+	return handle_weasel_message(response,'weasel/gc-ermine.html')

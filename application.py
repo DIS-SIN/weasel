@@ -6,7 +6,7 @@ def create_app():
 	app.register_blueprint(weasel.bp)
 	@app.route('/')
 	def index():
-		return redirect(url_for('weasel.render_index'))
+		return redirect(url_for('weasel.render_ermine'))
 	return app
 app = create_app()
 app.run(port=5050)

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>alpha | weasel | This weasel knows government</title>
+<!-- Metro 4 -->
+<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
+a {color: #fff !important; }
+a:hover {color: #fff !important; }
+h1 {font-family: "Open Sans", Helvetica, arial, sans-serif; padding:1em; font-weight: 600; font-size: 36px; }
+@media screen and (max-width: 768px) {h1 {font-size: 24px; } }
+.splash_link {font-weight: 300; text-decoration: none; color:red !important; }
+.splash_link:hover {text-decoration: underline; color: red !important; }
+h1 span {font-size: 0.5em; display: block; padding: 1em; }
+@media screen and (max-width: 768px) {h1 span {font-size: 0.3em; } }
+</style>
+</head>
+<body>
+<h1 class="container">
+<a class="splash_link" href="{{url_for('weasel.render_index')}}"><strong>alpha</strong></a> | weasel-summary
+<span>a dynamic web traffic driven dashboard <strong>built from what Canadians are accessing the most*</strong></span>
+</h1>
+<h2 class="container">
+	{{q}}
+</h2>
+<div class="tiles-grid container" id="tileview"></div>
+<!-- jQuery first, then Metro UI JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	var datasource = {{jsonds}}; // jsonp //window.location['origin'] + "/static/data/can-live/{f}.json";
+	var reports = {
+		"report_names": [	"downloads-en","downloads-fr", "pages-en","pages-fr", "videos-en","videos-fr"	],
+		"report_to_icon": {	"downloads-en":"cloud-download","downloads-fr":"cloud-download", 
+							"pages-en":"file-text","pages-fr":"file-text", "videos-en":"file-video","videos-fr":"file-video"	}};
+	var tiles = '';
+	var tile = ''
+	+'<div data-role="tile" class="bg-{c}" data-size="{s}">'
+		+'<span class="badge-top">{v}</span>'
+	    +'<span class="mif-{i} icon"></span>'
+	    +'<span class="branding-bar">{n}</span>'
+	+'</div>'
+	+'';   
+	var htile = ''
+	+'<a href="{h}" data-size="{s}" data-role="tile" class="bg-{c} ani-hover-bounce">'
+		+'<span class="badge-top">{v}</span>'
+	    +'<span class="mif-{i} icon"></span>'
+	    +'<span class="branding-bar">{n}</span>'
+	+'</div>'
+	+'';   
+	$tv = $("#tileview");
+	$tv.html('');
+
+	//var i=0;
+	var rpticon = "link";
+	var itemtile = "";
+	var ui_size_by_hits = false;
+	//rpticon = reports.report_to_icon[reports.report_names[i]]
+
+	for(var j = 0; j < datasource.data.length; j++){
+		itemtile = htile;
+		itemtile = itemtile.replace('{n}',datasource.data[j].page_title);
+		itemtile = itemtile.replace('{h}',datasource.data[j].page);
+		itemtile = itemtile.replace('{i}', rpticon);// 'news');
+		itemtile = itemtile.replace('{c}','red');
+		itemtile = itemtile.replace('{v}',datasource.data[j].active_visitors.toLocaleString() + " " + "Hits");
+
+		if(ui_size_by_hits == true) {
+			if(datasource.data[j].active_visitors >= 1000000) {
+				itemtile = itemtile.replace('{s}','large');
+			} else if(datasource.data[j].active_visitors >= 100000) {
+				itemtile = itemtile.replace('{s}','wide');
+			} else if(datasource.data[j].active_visitors >= 10000) {
+				itemtile = itemtile.replace('{s}','medium');
+			} else {
+				itemtile = itemtile.replace('{s}','medium'); //small
+			}
+		} else {
+			itemtile = itemtile.replace('{s}','wide'); //small
+		}
+		$tv.append(itemtile);
+	}
+});
+</script>
+</body>
+</html>

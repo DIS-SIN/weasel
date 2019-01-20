@@ -186,7 +186,8 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
-				"authority":"core","action": "weasel-search-lucky",
+				"authority":"core",
+				"action": "weasel-search-lucky",
 				"media": "Weasel will look",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
 				"spoken": "Search Canada Revenue Agency",
@@ -221,7 +222,7 @@
 				"spoken": "Search GEDS",
 				"written": "Search GES"
 			}
-		},
+		},		
 		{
 			"intent": "search site",
 			"topic_interest": "canada.ca",
@@ -326,7 +327,52 @@
 				"spoken": "Search Lucky Canada.ca Catch All",
 				"written": "Search Lucky Canada.ca Catch All"
 			}
-		},							
+		},	
+		{
+			"intent": "get summary",
+			"topic_interest": "most popular pages",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "get-summary",
+				"media": "json",
+				"hyperlink": "https://gcanalyticsapp.com/static/data/can-live/pages-en.json",
+				"spoken": "Get Most Popular Pages",
+				"written": "Get Most Popular Pages"
+			}
+		},									
+		{
+			"intent": "get summary",
+			"topic_interest": "most popular news",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "get-summary",
+				"media": "json",
+				"hyperlink": "https://gcanalyticsapp.com/static/data/can-live/news-en.json",
+				"spoken": "Get Most Popular Pages",
+				"written": "Get Most Popular Pages"
+			}
+		},	
+		{
+			"intent": "get summary",
+			"topic_interest": "most popular downloads",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "get-summary",
+				"media": "json",
+				"hyperlink": "https://gcanalyticsapp.com/static/data/can-live/downloads-en.json",
+				"spoken": "Get Most Popular Pages",
+				"written": "Get Most Popular Pages"
+			}
+		},			
 		{
 			"intent": "!",
 			"topic_interest": "!",

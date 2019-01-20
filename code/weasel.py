@@ -310,6 +310,10 @@ def do_weasel_action(valid_answer,response):
 	action = valid_answer['answer']['action']
 	if action == "access":
 		return redirect( valid_answer['answer']['hyperlink'] )
+	if action == "get-summary":
+		json_ds = weasel_http_request( valid_answer['answer']['hyperlink'] )
+		raw_json=Markup(json_ds)
+		return render_template('weasel/weasel-summary.html', q=response['_text'], jsonds=raw_json )
 	if action == "weasel-search-lucky":	
 		try:
 			search_q = response['entities']['message_body']['value']

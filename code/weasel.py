@@ -53,9 +53,12 @@ def render_answer():
 #  Setup weasel and define helper function
 ######################################################################
 
+app_set_debug_mode = 0 # 1 for on 0 of off
+
 weasel_miss_signature_json = '{"intent":"!","topic_interest":"!","impact_on":"!","key_party":"!"}'
 weasel_miss_signature = json.loads(weasel_miss_signature_json)
 weasel_all_selector = "*"
+weasel_core_authority_selector = "core"
 weasel_data_folder = "static/data/can-live/"
 
 # returns None on key miss, returns the array of matched items
@@ -104,6 +107,17 @@ def check_applicability(ans,q,datapoint):
 		pass
 	return datapoint_applies
 
+def check_authority(ans,q):
+	authority_applies = False
+	if ans['answer']['authority'] == weasel_core_authority_selector:
+		authority_applies = True
+	try:
+		if ans['answer']['authority'] == q['authority']:
+			authority_applies = True
+	except:
+		pass
+	return authority_applies
+
 # check the answer for applicability
 def check_answer(ans,q):
 	answer_applies = False
@@ -113,7 +127,10 @@ def check_answer(ans,q):
 	impact_applies = check_applicability(ans,q,'impact_on')
 	party_applies = check_applicability(ans,q,'key_party')
 	
-	answer_applies = intent_applies and topic_applies and impact_applies and party_applies
+	# check data sourced from authority (core, government, community)
+	authority_applies = check_authority(ans,q)
+
+	answer_applies = intent_applies and topic_applies and impact_applies and party_applies and authority_applies
 	
 	if answer_applies == True:
 		return ans
@@ -146,6 +163,7 @@ def generate_weasel_answer_html(ans):
 
 # helper for the handlers
 def intuit_valid_answer(response):
+	
 	entities = response['entities']
 	q = {}
 
@@ -157,6 +175,7 @@ def intuit_valid_answer(response):
 	intuit_topic_interest = shim_intuit_search_provider( response['_text'] )
 	if intuit_topic_interest is not None:
 		q['topic_interest'] = intuit_topic_interest
+
 
 	# look for valid answer
 	valid_answer = None
@@ -175,6 +194,13 @@ def intuit_valid_answer(response):
 				continue
 			result = valid_answer
 			break
+
+
+	#debug
+	if app_set_debug_mode == 1:
+		if valid_answer is None:
+			return render_template_string('{{responsea}}',responsea=response)
+
 	return valid_answer
 
 ##################################################################
@@ -192,6 +218,8 @@ def shim_intuit_search_provider(raw_text_query):
 		return "GEDS"
 	if 'search CRA ' in raw_text_query:
 		return "CRA"
+	if 'search CPAC ' in raw_text_query:
+		return "CPAC"
 	return None	
 # sometimes we get arrays of content back from weasel
 # for now, let's just smash them together
@@ -249,52 +277,71 @@ def shim_assist_weasel_comprehension(utterance):
 	utterance = utterance.strip()
 	return utterance
 
-# do a weasel war dance
-def do_weasel_action(valid_answer,response):
-	action = valid_answer['answer']['action']
-	if action == "access":
-		return redirect( valid_answer['answer']['hyperlink'] )
-	if action == "weasel-search-lucky":	
-		# ideally this should be:
-		# search_q = response['entities']['message_body']['value']
-		# search_q = quote(search_q,safe='') # python 3 warning, doesnt work in 2
-	
-		search_q = urllib.parse.quote( shim_assist_weasel_comprehension( shim_siht_message_subject( response ) ), safe='')  # could also use shim_implode
-		#debug
-		#if True:
-		#	return render_template_string("a:{{searchq}} b:{{r}}", searchq=search_q,r=response)
-
-		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
-		# weasel the page down 
-		page = requests.get( search_target )
-		if page.status_code == requests.codes.ok:
-			page_text = page.text
-		else:
-			page_text = ""
-		# were using bs4 here to chew through the tags and give us workable data
-		soup = BeautifulSoup(page_text, 'lxml')
+def extract_link_from_return(valid_answer,page_text,search_target):
+	soup = BeautifulSoup(page_text, 'lxml')
+	if valid_answer['topic_interest'] == "CPAC":
+		datapoints = soup.find_all('a', class_='vidlist-main__titlelink')
+		for a in datapoints:
+			search_target = a.attrs['href']
+			break
+	else:
 		datapoints = soup.find_all('article')
 		for dp in datapoints:
 			anchors = dp.find_all('a')
 			for a in anchors:
 				search_target = a.attrs['href']
 				break
-			break		
+			break
+	return search_target
+
+def weasel_http_request(search_target):
+	page = requests.get( search_target )
+	if page.status_code == requests.codes.ok:
+		page_text = page.text
+	else:
+		page_text = ""		
+	return page_text
+# do a weasel war dance
+def do_weasel_action(valid_answer,response):
+	#debug
+	if app_set_debug_mode == 1:
+		return render_template_string('{{responsea}}{{validanswer}}',responsea=response,validanswer=valid_answer)
+
+	action = valid_answer['answer']['action']
+	if action == "access":
+		return redirect( valid_answer['answer']['hyperlink'] )
+	if action == "weasel-search-lucky":	
+		try:
+			search_q = response['entities']['message_body']['value']
+			search_q = quote(search_q,safe='') # python 3 warning, doesnt work in 2
+		except:
+			search_q = urllib.parse.quote( shim_assist_weasel_comprehension( shim_siht_message_subject( response ) ), safe='')  # could also use shim_implode
 		#debug
-		#if True:
-		#	return render_template_string("a:{{searchq}} b:{{r}}", searchq=search_target,r=response)
+		if app_set_debug_mode == 1:
+			return render_template_string("a:{{searchq}} b:{{r}}", searchq=search_q,r=response)
+
+		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
+		# weasel the page down 
+		page_text = weasel_http_request(search_target)
+		# were using bs4 here to chew through the tags and give us workable data
+		search_target = extract_link_from_return(valid_answer,page_text,search_target)	
+		#debug
+		if app_set_debug_mode == 1:
+			return render_template_string("a:{{searchq}} b:{{r}}", searchq=search_target,r=response)
 		return redirect( search_target )
 	if action == "weasel-search":
 		# Ca-na-da-dot-see-eh is hard for the ai to grok, help it out
-		# ideally this should be:
-		# search_q = response['entities']['message_body']['value']
-		# search_q = quote(search_q,safe='') # python 3 warning, doesnt work in 2
-		search_q = urllib.parse.quote( shim_assist_weasel_comprehension( shim_siht_message_subject( response ) ), safe='') # could also use shim_implode
-		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
+		try:
+			search_q = response['entities']['message_body']['value']
+			search_q = quote(search_q,safe='') # python 3 warning, doesnt work in 2
+		except:
+			search_q = urllib.parse.quote( shim_assist_weasel_comprehension( shim_siht_message_subject( response ) ), safe='') # could also use shim_implode
 		
+		search_target = valid_answer['answer']['hyperlink'].replace('{ws}', search_q)
+			
 		#debug
-		#if True:
-		#	return render_template_string("a:{{searchq}} b:{{r}}", searchq=search_target,r=response)
+		if app_set_debug_mode == 1:
+			return render_template_string("a:{{searchq}} b:{{r}}", searchq=search_target,r=response)
 
 		return redirect( search_target )
 	return None
@@ -315,6 +362,12 @@ def action_api_handle_weasel_message(response):
 # regular response, returns html to the render
 def handle_weasel_message(response):
 	valid_answer = intuit_valid_answer(response)
+
+	#debug
+	if app_set_debug_mode == 1:
+		if valid_answer is None:
+			return render_template_string('{{responsea}}',responsea=response)
+
 	action = do_weasel_action(valid_answer,response)
 	if action is None:
 		raw_json = json.dumps(response, indent=4, sort_keys=True)

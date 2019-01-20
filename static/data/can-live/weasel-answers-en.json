@@ -7,6 +7,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "display",
 				"media": "<iframe width='958' height='539' src='https://www.youtube.com/embed/0MZvkWhAoEo' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink":"https://en.busrides-trajetsenbus.ca/episode-5/",
@@ -21,6 +22,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "display",
 				"media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/CQpUmRdJWRw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink":"https://github.com/CSPS-EFPC-DAAN",
@@ -35,6 +37,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "access",
 				"media": "<ul><li><a href='https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx'>https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account/access.html'>https://www.canada.ca/en/employment-social-development/services/my-account/access.html</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account.html'>https://www.canada.ca/en/employment-social-development/services/my-account.html</a></li><li><a href='https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html'>https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html</a></li></ul>",
 				"hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx",
@@ -49,6 +52,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "access",
 				"media": "1725987 visitors have accessed the following link",
 				"hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/ei-correspondence.jspx",
@@ -63,7 +67,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
-				"action": "access",
+				"authority":"core","action": "access",
 				"media": "3016435 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html",
 				"spoken": "Access My Account for Individuals",
@@ -77,6 +81,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "access",
 				"media": "3016435 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/forms.html",
@@ -91,6 +96,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "access",
 				"media": "4874424 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",
@@ -105,6 +111,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "access",
 				"media": "3921122 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/services/immigration-citizenship.html",
@@ -119,6 +126,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "access",
 				"media": "3190145 weasel visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency.html",
@@ -128,11 +136,42 @@
 		},
 		{
 			"intent": "search site",
+			"topic_interest": "CPAC",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "weasel-search",
+				"media": "Weasel will look",
+				"hyperlink": "http://www.cpac.ca/en/?s={ws}",
+				"spoken": "Search CPAC",
+				"written": "Search CPAC"
+			}
+		},	
+		{
+			"intent": "search site lucky",
+			"topic_interest": "CPAC",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "weasel-search-lucky",
+				"media": "Weasel will look",
+				"hyperlink": "http://www.cpac.ca/en/?s={ws}",
+				"spoken": "Search CPAC",
+				"written": "Search CPAC"
+			}
+		},
+		{
+			"intent": "search site",
 			"topic_interest": "CRA",
 			"impact_on": "*",
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "weasel-search",
 				"media": "Weasel will look",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
@@ -147,7 +186,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
-				"action": "weasel-search-lucky",
+				"authority":"core","action": "weasel-search-lucky",
 				"media": "Weasel will look",
 				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
 				"spoken": "Search Canada Revenue Agency",
@@ -161,6 +200,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "weasel-search",
 				"media": "Weasel will look",
 				"hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
@@ -175,7 +215,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
-				"action": "weasel-search",
+				"authority":"core","action": "weasel-search",
 				"media": "Weasel will look",
 				"hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
 				"spoken": "Search GEDS",
@@ -189,6 +229,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "weasel-search",
 				"media": "Weasel will look",
 				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
@@ -203,6 +244,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "weasel-search-lucky",
 				"media": "Weasel will look",
 				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
@@ -217,6 +259,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "access",
 				"media": "2378528 visitors have accessed the link I found",
 				"hyperlink": "https://www.canada.ca/en.html",
@@ -231,6 +274,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "display",
 				"media": "<iframe width='1280' height='720' src='https://www.youtube.com/embed/AdfwQXJ0ZVM' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/new-life-canada/improve-english-french.html",
@@ -245,6 +289,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "display",
 				"media": "<iframe width='1280' height='720' src='https://www.youtube.com/embed/Y9FOyoS3Fag' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink": "https://www.canada.ca/en.html",
@@ -259,6 +304,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "weasel-search",
 				"media": "Weasel will look",
 				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
@@ -273,6 +319,7 @@
 			"key_party": "*",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "weasel-search-lucky",
 				"media": "Weasel will look",
 				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
@@ -287,6 +334,7 @@
 			"key_party": "!",
 			"answer": {
 				"type": "weasel-answer",
+				"authority":"core",
 				"action": "display",
 				"media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/7H4Zy4fWpmA' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink":"http://canada.ca",

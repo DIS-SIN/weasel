@@ -266,7 +266,7 @@ def shim_intuit_intent_visualize(raw_text_query):
 	if 'visualize ' in raw_text_query:
 		return "visualize"
 	return None
-	
+
 def shim_intuit_search_provider(raw_text_query):
 	raw_text_query = raw_text_query.replace('lucky ','')
 	if 'search GEDS ' in raw_text_query:
@@ -275,7 +275,7 @@ def shim_intuit_search_provider(raw_text_query):
 		return "CRA"
 	if 'search CPAC ' in raw_text_query:
 		return "CPAC"
-	if 'busrides' in raw_text_query:
+	if 'busrides' in raw_text_query or 'bus rides' in raw_text_query:
 		return "busrides.ca"
 	return None	
 # sometimes we get arrays of content back from weasel
@@ -331,9 +331,11 @@ def shim_assist_weasel_comprehension(utterance):
 	utterance = utterance.replace('Canada .CA','canada.ca') 
 	utterance = utterance.replace('canada. CA','canada.ca') 
 	utterance = utterance.replace('canada .CA','canada.ca') 
+	utterance = utterance.replace('bus rides','busrides') 
+	utterance = utterance.replace('busrides .CA','busrides.ca') 
 	
 	swap_space_with_dash = False
-	if 'busrides' in utterance:
+	if 'busrides' in utterance  or 'bus rides' in utterance:
 		swap_space_with_dash = True		
 	# knockouts
 	utterance = ' '.join(utterance.split()[1:])

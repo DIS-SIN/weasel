@@ -56,7 +56,7 @@ $(function() {
 		if(recognition_lang == "fr-CA"){
 			rl = "Bellete écoute Français: " + ($("#recognition_language").val()) + " | " + "Traduire automatiquement: " + "<span class='mif-blocked'></span>";
 		}
-		$("#weasel_listening_for").html( rl + "<br><small>[Note: Auto-translate hardcoded off]</small>");
+		$("#weasel_listening_for").html( rl + "<br><small>[Note: Auto-translate force-off]</small>");
 	};
 
 	var set_recog_yestlx = function() {
@@ -69,21 +69,21 @@ $(function() {
 		if(recognition_lang == "fr-CA"){
 			rl = "Bellete écoute Français: " + ($("#recognition_language").val()) + " | " + "Traduire automatiquement: " + "<span class='mif-checkmark'></span>";
 		}
-		$("#weasel_listening_for").html( rl  + "<br><small>[Note: Auto-translate hardcoded off]</small>");
+		$("#weasel_listening_for").html( rl  + "<br><small>[Note: Auto-translate force-off]</small>");
 	};
 	var set_recog_en = function() {
 		recognition_lang = "en-US";
 		recognition_lang_tlxd = "enabled";
 		$("#recognition_lang_tlxd").val(recognition_lang);
 		$("#recognition_language").val(recognition_lang);
-		$("#weasel_listening_for").html( "Weasel is listening in English: " + ($("#recognition_language").val()) +  " | " + "Auto-translate: " +"<span class='mif-checkmark'></span>"  + "<br><small>[Note: Auto-translate hardcoded off]</small>");
+		$("#weasel_listening_for").html( "Weasel is listening in English: " + ($("#recognition_language").val()) +  " | " + "Auto-translate: " +"<span class='mif-checkmark'></span>"  + "<br><small>[Note: Auto-translate forced-off]</small>");
 	};
 	var set_recog_fr = function() {
 		recognition_lang = "fr-CA";
 		recognition_lang_tlxd = "enabled";
 		$("#recognition_lang_tlxd").val(recognition_lang);
 		$("#recognition_language").val(recognition_lang);
-		$("#weasel_listening_for").html( "Weasel écoute Français: " + ($("#recognition_language").val()) +  " | " + "Traduire automatiquement: " +"<span class='mif-checkmark'></span>"  + "<br><small>[Note: Auto-translate hardcoded off]</small>");
+		$("#weasel_listening_for").html( "Weasel écoute Français: " + ($("#recognition_language").val()) +  " | " + "Traduire automatiquement: " +"<span class='mif-checkmark'></span>"  + "<br><small>[Note: Auto-translate forced-off]</small>");
 	};
 	var recognize_speech = function() {
 		if (window.hasOwnProperty('webkitSpeechRecognition')) {

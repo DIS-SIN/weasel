@@ -2,11 +2,11 @@
 
 Weasels are small yet very competent hunters. They can find things and retrieve things even in the most inaccessible of places. 
 
-This app is kind of like one of those weasels... It's an app that helps you find things to help you learn stuff or do stuff. Weasel, the Web Enabled AI Support Expression Learner - helping you better understand a digital government (With Easy Available Smart E-Learning) lets you get the information that matters to you. There's a lot of great content and sites out there for us to improve and grow, but sometimes just gettign started is the hard part.
+This app is kind of like one of those weasels... It's an app that helps you find things to help you learn stuff or do stuff. Weasel, the Web Enabled AI Support Expression Learner - helping you better understand a digital government (With Easy Available Smart E-Learning) lets you get the information that matters to you. There's a lot of great content and sites out there for us to improve and grow, but sometimes just getting started is the hard part.
 
 That's where Weasel comes in. 
 
-You ask weasel things like **"why is digital important for goverment"**, **"why should TBS care about open source"**, Suggested Weasel Queries: **"why does open souce matter to me"**, **"access my service canada account"**, **"I want to become a citizen"**, **"why does digital matter to my department"**, **"I want to learn french"**, **"Renew my passport"**, **"what skills do I need for digital"** and weasel will find you online learning tools (and some guiding information to help you get rolling). We don't want to just give you a list, that doesn't help as much as people hope. We aim to give you knowledge, what you can do, how you'd learn, if there are any hints from the experts in the industry.
+You ask weasel things like **"why is digital important for government"**, **"why should TBS care about open source"**, Suggested Weasel Queries: **"why does open source matter to me"**, **"access my service canada account"**, **"I want to become a citizen"**, **"why does digital matter to my department"**, **"I want to learn french"**, **"Renew my passport"**, **"what skills do I need for digital"** and weasel will find you online learning tools (and some guiding information to help you get rolling). We don't want to just give you a list, that doesn't help as much as people hope. We aim to give you knowledge, what you can do, how you'd learn, if there are any hints from the experts in the industry.
 
 Our goal is to get you learning by clearing the weeds and critters in your path. That's what Weasel is for.
 
@@ -26,7 +26,7 @@ The experimental apps here are built on the following stack:
 
 > Note: Our long term aspiration goal here is to have you be able to naturally speak to weasel about work related stuff and it would actually be useful. You'd ask a question and the weasel would find you the best way to move forward. Our goal is to experiment with the AI platforms out there to see if we can make really compelling experiences for the humans. We also want to try and stay as AI system agnostic as possible, while still making the data we generate open and modular.
 
-> Note: Canada has two official languages. If you want something to resonate with Canadians, you better be able to talk to them. Weasel currently supports listening/reading in english, but only can answer in english (we're actively working on bilinguaweasel). This isn't a limitation of the code, just the human writing it. Je travaille à améliorer ma capacité de parler français. And so will weasel.
+> Note: Canada has two official languages. If you want something to resonate with Canadians, you better be able to talk to them. Weasel currently supports listening/reading in english (french coming soon) and can answer in english (we're actively working on bilinguaweasel). This isn't a limitation of the code, just the human writing it. Je travaille à améliorer ma capacité de parler français. And so will weasel.
 
 ### Getting/Refreshing the Data
 
@@ -95,7 +95,7 @@ You can say things like "search lucky cra the audit process for charities" and w
 cd wheremystufflives/development/weasel/
 sass sass/weasel.css.scss:sass/weasel.css
 ```
-This will create the css files you need. When your testing is done, move htem into the css directory
+This will create the css files you need. When your testing is done, move item into the css directory
 
 * Assuming you have make, to watch the Sass source for changes and build the stylesheets automatically, run:
 
@@ -164,7 +164,7 @@ git push
 
 ### Thanks and mentions
 
-The entire team at CSPS both DIS and DAT - you are all an inspiration.
+The entire team at CSPS Digital Academy both DIS and DAT - you are all an inspiration.
 
 ### Public domain
 

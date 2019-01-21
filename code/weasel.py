@@ -255,10 +255,11 @@ def intuit_valid_answer(response):
 
 ##################################################################
 # SHIMS - hacks for reducing complexity of what we send to wit
-# definitely want to revist this, because we both know this isn't
+# definitely want to revisit this, because we both know this isn't
 # how we should do things long terms. This is spaghetti waiting to
-# happen. But my model wont finish re-training until 9:33PM, and it
-# is only 3:49pm. I'm impatient. That's way too long to wait to make
+# happen. But my model wont finish re-training until 9:33PM 
+# (or 2am as is the case now as im fixing spelling ), 
+# and it is only 3:49pm. I'm impatient. That's way too long to wait to make
 # progress. So forgive me dear reader. Trust that this pains me 
 ##################################################################
 
@@ -292,12 +293,12 @@ def shim_implode_message_subject(response):
 		utterance += ms['value'] + " "
 	return utterance
 
-# string inferrence, hardcode transliteration
+# string inference, hardcode transliteration
 # aka siht aka this.backwards() aka this is not an example of long term code
 # The message passes us back the raw text before it gives us confidence values
 # we're going to use the raw and just snip out the unhelpful parts of the query
 # (side note, we're straight up ignoring confidence for now, but we could
-# easily use those as proper replacements for these shims. anthing less than .79
+# easily use those as proper replacements for these shims. anything less than .79
 # we can assume is a miss. But we can probably improve our chances by removing
 # known safe keyword phrases from the input. Downside there is languification.
 # so if you're in a bilingual environment that hack wont cut it (well it could)

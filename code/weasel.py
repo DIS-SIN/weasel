@@ -219,6 +219,13 @@ def intuit_valid_answer(response):
 	if intuit_topic_interest is not None:
 		q['topic_interest'] = intuit_topic_interest
 
+	#shim
+	if q['topic_interest'] == "busrides.ca":
+		q['intent'] = 'search site' 
+	intuit_intent_visualize = shim_intuit_intent_visualize( response['_text'] )
+	if intuit_intent_visualize is not None:
+		q['intent'] = 'visualize'
+
 
 	# look for valid answer
 	valid_answer = None
@@ -255,6 +262,11 @@ def intuit_valid_answer(response):
 # progress. So forgive me dear reader. Trust that this pains me 
 ##################################################################
 
+def shim_intuit_intent_visualize(raw_text_query):
+	if 'visualize ' in raw_text_query:
+		return "visualize"
+	return None
+	
 def shim_intuit_search_provider(raw_text_query):
 	raw_text_query = raw_text_query.replace('lucky ','')
 	if 'search GEDS ' in raw_text_query:
@@ -263,6 +275,8 @@ def shim_intuit_search_provider(raw_text_query):
 		return "CRA"
 	if 'search CPAC ' in raw_text_query:
 		return "CPAC"
+	if 'busrides' in raw_text_query:
+		return "busrides.ca"
 	return None	
 # sometimes we get arrays of content back from weasel
 # for now, let's just smash them together
@@ -317,9 +331,19 @@ def shim_assist_weasel_comprehension(utterance):
 	utterance = utterance.replace('Canada .CA','canada.ca') 
 	utterance = utterance.replace('canada. CA','canada.ca') 
 	utterance = utterance.replace('canada .CA','canada.ca') 
+	
+	swap_space_with_dash = False
+	if 'busrides' in utterance:
+		swap_space_with_dash = True		
 	# knockouts
 	utterance = ' '.join(utterance.split()[1:])
 	utterance = utterance.strip()
+
+	# diff search providers want different food
+	if swap_space_with_dash == True:
+		utterance = utterance.replace(' ','-') 
+		utterance = utterance.replace('%20','-') 
+
 	return utterance
 
 def extract_link_from_return(valid_answer,page_text,search_target):

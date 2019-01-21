@@ -222,7 +222,52 @@
 				"spoken": "Search GEDS",
 				"written": "Search GES"
 			}
+		},	
+		{
+			"intent": "visualize",
+			"topic_interest": "AI",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "access",
+				"media": "Weasel will look",
+				"hyperlink": "https://app.powerbi.com/view?r=eyJrIjoiMDYwZjMwODMtZTAyOS00YWZmLWEzNTgtYTJiNjZjYjg5MDllIiwidCI6IjA0NmEyNDRiLWZhZGQtNDA1My04OWVjLTU5Y2IxMTJiMzJhOCIsImMiOjZ9",
+				"spoken": "Report",
+				"written": "Report"
+			}
+		},
+		{
+			"intent": "search site",
+			"topic_interest": "busrides.ca",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "weasel-search",
+				"media": "Weasel will look",
+				"hyperlink": "https://en.busrides-trajetsenbus.ca/{ws}/",
+				"spoken": "Search busrides.ca",
+				"written": "Search busrides.ca"
+			}
 		},		
+		{
+			"intent": "search site lucky",
+			"topic_interest": "busrides.ca",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "weasel-search-lucky",
+				"media": "Weasel will look",
+				"hyperlink": "https://en.busrides-trajetsenbus.ca/{ws}/",
+				"spoken": "Search busrides.ca",
+				"written": "Search busrides.ca"
+			}
+		},
 		{
 			"intent": "search site",
 			"topic_interest": "canada.ca",
@@ -237,7 +282,7 @@
 				"spoken": "Search Canada.ca",
 				"written": "Search Canada.ca"
 			}
-		},	
+		},			
 		{
 			"intent": "search site lucky",
 			"topic_interest": "canada.ca",

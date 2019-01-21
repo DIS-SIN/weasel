@@ -6,40 +6,160 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>alpha | weasel | Using ai to better understand the digital government.</title>
-<link href="https://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="http://www.canada.ca/etc/designs/canada/wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon"/>
 <!-- Metro 4 -->
 <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
 <link rel="stylesheet" href="{{url_for('static', filename='weasel/css/weasel.css')}}">
 <link rel="stylesheet" href="{{url_for('static', filename='weasel/css/ermine.css')}}">
 </head>
 <body style="background: rgb(249,249,249);">
-<div class="container" style="margin-bottom-bottom: -0.5em;">
+  <div class="container" style="margin-bottom-bottom: -0.5em;">
     <div class="row">
-        <div class="cell-sm-full cell-md-8">
-            <h1>
+        <div class="cell-md-full cell-lg-4">
+            <h1 style="padding:0.3em;">
                 <a class="splash_link" href="{{url_for('weasel.render_ermine')}}"><strong>alpha</strong></a> | ermine
-                <span><strong>it's weasel in a suit</strong></span>
+                <span><strong>it's weasel in a suit</strong></span><a id="top" name="top"></a>
             </h1>
         </div>
-        <div class="cell-sm-full cell-md-4">
+        <div class="cell-md-full cell-lg-8">
             <div class="row">
                 <ul class="h-menu">
-                    <li><a href="#" id="speech_icon_en"><span class="mif-multitrack-audio"></span> Recognize English</a></li> 
-                    <li><a href="#" id="speech_icon_fr"><span class="mif-multitrack-audio"></span> Reconnaître Français</a></li>
+                    <li class="cell-md-full cell-lg-6"><a href="#" class="cell-sm" id="speech_icon_en"><span class="mif-multitrack-audio"></span> Recognize English</a></li> 
+                    <li class="cell-md-full cell-lg-6"><a href="#" id="speech_icon_fr"><span class="mif-multitrack-audio"></span> Reconnaître Français</a></li>
                 </ul>
             </div>
-            <div class="row">
-                <span id="tlx_msg"><small>This page uses auto-translations. When the desired term is not available from the application in your language of choice, the application will attempt to translate results automatically. Autotranslations are a convenience feature, official bilingual content is our desired standard. 
-            </div>
-            <div class="row">
-                <a href="#" id="speech_icon_yes_tlx"><span class="mif-sync-disabled"></span>Enable Auto-translate</a></span> | <a href="#" id="speech_icon_no_tlx"><span class="mif-sync-disabled"></span>Disable Auto-translate</a></small></span>
+            <div class="row" style="padding: 1em;">
+                <span id="tlx_msg"><small>This page uses auto-translations. When the desired term is not available from the application in your language of choice, the application will attempt to translate results automatically. Autotranslations are a convenience feature, official bilingual content is our desired standard.</small></span>
             </div>
         </div>
     </div>
 </div>
+<div class="container" id="weasel_help" style="display: none;">
+    <div>
+        <span class="h2">ermine/</span>
+        <span class="h3"> Electronic Resource Mine</span>
+        <p class="h4">Help Guide</p>
+        <div id="help_guide_gi" class="help_guide">
+            <p class="h5">General Information</p>
+            <p>
+                Ermine is built on Weasel (Web Enable AI Support Expression Learner), an experiment
+                by CSPS Digital Academy on what is possible with disruptive technology and agile practices. 
+            </p>
+            <p>
+                Ermine is an early example of Web 3.0 thinking. Aggregation. Execution. Intention understanding. The goal is to get to what you wanted anyway just quicker. It doesn't do any of the work itself, but
+                rather acts as a routing layer on top of many other services.
+            </p>
+            <p>
+                Ermine learns when you search. Each time we submit a query the AI model is given training data to make its predications on intent and content better. In order for it to learn something new we just need to ask it. It will get it wrong until out of the blue, it learns and does what you want. This is a tool that will grow with us. Support the public service in being more efficient and open. Enable citizens to be more enagaged with their government and the actions of democracy. This is a tool to help lay a few foundations for a fully digital government.
+            </p>
+            <p>
+                Ermine isn't monolithic. It's a small ~3000 line python flask application. We built it in less than 7 days to the point it could search find and act on common requests. If we can accomplish this much in 7 days with only two public servants chipping away at code, imagine what we can accomplish all together. The future of government is positively collaborative, and will be supported by a wide ecosystem of intelligrent agents, like Ermine.
+            </p>
+            <p>
+                Explore more content in the options below.
+            </p>
+        </div>
+        <div id="help_guide_sw" class="help_guide">
+            <p class="h5">How to speak Weasel</p>
+            <p>
+                Ermine understands natural language, but along the way it does a few things to help us get the results we want. You can help by adjusting your speech patterns a bit. "Hi weasel I would like you to find for me the current sitting prime minister of our country" is probably not going to get you what you want. It also takes forever to say. You could easily try instead "contact justin trudeau" for their details (but you'd need to know who was PM). So you can also try "search lucky canada.ca who is the prime minister" and you'll get the PMs page.
+            </p>
+        </div>
+        <div id="help_guide_lm" class="help_guide">
+            <p class="h5">Limitations / Bugs</p>
+            <p>
+                Limitations and Known Bugs. Ermine is an experimental alpha. We built it because we could. We built it because we wanted to get better at Python, ML, AI, cloud, and a bunch of others tools we need to make sure we can be the best at our roles of supporting the Canada School of Public Service. Reading a book on it isn't enough. You have to do it to really learn. And we've learned a lot.
+            </p>
+            <p>
+                Bilingual - Ermine WILL be able to understand and serve content in both official languages. We've proven it works with a poc. To make it real we need to figure out which cloud provider API is right for us. Once that happens, we'll be able to easily translate even content we dont have officially languified. We can also try to create two AI models, one which recognizes each language, but routes the requests identically (just languified). Teaching our AI system is what will make Ermine actually helpful.
+            </p>
+            <p>
+                Voice Capture - This feature works in chrome on android, and chrome on desktop. It's supported everywhere yet. But Ermine happily falls back on standard search text. This can be resolved by making Ermine a hybrid-native app or a fully native android/ios app.
+            </p>
+            <p>
+                Voice Synthesis - This feature has better support so many browsers will actually speak back to you as the answer dictates. 
+            </p>
+            <p>
+                Overall Intelligence - This is a problem that will resolve itself with time and training data. The more we use it the better it is. On day one it barely understood anything. On day 7 it's reliably serving the common queries we've been feeding it. Even with data we haven't supplied it. It's inferring their types based on previous experience.
+            </p>
+            <p>
+                Quality of answers - The first Ermine knowledge base was manually curated as a test. The actual data set will be a mix of community suggestions, authoritative content from the public service, and core messages built in to handle the unknown. However, it's important to note, adding new functionality and answer capacity is trivial with the current design.
+            </p>
+        </div>
+        <div id="help_guide_ex" class="help_guide">
+            <p class="h5">Examples</p>
+            <p>
+                Here are some example searches you can try out in Ermine. If there's an action associated with the search, it will get done (like if you said "access canada.ca" you would be redirected). If you asked "why is open source important to my boss", weasel would give you an answer
+            </p>
+            <ul>
+                <li>why should I care about open source</li>
+                <li>why does digital matter to my department</li>
+                <li>what skills do I need for digital</li>
+                <hr style="color:#ddd;background:#ddd;"/>
+                <li>access my service canada account</li>
+                <li>access canada.ca</li>
+                <li>access CRA</li>
+                <hr style="color:#ddd;background:#ddd;"/>
+                <li>I want to learn french</li>
+                <li>I want to become a citizen</li>
+                <li>I want to move to canada</li>
+                <hr style="color:#ddd;background:#ddd;"/>
+                <li>Renew my passpor</li><li>I want to renew my passport</li>
+                <li>trouvez une form du passport</li>
+                <hr style="color:#ddd;background:#ddd;"/>
+                <li>watch my government in action on climate change</li>
+                <li>most popular pages</li><li>most popular downloads</li><li>most popular news</li>
+                <li>contact minister of finance</li>
+                <hr style="color:#ddd;background:#ddd;"/>
+                <li>visualize state of AI</li>
+                <li>busrides episode 5</li>    
+                <hr style="color:#ddd;background:#ddd;"/>
+                <li>search canada.ca all canada day celebrations</li>
+                <li>search lucky canada.ca all services</li>
+                <li>search lucky canada.ca who is the prime minister</li>
+                <hr style="color:#ddd;background:#ddd;"/>
+                <li>search GEDS treasury board</li>
+                <li>search GEDS justin trudeau</li>
+                <li>search GEDS minister of finance</li>
+                <hr style="color:#ddd;background:#ddd;"/>
+                <li>search lucky CPAC national defence</li>
+                <li>search CPAC climate change</li>
+                <hr style="color:#ddd;background:#ddd;"/>
+                <li>search lucky CRA the audit process for charities</li>
+                <li>search lucky Canada Revenue Agency T4</li>
+            </ul>
+        </div>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a id="b_help_guide_gi" href="#top"><span class="mif-home icon"></span>General Information</a></li>
+        <li><a id="b_help_guide_sw" href="#top"><span class="mif-books icon"></span>How to speak Weasel</a></li>
+        <li><a id="b_help_guide_ex" href="#top"><span class="mif-files-empty icon"></span>Examples</a></li>
+        <li><a id="b_help_guide_lm" href="#top"><span class="mif-files-empty icon"></span>Limitations/Bugs</a></li>
+        <li class="divider"></li>
+        <li><a href="https://github.com/CSPS-EFPC-DAAN/weasel"><span class="mif-github icon"></span>Github Source Code</a></li>
+        <li class="divider"></li>
+        <li><a id="weasel_help_dismiss"><span class="mif-help icon"></span>Close Help Guide</a></li>
+    </ul>
+</div>
 <div class="container" style="background: rgb(51,80,117);padding:1.3em;">
     <div class="container" style="color:#afafaf;padding-bottom: 1em;">
-        <span class="mif-multitrack-audio"></span><span id="weasel_listening_for">Weasel is listening in English</span></li>
+        <div class="row" style="padding: 1em;padding-top: 0.2em;">
+            <div class="ell-md-full cell-lg-7">
+                <span class="mif-multitrack-audio"></span><span id="weasel_listening_for">Weasel is listening in English<br><small>[Note: Auto-translate hardcoded off]</small></span></li>
+
+            </div>
+            <div class="cell-md-full cell-lg-5">
+                <ul class="h-menu">
+                    <li class="cell-md-full cell-lg-6"><a href="#" id="speech_icon_yes_tlx">
+                        <small><span class="mif-sync-problem"></span>Enable Translate</small>
+                    </a></li> 
+                    <li class="cell-md-full cell-lg-6"><a href="#" id="speech_icon_no_tlx">
+                        <small><span class="mif-sync-disabled"></span>Disable Translate</small>
+                    </a></li>
+                </ul>
+                <span class="cell-md-full cell-lg-6"></span>
+            </div>
+        </div>
     </div>
     <form class="container" id="weaselfrm" method="get" action="{{url_for('weasel.render_ermine_answer')}}" style="padding-bottom:1.3em;">
         <div class="speech">
@@ -63,17 +183,20 @@
             {% endif %}
         </div>
     </form>
-    <ul class="h-menu">
-        <li><a href="#" id="speech_icon"><span class="mif-mic"></span> Press here to Speak to Weasel!</a></li>
-        <li><a href="#" id="send_text"><span class="mif-pencil"></span> Press to send your text to Weasel!</a></li>
-        <li><a href="#" id="clear_text"><span class="mif-blocked"></span> Clear Search</a></li>
-        <li><a href="#" id="talk_back"><span class="mif-volume-medium"></span>Weasel, Read!</a></li> 
-        <li><a href="#" id="dont_talk_back"><span class="mif-volume-mute2"></span>Weasel, Silence!</a></li> 
+    <ul class="h-menu"  class="cell-sm-full" >
+        <li class="cell-md-full cell-lg-2"><a href="#" id="speech_icon"><span class="mif-mic"></span> Say Question!</a></li>
+        <li class="cell-md-full cell-lg-2"><a href="#" id="send_text"><span class="mif-pencil"></span> Send Text!</a></li>
+        <li class="cell-md-full cell-lg-2"><a href="#" id="clear_text"><span class="mif-blocked"></span> Clear Search</a></li>
+        <li class="cell-md-full cell-lg-2"><a href="#" id="talk_back"><span class="mif-volume-medium"></span> Weasel, Read!</a></li> 
+        <li class="cell-md-full cell-lg-2"><a href="#" id="dont_talk_back"><span class="mif-volume-mute2"></span> Weasel, Shh!</a></li> 
+        <li class="cell-md-full cell-lg-2""><a href="#top" id="weasel_help_open"><span class="mif-help"></span> Help</a></li>
     </ul>
 </div>
 <div style="background: white;" class="container" id="suggested_queries">
     <div class="row" class="cell-12">
+        {% if q != "Weasel Ready!" %}
         <div id="result_set" style="padding:1em;"><div id="weasel_return">{{weaselanswer}}</div></div>
+        {% endif %}
         <div class="container">
             <div class="row">
                 <div class="cell-md-4 cell-sm-full" style="padding:0.5em;">
@@ -102,6 +225,9 @@
                 <div class="cell-md-4 cell-sm-full" style="padding:0.5em;">
                     <h3>Deeper searches?</h3>
                     <ul>
+                    <li>visualize state of AI</li>
+                    <li>busrides episode 5</li>
+                    <hr style="color:#ddd;background:#ddd;"/>
                     <li>search canada.ca all canada day celebrations</li>
                     <li>search lucky canada.ca all services</li>
                     <li>search lucky canada.ca who is the prime minister</li>
@@ -160,5 +286,6 @@
 <!-- jQuery first, then Metro UI JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="{{url_for('static', filename='weasel/js/index.js')}}"></script>
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
 </body>
 </html>

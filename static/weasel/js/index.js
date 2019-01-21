@@ -56,7 +56,7 @@ $(function() {
 		if(recognition_lang == "fr-CA"){
 			rl = "Bellete écoute Français: " + ($("#recognition_language").val()) + " | " + "Traduire automatiquement: " + "<span class='mif-blocked'></span>";
 		}
-		$("#weasel_listening_for").html( rl + " <small>[Note: Auto-translate hardcoded off]</small>");
+		$("#weasel_listening_for").html( rl + "<br><small>[Note: Auto-translate hardcoded off]</small>");
 	};
 
 	var set_recog_yestlx = function() {
@@ -67,23 +67,23 @@ $(function() {
 			rl = "Weasel is listening in English: " + ($("#recognition_language").val()) + " | " + "Auto-translate: " + "<span class='mif-checkmark'></span>";
 		}
 		if(recognition_lang == "fr-CA"){
-			rl = "Bellete écoute Français: " + ($("#recognition_language").val()) + " | " + "Traduire automatiquement: " + "<span class='mif-blocked'></span>";
+			rl = "Bellete écoute Français: " + ($("#recognition_language").val()) + " | " + "Traduire automatiquement: " + "<span class='mif-checkmark'></span>";
 		}
-		$("#weasel_listening_for").html( rl  + " <small>[Note: Auto-translate hardcoded off]</small>");
+		$("#weasel_listening_for").html( rl  + "<br><small>[Note: Auto-translate hardcoded off]</small>");
 	};
 	var set_recog_en = function() {
 		recognition_lang = "en-US";
 		recognition_lang_tlxd = "enabled";
 		$("#recognition_lang_tlxd").val(recognition_lang);
 		$("#recognition_language").val(recognition_lang);
-		$("#weasel_listening_for").html( "Weasel is listening in English: " + ($("#recognition_language").val()) +  " | " + "Auto-translate: " +"<span class='mif-checkmark'></span>"  + " <small>[Note: Auto-translate hardcoded off]</small>");
+		$("#weasel_listening_for").html( "Weasel is listening in English: " + ($("#recognition_language").val()) +  " | " + "Auto-translate: " +"<span class='mif-checkmark'></span>"  + "<br><small>[Note: Auto-translate hardcoded off]</small>");
 	};
 	var set_recog_fr = function() {
 		recognition_lang = "fr-CA";
 		recognition_lang_tlxd = "enabled";
 		$("#recognition_lang_tlxd").val(recognition_lang);
 		$("#recognition_language").val(recognition_lang);
-		$("#weasel_listening_for").html( "Weasel écoute Français: " + ($("#recognition_language").val()) +  " | " + "Traduire automatiquement: " +"<span class='mif-checkmark'></span>"  + " <small>[Note: Auto-translate hardcoded off]</small>");
+		$("#weasel_listening_for").html( "Weasel écoute Français: " + ($("#recognition_language").val()) +  " | " + "Traduire automatiquement: " +"<span class='mif-checkmark'></span>"  + "<br><small>[Note: Auto-translate hardcoded off]</small>");
 	};
 	var recognize_speech = function() {
 		if (window.hasOwnProperty('webkitSpeechRecognition')) {
@@ -109,14 +109,37 @@ $(function() {
 		}
 	};
 
+	var weasel_help_box = function() {
+		$("#weasel_help").show();
+		help_guide_toggle_gi();
+	};
+	var weasel_help_box_dismiss = function() {
+		$("#weasel_help").hide();
+	};
+
 	var weasel_console_display = function() {
 		$("#weasel_console").toggle();
 	};
+	
+	var help_guide_toggle = function(panel) {
+		$(".help_guide").hide();
+		$("#"+panel).toggle();
+	};
+	var help_guide_toggle_gi = function(panel) { help_guide_toggle('help_guide_gi'); }
+	$("#b_help_guide_gi").on("click", help_guide_toggle_gi );
+	var help_guide_toggle_sw = function(panel) { help_guide_toggle('help_guide_sw'); }
+	$("#b_help_guide_sw").on("click", help_guide_toggle_sw );
+	var help_guide_toggle_ex = function(panel) { help_guide_toggle('help_guide_ex'); }
+	$("#b_help_guide_ex").on("click", help_guide_toggle_ex );
+	var help_guide_toggle_lm = function(panel) { help_guide_toggle('help_guide_lm'); }
+	$("#b_help_guide_lm").on("click", help_guide_toggle_lm );
 
 	$("#speech_icon_en").on("click", set_recog_en);
 	$("#speech_icon_fr").on("click", set_recog_fr);
 	$("#speech_icon_no_tlx").on("click", set_recog_notlx);
 	$("#speech_icon_yes_tlx").on("click", set_recog_yestlx);
+	$("#weasel_help_open").on("click", weasel_help_box);
+	$("#weasel_help_dismiss").on("click", weasel_help_box_dismiss );
 
 	$("#speech_icon").on("click", recognize_speech);
 	$("#send_text").on("click", send_speech_text);

@@ -121,6 +121,21 @@
 		},
 		{
 			"intent": "access site",
+			"topic_interest": "all services",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "access",
+				"media": "All Canada.ca Services",
+				"hyperlink": "https://www.canada.ca/en/services.html",
+				"spoken": "Access All Services",
+				"written": "Access All Services"
+			}
+		},
+		{
+			"intent": "access site",
 			"topic_interest": "CRA",
 			"impact_on": "*",
 			"key_party": "*",
@@ -206,7 +221,7 @@
 				"media": "Weasel will look",
 				"hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
 				"spoken": "Search GEDS",
-				"written": "Search GES"
+				"written": "Search GEDS"
 			}
 		},						
 		{
@@ -220,7 +235,7 @@
 				"media": "Weasel will look",
 				"hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
 				"spoken": "Search GEDS",
-				"written": "Search GES"
+				"written": "Search GEDS"
 			}
 		},	
 		{

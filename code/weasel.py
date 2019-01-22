@@ -324,6 +324,11 @@ def shim_assist_weasel_comprehension(utterance,assist_hints=""):
 	if assist_hints.get('knock-common-words', "") == "":
 		assist_hints['knock-common-urls'] = True
 
+	if assist_hints.get('knock-gov-speak', "") == "":
+		assist_hints['knock-gov-speak'] = True
+
+	# use them
+
 	if assist_hints.get('knock-common-words') == True:
 		utterance = shim_knock_en_common_words( ' ' + utterance )
 	
@@ -335,10 +340,17 @@ def shim_assist_weasel_comprehension(utterance,assist_hints=""):
 		utterance = utterance.replace('bus rides','busrides') 
 		utterance = utterance.replace('busrides','busrides.ca') 
 		utterance = utterance.replace('busrides .CA','busrides.ca') 
-		
+	
 	if 'busrides.ca' in utterance:
 		assist_hints['knock-space-with-dash'] = True
-		assist_hints['knock-first-word'] = True		
+	
+	# gov speak knockouts
+	if assist_hints.get('knock-gov-speak') == True:
+		out = ['contact ','geds','GEDS','cra','CRA','canada.ca','busrides.ca']
+		utterance = ' ' + utterance 
+		for knock in out:
+			utterance = utterance.replace(' '+knock+' ',' ')	
+	#	assist_hints['knock-first-word'] = True		
 	# knockouts
 	if assist_hints.get('knock-first-word') == True:
 		utterance = ' '.join(utterance.split()[1:])

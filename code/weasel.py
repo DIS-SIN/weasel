@@ -357,6 +357,8 @@ def shim_assist_weasel_comprehension(utterance,assist_hints=""):
 
 	utterance = utterance.strip()
 
+	# WARN: deep magic. burn deck. Remove when you've got a better AI model
+	utterance = utterance.replace('T4','T4 Statement of Remuneration Paid (slip)')
 
 	# diff search providers want different food
 	if assist_hints.get('knock-space-with-dash') == True:

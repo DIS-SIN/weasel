@@ -619,7 +619,7 @@ def generate_weasel_answer_html(ans):
 		+ "<div class='weasel_answer_reply'>" \
 			+ "<div id='weasel_spoken'>"+ans['answer']['spoken']+"</div>" \
 			+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> In short:</strong></div>"\
-			+ "<div>" + written + "</div>" \
+			+ "<p>" + written + "</p>" \
 			+ "<div><strong><span class='mif-link'></span>Actually Helpful Link(s):</strong></div>" \
 			+ links \
 			+ "<div class='weasel_media'><strong><span class='mif-video'></span> Helpful Media:</strong></div><div><div class='video-container'>" + ans['answer']['media'] + "</div></div>" \

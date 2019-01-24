@@ -7,7 +7,7 @@ import requests
 
 
 #debug enable for logging
-app_set_debug_mode = 3 # 0=none,1=entry,2=entry/exit,3=all
+app_set_debug_mode = 0 # 0=none,1=entry,2=entry/exit,3=all
 
 ######################################################################
 #  Application routing and web end
@@ -372,7 +372,7 @@ def shim_assist_weasel_comprehension(utterance,assist_hints=""):
 	
 	# gov speak knockouts
 	if assist_hints.get('knock-gov-speak') == True:
-		out = ['contact ','geds','GEDS','cra','CRA','canada.ca','busrides.ca']
+		out = ['contact','geds','GEDS','cra','CRA','canada.ca','busrides.ca']
 		utterance = ' ' + utterance 
 		for knock in out:
 			utterance = utterance.replace(' '+knock+' ',' ')	

@@ -301,7 +301,8 @@ def shim_intuit_search_provider(raw_text_query):
 		search_provider = "CPAC"
 	if 'busrides' in raw_text_query or 'bus rides' in raw_text_query:
 		search_provider = "busrides.ca"
-
+	if 'courses' in raw_text_query or 'catalog' in raw_text_query:
+		search_provider = "catalogue.da-an.ca"
 	#debug
 	if app_set_debug_mode >= 2:
 		print(f"-- wsl -- > shim_intuit_search_provider > exit_method > {search_provider}")

@@ -223,7 +223,37 @@
 				"spoken": "Search GEDS",
 				"written": "Search GEDS"
 			}
-		},						
+		},
+		{
+			"intent": "search site",
+			"topic_interest": "catalogue.da-an.ca",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "weasel-search",
+				"media": "Weasel will look",
+				"hyperlink": "http://catalogue.da-an.ca/course-result?course_code={ws}",
+				"spoken": "Search CSPS Course catalog",
+				"written": "Search CSPS Course catalog"
+			}
+		},		
+		{
+			"intent": "search site lucky",
+			"topic_interest": "catalogue.da-an.ca",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "weasel-search-lucky",
+				"media": "Weasel will look",
+				"hyperlink": "http://catalogue.da-an.ca/course-result?course_code={ws}",
+				"spoken": "Search CSPS Course catalog",
+				"written": "Search CSPS Course catalog"
+			}
+		},									
 		{
 			"intent": "search site lucky",
 			"topic_interest": "GEDS",

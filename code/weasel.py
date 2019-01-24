@@ -616,7 +616,7 @@ def generate_weasel_answer_html(ans):
 		links = html_link_tiles_snippet
 	
 	html_snippet = "" \
-		+ "<div class='weasel_answer_reply'>" \
+		+ "<div class='container weasel_answer_reply'>" \
 			+ "<div id='weasel_spoken'>"+ans['answer']['spoken']+"</div>" \
 			+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> In short:</strong></div>"\
 			+ "<p>" + written + "</p>" \

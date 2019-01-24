@@ -240,7 +240,7 @@ def shim_siht_message_subject(response):
 
 # more hacks to send good queries to canada.ca search
 def shim_knock_en_common_words(utterance):
-	out = ['search','Search','lucky','Lucky','into', 'will', "won't ", 'who', 'what', 'when', 'where', 'why', 'how', \
+	out = ['search','Search','course','courses','catalog','catalogue','lucky','Lucky','into', 'will', "won't ", 'who', 'what', 'when', 'where', 'why', 'how', \
 		'is', 'the', 'we', 'my', 'your', 'a', 'an', 'and', \
 		#'of', \
 		'that', 'this', \
@@ -353,7 +353,7 @@ def shim_assist_weasel_comprehension(utterance,assist_hints=""):
 		assist_hints['knock-common-urls'] = True
 
 	if assist_hints.get('knock-common-words', "") == "":
-		assist_hints['knock-common-urls'] = True
+		assist_hints['knock-common-words'] = True
 
 	if assist_hints.get('knock-gov-speak', "") == "":
 		assist_hints['knock-gov-speak'] = True
@@ -371,13 +371,13 @@ def shim_assist_weasel_comprehension(utterance,assist_hints=""):
 		utterance = utterance.replace('bus rides','busrides') 
 		utterance = utterance.replace('busrides','busrides.ca') 
 		utterance = utterance.replace('busrides .CA','busrides.ca') 
-	
+
 	if 'busrides.ca' in utterance:
 		assist_hints['knock-space-with-dash'] = True
 	
 	# gov speak knockouts
 	if assist_hints.get('knock-gov-speak') == True:
-		out = ['contact','geds','GEDS','cra','CRA','canada.ca','busrides.ca']
+		out = ['contact','geds','GEDS','cra','CRA','canada.ca','busrides.ca','catalogue.da-an.ca']
 		utterance = ' ' + utterance 
 		for knock in out:
 			utterance = utterance.replace(' '+knock+' ',' ')	

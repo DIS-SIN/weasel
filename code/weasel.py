@@ -7,31 +7,13 @@ import requests
 
 
 #debug enable for logging
-app_set_debug_mode = 0 # 0=none,1=entry,2=entry/exit,3=all
+app_set_debug_mode = 3 # 0=none,1=entry,2=entry/exit,3=all
 
 ######################################################################
 #  Application routing and web end
 ######################################################################
 
 bp = Blueprint('weasel', __name__, url_prefix = '/weasel')
-
-def weasel_translate_request(utterance):
-	# this is a temporary shim to test if translation services would be beneficial to us
-	# warning: replace this asap with gcloud translation api or microsoft azure cognitive
-	# this is only a proof of concept. Do not use as actual solution.
-	translation_service = "https://translate.google.com/#view=home&op=translate&sl=es&tl=fr&text={ws}"
-	search_target = translation_service.replace('{ws}', utterance.replace(' ','%20'))
-	page = requests.get( search_target )
-	if page.status_code == requests.codes.ok:
-		page_text = page.text
-	else:
-		return utterance		
-	soup = BeautifulSoup(page_text, 'lxml')
-	datapoints = soup.find_all('span', class_='tlid-translation translation')
-	for a in datapoints:
-		search_target = a.attrs['text']
-		break
-	return search_target	
 
 # configs, setup, get the weasel ready
 def wake_the_weasel(request):
@@ -269,9 +251,36 @@ def shim_knock_en_common_words(utterance):
 	return utterance
 
 def shim_intuit_intent_visualize(raw_text_query):
+	#debug
+	if app_set_debug_mode >= 1:
+		print(f"-- wsl -- > shim_intuit_intent_visualize > enter_method > {raw_text_query}")
+
 	if 'visualize ' in raw_text_query:
 		return "visualize"
 	return None
+
+def shim_intuit_intent_learnskill(raw_text_query):
+	#debug
+	if app_set_debug_mode >= 1:
+		print(f"-- wsl -- > shim_intuit_intent_learnskill > enter_method > {raw_text_query}")
+
+	utterance = raw_text_query.lower().strip()
+	utterance = ' '+raw_text_query+' '
+	if ' learn ' in utterance:
+		out = ['learn', 'how', 'do', 'i', 'in', 'with', 'want','to','program','code','develop','build','a' \
+		]
+		for knock in out:
+			utterance = utterance.replace(' '+knock+' ',' ')
+		utterance = utterance.strip()
+		if(utterance == ""):
+			utterance = "how to learn" # ugly shim, but this is all temporary as the model figured it out
+	else:
+		utterance = None
+	#debug
+	if app_set_debug_mode >= 2:
+		print(f"-- wsl -- > shim_intuit_intent_learnskill > exit_method > '{utterance}'")
+
+	return utterance
 
 def shim_intuit_search_provider(raw_text_query):
 	#debug
@@ -295,6 +304,23 @@ def shim_intuit_search_provider(raw_text_query):
 
 	return search_provider
 
+def shim_weasel_translate_request(utterance):
+	# this is a temporary shim to test if translation services would be beneficial to us
+	# warning: replace this asap with gcloud translation api or microsoft azure cognitive
+	# this is only a proof of concept. Do not use as actual solution.
+	translation_service = "https://translate.google.com/#view=home&op=translate&sl=es&tl=fr&text={ws}"
+	search_target = translation_service.replace('{ws}', utterance.replace(' ','%20'))
+	page = requests.get( search_target )
+	if page.status_code == requests.codes.ok:
+		page_text = page.text
+	else:
+		return utterance		
+	soup = BeautifulSoup(page_text, 'lxml')
+	datapoints = soup.find_all('span', class_='tlid-translation translation')
+	for a in datapoints:
+		search_target = a.attrs['text']
+		break
+	return search_target	
  
 # help out the baby weasel get better food to eat
 def shim_assist_weasel_comprehension(utterance,assist_hints=""):
@@ -388,18 +414,37 @@ def intuit_valid_answer(response):
 	q['impact_on'] = first_entity_value_rs(entities, 'impact_on')
 	q['key_party'] = first_entity_value_rs(entities, 'key_party')
 
-	intuit_topic_interest = shim_intuit_search_provider( response['_text'] )
-	if intuit_topic_interest is not None:
-		q['topic_interest'] = intuit_topic_interest
+	# ideally the AI would always give us the message JSON with the same params
+	# each time we ask it something, but thats a good million training datapoints
+	# away at least. While it's learning it can be very confident of something
+	# thats just not correct. Kinda like humans. We should aim to have strong opinions
+	# that are loosely held and subject to discussion without ego interrupting growth
+	# So lets cut our AI a break and give it some intuitions, you know the stuff you
+	# know you should know even if you didn't understand it. Kind of like if you
+	# were visiting a country where you didnt speak the language. You could still find 
+	# something to eat with hand signals alone, or if you got lucky (and nowadays more
+	# often than not you get lucky) some kind human will understand your interface and
+	# provide an adapater for you. Do good things people.
 
-	#shim
-	if q['topic_interest'] == "busrides.ca":
-		q['intent'] = 'search site' 
+	# Aaaanyways. These functions will try some hacky, but useful things.
+	# Also, in time they should be wrapped to only fire if the AI really did get confused
+	# never forget, the two state 3d button in Windows 3.0 was just two lines of pixels
+	# just with different shades. And the first 3D was red/blue lenses with two sets of lines
+	# painted. Things have an amazing ability to evolve.
+	intuition_check = shim_intuit_search_provider( response['_text'] )
+	if intuition_check is not None:
+		q['topic_interest'] = intuition_check
 
-	intuit_intent_visualize = shim_intuit_intent_visualize( response['_text'] )
-	if intuit_intent_visualize is not None:
+	intuition_check = shim_intuit_intent_visualize( response['_text'] )
+	if intuition_check is not None:
 		q['intent'] = 'visualize'
 
+	intuition_check = shim_intuit_intent_learnskill( response['_text'] )
+	if intuition_check is not None:
+		q['topic_interest'] = intuition_check
+
+	if q['topic_interest'] == "busrides.ca":
+		q['intent'] = 'search site' 
 
 	# look for valid answer
 	valid_answer = None
@@ -535,17 +580,47 @@ def do_weasel_action(valid_answer,response,runquery=True):
 
 # make the html fragment (consider a better solution, template string) something
 # like html_snippet = render_template_string('hello {{ what }}', what='world')
+def generate_weasel_linktile_html(hyperlink):
+	#html_tile_snippet = "" \
+	#	+"<a href='|h|' data-size='|s|' data-role='tile' class='bg-|c| ani-hover-bounce'>" \
+	#		+"<span class='mif-|i| icon'></span> " \
+	#		+"<span class='badge-top'>(|v|)</span>" \
+	#		+"<span class='branding-bar'>|n|</span>" \
+	#	+"</a>"
+	html_tile_snippet = "" \
+		+"<p><a href='|h|' style='background-color:#cccccc;'>" \
+			+"<span class='mif-|i| icon'></span> " \
+			+"<span class='branding-bar'>|n|</span> " \
+			+"<span class='badge-top'>(|v|)</span> " \
+		+"</a></p>"
+
+	html_tile_snippet = html_tile_snippet.replace("|n|",hyperlink)
+	html_tile_snippet = html_tile_snippet.replace("|h|",hyperlink)
+	html_tile_snippet = html_tile_snippet.replace("|i|","link")
+	html_tile_snippet = html_tile_snippet.replace("|c|","red")
+	html_tile_snippet = html_tile_snippet.replace("|s|","small")
+	html_tile_snippet = html_tile_snippet.replace("|v|","Human Curated")
+	return html_tile_snippet
+
 def generate_weasel_answer_html(ans):
 	written = ""
 	written_lines = ans['answer']['written'].splitlines()
 	for wl in written_lines:
 		written += "<p>" + wl + "</p>"
+
+	links = ans['answer']['hyperlink']
+	if isinstance(links,list):
+		html_link_tiles_snippet = ""
+		for link in ans['answer']['hyperlink']:
+			html_link_tiles_snippet += generate_weasel_linktile_html( link['hyperlink'] )
+		links = html_link_tiles_snippet
 	
 	html_snippet = "" \
 		+ "<div class='weasel_answer_reply'>" \
 			+ "<div id='weasel_spoken'>"+ans['answer']['spoken']+"</div>" \
-			+ "<div><strong><span class='mif-link'></span> Helpful Link:</strong></div><div><a href='" + ans['answer']['hyperlink'] +"'>"+ ans['answer']['hyperlink'] +"</a></div>" \
-			+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> Weasel Thinks:</strong></div><div>" + written + "</div>" \
+			+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> In short:</strong></div><div>" + written + "</div>" \
+			+ "<div><strong><span class='mif-link'></span>Actually Helpful Link(s):</strong></div>" \
+			+ links \
 			+ "<div class='weasel_media'><strong><span class='mif-video'></span> Helpful Media:</strong></div><div><div class='video-container'>" + ans['answer']['media'] + "</div></div>" \
 			+ "<div class='weasel_message_signature'>" \
 				+ "<strong><span class='mif-cogs'></span> Weasel Message Signature:</strong>" \
@@ -556,6 +631,7 @@ def generate_weasel_answer_html(ans):
 				+ " | " + ans['answer']['type'] + "" \
 			+ "</div>" \
 		+ "</div>"
+
 	return html_snippet
 
 # the api return as json response, this can be used for whatever application you like

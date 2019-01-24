@@ -342,7 +342,56 @@
 				"spoken": "Weasel wants everyone to be bilingual. Lets learn a language.",
 				"written": "Canada has two official languages: English and French. English is the most commonly spoken language in most provinces and territories.\nFrench is the main language spoken in Quebec and in some areas of Ontario, New Brunswick and Manitoba. There are also francophone communities in all provinces and territories across Canada. Quebec has a large minority of residents who speak English."
 			}
-		},		
+		},	
+		{
+			"intent": "learn skill",
+			"topic_interest": "go",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "display",
+				"media": "<iframe width='863' height='485' src='https://www.youtube.com/embed/XCsL89YtqCs' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+				"hyperlink": [ {"hyperlink":"https://golang.org/doc/code.html"}
+					,{"hyperlink":"https://golang.org/doc/articles/wiki/"}
+					,{"hyperlink":"https://forum.golangbridge.org/t/serving-css-files/2386/7"}
+					,{"hyperlink":"https://curtisvermeeren.github.io/2017/09/14/Golang-Templates-Cheatsheet"}
+					,{"hyperlink":"https://stackoverflow.com/questions/15407719/in-gos-http-package-how-do-i-get-the-query-string-on-a-post-request"}
+					,{"hyperlink":"https://stackoverflow.com/questions/28745161/with-golang-webserver-where-does-the-root-of-the-website-map-onto-the-filesystem/28745280#28745280"}
+					,{"hyperlink":"https://stackoverflow.com/questions/28899675/include-js-file-in-go-template/28899786#28899786"}
+					,{"hyperlink":"https://stackoverflow.com/questions/33027070/variables-inside-templates-in-golang"}
+					,{"hyperlink":"https://stackoverflow.com/questions/23925005/function-declaration-in-golang"}
+					,{"hyperlink":"http://www.gorillatoolkit.org/pkg/mux"}
+					,{"hyperlink":"https://www.ardanlabs.com/blog/2014/03/exportedunexported-identifiers-in-go.html"}
+					,{"hyperlink":"https://www.reddit.com/r/golang/comments/29ay5j/rookie_how_do_i_organize_my_code_into_multiple/"}
+					,{"hyperlink":"https://www.reddit.com/r/golang/comments/1f8ue5/web_app_code_layoutorganization/"}
+					,{"hyperlink":"https://medium.com/golangspec/init-functions-in-go-eac191b3860a"}
+					,{"hyperlink":"https://golang.org/doc/effective_go.html"}
+				],
+				"spoken": "Ready developer one! Go is a language for Programming, Web Applications, and Modern Web Development. Weasel thinks the following links are going to help you write your first Go web application.",
+				"written": "Ready developer one! Go is a language for Programming, Web Applications, and Modern Web Development. Weasel thinks the following links are going to help you write your first Go web application"
+			}
+		},	
+		{
+			"intent": "learn skill",
+			"topic_interest": "AI",
+			"impact_on": "*",
+			"key_party": "*",
+			"answer": {
+				"type": "weasel-answer",
+				"authority":"core",
+				"action": "display",
+				"media": "<iframe width='863' height='485' src='https://www.youtube.com/embed/cKxRvEZd3Mw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+				"hyperlink": [ {"hyperlink":"https://wit.ai/docs"}
+					,{"hyperlink":"https://github.com/wit-ai/pywit"}
+					,{"hyperlink":"https://wit.ai/mightyweasel/Weasel/entities"}
+					,{"hyperlink":"https://rasa.com/"}
+				],
+				"spoken": "Weasel is possible with Machine Learning and Artificial intelligence! AI is a one of the biggest disruptive forces facing humanity today. Weasel thinks the following links are going to help you write your first AI web application.",
+				"written": "Weasel is possible with Machine Learning and Artificial intelligence! AI is a one of the biggest disruptive forces facing humanity today. Weasel thinks the following links are going to help you write your first AI web application"
+			}
+		},	
 		{
 			"intent": "skills required",
 			"topic_interest": "*",
@@ -355,7 +404,7 @@
 				"media": "<iframe width='1280' height='720' src='https://www.youtube.com/embed/Y9FOyoS3Fag' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
 				"hyperlink": "https://www.canada.ca/en.html",
 				"spoken": "Digital skills include the ability to find, evaluate, utilize, share, and create content using information technologies and the Internet. Digital skills are any skills related to being digitally literate. Anything from the ability to find out your high-score on your favorite game to coding a website counts as a digital skill.",
-				"written": "However, it is not simply the development of old jobs that make digital skills so important in the modern workplace, but the creation of entirely new jobs. There is a genuine fear of a digital skills gap created by the boom in the digital economy versus the amount of people who are trained to work in it. Specifically, the UK needs 750,000 more people with digital skills to capitalize on jobs that could boost the UK economy by 12 billion pounds.\nThe digital skills gap should not be something to be afraid of. Rather, it is an opportunity for people of all ages – not just young people – to jump into a new sector or to get a better job in their current one. Half of all British IT teachers don’t have a post-A-level qualification that is relevant to IT, and so schools are eager for teachers who have any kind of degree related to computing. Being a person with digital skills, in the current economic climate, has never been more lucrative.\nMoreover, attaining these digital skills has never been easier. School coding clubs and professional training companies are happy to fill the gap left by the public sector in terms of digital skills, but there are also ways in which a person can develop their digital skills individually. There are programs and services you can use to make sure that you make the most out of your computer. Having a computer desktop that you can navigate quickly and efficiently is fast becoming more important than having a tidy desk."
+				"written": "Also try weasel query 'learn AI', or 'learn go' for more. However, it is not simply the development of old jobs that make digital skills so important in the modern workplace, but the creation of entirely new jobs. There is a genuine fear of a digital skills gap created by the boom in the digital economy versus the amount of people who are trained to work in it. Specifically, the UK needs 750,000 more people with digital skills to capitalize on jobs that could boost the UK economy by 12 billion pounds.\nThe digital skills gap should not be something to be afraid of. Rather, it is an opportunity for people of all ages – not just young people – to jump into a new sector or to get a better job in their current one. Half of all British IT teachers don’t have a post-A-level qualification that is relevant to IT, and so schools are eager for teachers who have any kind of degree related to computing. Being a person with digital skills, in the current economic climate, has never been more lucrative.\nMoreover, attaining these digital skills has never been easier. School coding clubs and professional training companies are happy to fill the gap left by the public sector in terms of digital skills, but there are also ways in which a person can develop their digital skills individually. There are programs and services you can use to make sure that you make the most out of your computer. Having a computer desktop that you can navigate quickly and efficiently is fast becoming more important than having a tidy desk."
 			}
 		},
 		{

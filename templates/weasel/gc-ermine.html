@@ -147,6 +147,14 @@
         <li><a id="weasel_help_dismiss"><span class="mif-help icon"></span>Close Help Guide</a></li>
     </ul>
 </div>
+{% if q != "Weasel Ready!" %}
+<div style="background: white;" class="container" id="suggested_queries">
+    <div class="row" class="cell-12">
+        <h4>Weasel Thinks...</h4>
+        <div id="result_set" style="padding:1em;"><div id="weasel_return">{{weaselanswer}}</div></div>
+    </div>
+</div>
+{% endif %}
 <div class="container" style="background: rgb(51,80,117);padding:1.3em;">
     <div class="container" style="color:#afafaf;padding-bottom: 1em;">
         <div class="row" style="padding: 1em;padding-top: 0.2em;">
@@ -200,9 +208,6 @@
 </div>
 <div style="background: white;" class="container" id="suggested_queries">
     <div class="row" class="cell-12">
-        {% if q != "Weasel Ready!" %}
-        <div id="result_set" style="padding:1em;"><div id="weasel_return">{{weaselanswer}}</div></div>
-        {% endif %}
         <div class="container">
             <div class="row">
                 <div class="cell-md-4 cell-sm-full" style="padding:0.5em;">

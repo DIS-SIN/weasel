@@ -150,10 +150,9 @@
     </ul>
 </div>
 {% if q != "Weasel Ready!" %}
-<div style="background: white;" class="container" id="suggested_queries">
+<div style="background: white;" class="container" id="suggested_answer">
     <div class="row" class="cell-12">
-        <h4>Weasel Thinks...</h4>
-        <div id="result_set" style="padding:1em;"><div id="weasel_return">{{weaselanswer}}</div></div>
+        <div id="result_set" style="padding:1em;"><div id="weasel_return"><h4>Weasel Thinks...</h4>{{weaselanswer}}</div></div>
     </div>
 </div>
 {% endif %}

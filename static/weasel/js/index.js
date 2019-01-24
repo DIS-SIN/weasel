@@ -37,6 +37,7 @@ $(function() {
 		$("#transcript").val('');
 		$("#weasel_console").html('');
 		$("#weasel_return").html('');
+		$("#suggested_answer").remove();
 		$("#q_asked").html('Weasel Ready!');
 	};
 

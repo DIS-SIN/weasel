@@ -255,6 +255,7 @@ def shim_intuit_intent_visualize(raw_text_query):
 	if app_set_debug_mode >= 1:
 		print(f"-- wsl -- > shim_intuit_intent_visualize > enter_method > {raw_text_query}")
 
+	# note the space, brittle shim
 	if 'visualize ' in raw_text_query:
 		return "visualize"
 	return None
@@ -265,8 +266,11 @@ def shim_intuit_intent_learnskill(raw_text_query):
 		print(f"-- wsl -- > shim_intuit_intent_learnskill > enter_method > {raw_text_query}")
 
 	utterance = raw_text_query.lower().strip()
-	utterance = ' '+raw_text_query+' '
-	if ' learn ' in utterance:
+	utterance = ' '+utterance+' '
+	if app_set_debug_mode >= 1:
+		print(f"-- wsl -- > shim_intuit_intent_learnskill > check > {utterance}")
+
+	if 'learn' in utterance:
 		out = ['learn', 'how', 'do', 'i', 'in', 'with', 'want','to','program','code','develop','build','a' \
 		]
 		for knock in out:

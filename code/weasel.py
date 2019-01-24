@@ -590,11 +590,11 @@ def generate_weasel_linktile_html(hyperlink):
 	html_tile_snippet = "" \
 		+"<p><a href='|h|' style='background-color:#cccccc;'>" \
 			+"<span class='mif-|i| icon'></span> " \
-			+"<span class='branding-bar'>|n|</span> " \
+			+"<span>|n|</span>" \
 			+"<span class='badge-top'>(|v|)</span> " \
 		+"</a></p>"
 
-	html_tile_snippet = html_tile_snippet.replace("|n|",hyperlink)
+	html_tile_snippet = html_tile_snippet.replace("|n|",hyperlink.replace("/","/ "))
 	html_tile_snippet = html_tile_snippet.replace("|h|",hyperlink)
 	html_tile_snippet = html_tile_snippet.replace("|i|","link")
 	html_tile_snippet = html_tile_snippet.replace("|c|","red")
@@ -618,7 +618,8 @@ def generate_weasel_answer_html(ans):
 	html_snippet = "" \
 		+ "<div class='weasel_answer_reply'>" \
 			+ "<div id='weasel_spoken'>"+ans['answer']['spoken']+"</div>" \
-			+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> In short:</strong></div><div>" + written + "</div>" \
+			+ "<div class='weasel_written'><strong><span class='mif-bubble'></span> In short:</strong></div>"\
+			+ "<div>" + written + "</div>" \
 			+ "<div><strong><span class='mif-link'></span>Actually Helpful Link(s):</strong></div>" \
 			+ links \
 			+ "<div class='weasel_media'><strong><span class='mif-video'></span> Helpful Media:</strong></div><div><div class='video-container'>" + ans['answer']['media'] + "</div></div>" \

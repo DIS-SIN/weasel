@@ -375,7 +375,7 @@
 		},	
 		{
 			"intent": "learn skill",
-			"topic_interest": "AI",
+			"topic_interest": "ai",
 			"impact_on": "*",
 			"key_party": "*",
 			"answer": {

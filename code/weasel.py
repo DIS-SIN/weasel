@@ -441,7 +441,7 @@ def intuit_valid_answer(response):
 
 	intuition_check = shim_intuit_intent_learnskill( response['_text'] )
 	if intuition_check is not None:
-		q['topic_interest'] = intuition_check
+		q['topic_interest'] = intuition_check.lower()
 
 	if q['topic_interest'] == "busrides.ca":
 		q['intent'] = 'search site' 

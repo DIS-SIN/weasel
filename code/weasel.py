@@ -590,11 +590,11 @@ def generate_weasel_linktile_html(hyperlink):
 	html_tile_snippet = "" \
 		+"<p><a href='|h|' style='background-color:#cccccc;'>" \
 			+"<span class='mif-|i| icon'></span> " \
-			+"<span>|n|</span>" \
+			+"<span>|n|</span> " \
 			+"<span class='badge-top'>(|v|)</span> " \
 		+"</a></p>"
 
-	html_tile_snippet = html_tile_snippet.replace("|n|",hyperlink.replace("/","/ "))
+	html_tile_snippet = html_tile_snippet.replace("|n|",hyperlink.replace("/","/ ").replace("-"," "))
 	html_tile_snippet = html_tile_snippet.replace("|h|",hyperlink)
 	html_tile_snippet = html_tile_snippet.replace("|i|","link")
 	html_tile_snippet = html_tile_snippet.replace("|c|","red")

@@ -594,7 +594,7 @@ def generate_weasel_linktile_html(hyperlink):
 			+"<span class='badge-top'>(|v|)</span> " \
 		+"</a></p>"
 
-	html_tile_snippet = html_tile_snippet.replace("|n|",hyperlink.replace("/","/ ").replace("-"," "))
+	html_tile_snippet = html_tile_snippet.replace("|n|",hyperlink.replace("/","/ ").replace("-"," ").replace("_"," "))
 	html_tile_snippet = html_tile_snippet.replace("|h|",hyperlink)
 	html_tile_snippet = html_tile_snippet.replace("|i|","link")
 	html_tile_snippet = html_tile_snippet.replace("|c|","red")

@@ -8,71 +8,71 @@ $gutter: 0em !global;
 @import "neat/neat";
 
 
-$xlarge-screen:  new-breakpoint(max-width  1600px  14);
-$large-screen:  new-breakpoint(max-width 1200px 14);
-$medium-screen: new-breakpoint(max-width  992px 14);
-$small-screen:  new-breakpoint(max-width  768px  1);
+$xlarge-screen:    new-breakpoint(max-width    1600px    14);
+$large-screen:    new-breakpoint(max-width 1200px 14);
+$medium-screen: new-breakpoint(max-width    992px 14);
+$small-screen:    new-breakpoint(max-width    768px    1);
 
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
 
 a, a:hover {
-  color: blue !important;
+    color: blue !important;
 }
 
 h1 {
-  font-family: "Open Sans", Helvetica, arial, sans-serif;
-  padding:1em;
-  font-weight: 600;
-  font-size: 36px;
+    font-family: "Open Sans", Helvetica, arial, sans-serif;
+    padding:1em;
+    font-weight: 600;
+    font-size: 36px;
 
-  span {
-    font-size: 0.5em;
-    display: block;
-    padding: 1em;
-    @include media($small-screen) {
-      font-size: 0.3em;
+    span {
+        font-size: 0.5em;
+        display: block;
+        padding: 1em;
+        @include media($small-screen) {
+            font-size: 0.3em;
+        }
     }
-  }
 
-  @include media($small-screen) {
-    font-size: 24px;
-  }
+    @include media($small-screen) {
+        font-size: 24px;
+    }
 
 }
  
 .display2 {
-  @include media($small-screen) {
-    font-size:1.7em;
-  }
+    @include media($small-screen) {
+        font-size:1.7em;
+    }
 }
 
 .weaseltitle {
-  font-size: 0.4em;
-  @include media($small-screen) {
     font-size: 0.4em;
-  }
+    @include media($small-screen) {
+        font-size: 0.4em;
+    }
 }
 
 .splash_link {
-  font-weight: 300; 
-  text-decoration: none; 
-  color:red !important; 
+    font-weight: 300; 
+    text-decoration: none; 
+    color:red !important; 
 }
 .splash_link:hover { 
-  text-decoration: underline; 
-  color: red !important; 
+    text-decoration: underline; 
+    color: red !important; 
 }
 .speech {
-  border: 3px solid #DDD; 
-  padding: 3px; 
-  margin: 0;
-  input {
-    border: 0; display: inline-block; height: 60px;
-  }
-  img {
-    float: right; width: 40px 
-  }
+    border: 3px solid #DDD; 
+    padding: 3px; 
+    margin: 0;
+    input {
+        border: 0; display: inline-block; height: 60px;
+    }
+    img {
+        float: right; width: 40px 
+    }
 }
 
 .video-container {
@@ -92,9 +92,9 @@ height: 100%;
 }
 
 #weasel_spoken {
-  display: none;
+    display: none;
 }
 #suggested_queries {
-  padding: 1em;
-  background: #eeeeee;
+    padding: 1em;
+    background: #eeeeee;
 }

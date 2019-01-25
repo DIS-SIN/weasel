@@ -1,108 +1,108 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 a, a:hover {
-  color: blue !important;
+    color: blue !important;
 }
 
 h1 {
-  font-family: "Open Sans", Helvetica, arial, sans-serif;
-  padding: 1em;
-  font-weight: 600;
-  font-size: 36px;
+    font-family: "Open Sans", Helvetica, arial, sans-serif;
+    padding: 1em;
+    font-weight: 600;
+    font-size: 36px;
 }
 h1 span {
-  font-size: 0.5em;
-  display: block;
-  padding: 1em;
+    font-size: 0.5em;
+    display: block;
+    padding: 1em;
 }
 @media screen and (max-width: 768px) {
-  h1 span {
-    font-size: 0.3em;
-  }
+    h1 span {
+        font-size: 0.3em;
+    }
 }
 @media screen and (max-width: 768px) {
-  h1 {
-    font-size: 24px;
-  }
+    h1 {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .display2 {
-    font-size: 1.7em;
-  }
+    .display2 {
+        font-size: 1.7em;
+    }
 }
 
 .weaseltitle {
-  font-size: 0.4em;
+    font-size: 0.4em;
 }
 @media screen and (max-width: 768px) {
-  .weaseltitle {
-    font-size: 0.4em;
-  }
+    .weaseltitle {
+        font-size: 0.4em;
+    }
 }
 
 .splash_link {
-  font-weight: 300;
-  text-decoration: none;
-  color: red !important;
+    font-weight: 300;
+    text-decoration: none;
+    color: red !important;
 }
 
 .splash_link:hover {
-  text-decoration: underline;
-  color: red !important;
+    text-decoration: underline;
+    color: red !important;
 }
 
 .speech {
-  border: 3px solid #DDD;
-  padding: 3px;
-  margin: 0;
+    border: 3px solid #DDD;
+    padding: 3px;
+    margin: 0;
 }
 .speech input {
-  border: 0;
-  display: inline-block;
-  height: 60px;
+    border: 0;
+    display: inline-block;
+    height: 60px;
 }
 .speech img {
-  float: right;
-  width: 40px;
+    float: right;
+    width: 40px;
 }
 
 .video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
 
 .video-container iframe,
 .video-container object,
 .video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #weasel_spoken {
-  display: none;
+    display: none;
 }
 
 #suggested_queries {
-  padding: 1em;
-  background: #eeeeee;
+    padding: 1em;
+    background: #eeeeee;
 }
 
 /*# sourceMappingURL=weasel.css.map */

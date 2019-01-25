@@ -1,531 +1,531 @@
 {
-	"answers": [
-		{
-			"intent": "why is",
-			"topic_interest": "digital",
-			"impact_on": "important to",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "display",
-				"media": "<iframe width='958' height='539' src='https://www.youtube.com/embed/0MZvkWhAoEo' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-				"hyperlink":"https://en.busrides-trajetsenbus.ca/episode-5/",
-				"spoken":"Digital is collaborative, multidisciplinary, open, engaged and authentic. Digital enables citizen-users. With digital we can design services that are convenient, easy to understand and simple to use. The work methods that we usually associate with digital such as experimentation, agile, and open source provide better results for users. They are also more effective in the use of public funds.",
-				"written": "Put users first, make services simpler to use In the early 2000s, the government got 'on the internet'. The intention was to modernize government services, but the follow-through largely resulted in the digitalization of processes that already existed (the form is online in PDF format, you may print it). The world has changed and so have people's expectations. It is time to re-imagine government and our services to meet these high standards.\nDigital provides us with wonderful opportunities to get closer to citizen-users. We can design services with that are convenient, easy to understand and simple to use. For those of us inside government, it is easy to forget that we are not the user. We need to make our services more accessible, understandable and efficient. The recently released Government of Canada digital standards point the way and show how we can make this happen.\nWe have no more excuses. The government is taking big steps towards building technology, techniques and skills that will allow us to meet user needs.\nFind different ways of working for better results\nThe work methods that we usually associate with digital (experimentation, agile, open) provide better results for users. They are also more effective in the use of public funds. They also shed a new light on how we can work: collaboratively, in multidisciplinary teams, open, engaged and authentic.\nDigital is a state of mind: we need to ask different and new questions and find solutions to problems, and involve people with different perspectives. Digital is not only for our IT teams, it's also for teams in charge of policies, legislation, operations and support services.\nYou also told us we need to focus on better using our data, use and support open source projects and ensure government data is open data.\nWe loved hearing your responses and seeing the energy and passion you put into your work. This government has taken a huge leap forwards in the recent years and you are all a part of this. There is a lot of work still to do.\nThe Digital Academy is happy to be here as a partner and support as you continue to chart new courses for government and Canada. Let us know how we can help."                
-			}
-		},
-		{
-			"intent": "why is",
-			"topic_interest": "open-source",
-			"impact_on": "important to",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "display",
-				"media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/CQpUmRdJWRw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-				"hyperlink":"https://github.com/CSPS-EFPC-DAAN",
-				"spoken":"Weasel is open source. Open-source software development, or collaborative development between multiple independent contributors, generates an increasingly more diverse scope of design perspective than any company is capable of developing and sustaining long term on their own.",
-				"written": "Open-source software (OSS) is a type of computer software in which source code is released under a license in which the copyright holder grants users the rights to study, change, and distribute the software to anyone and for any purpose.[1] Open-source software may be developed in a collaborative public manner. According to scientists who have studied it, open-source software is a prominent example of open collaboration.[2] The term is often written without a hyphen as 'open source software'.[3][4][5]\nOpen-source software development, or collaborative development between multiple independent contributors, generates an increasingly more diverse scope of design perspective than any company is capable of developing and sustaining long term.[citation needed] A 2008 report by the Standish Group states that adoption of open-source software models has resulted in savings of about $60 billion (£48 billion) per year to consumers."
-			}
-		},
-		{
-			"intent": "access site",
-			"topic_interest": "my service canada",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "access",
-				"media": "<ul><li><a href='https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx'>https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account/access.html'>https://www.canada.ca/en/employment-social-development/services/my-account/access.html</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account.html'>https://www.canada.ca/en/employment-social-development/services/my-account.html</a></li><li><a href='https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html'>https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html</a></li></ul>",
-				"hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx",
-				"spoken": "My Service Canada Account",
-				"written": "My Service Canada Account"
-			}
-		},
-		{
-			"intent": "access site",
-			"topic_interest": "latest claim status",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "access",
-				"media": "1725987 visitors have accessed the following link",
-				"hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/ei-correspondence.jspx",
-				"spoken": "access latest claim status",
-				"written": "access latest claim status"				
-			}
-		},
-		{
-			"intent": "access site",
-			"topic_interest": "my account for individuals",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core","action": "access",
-				"media": "3016435 visitors have accessed the link I found",
-				"hyperlink": "https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html",
-				"spoken": "Access My Account for Individuals",
-				"written": "Access My Account for Individuals"
-			}
-		},
-		{
-			"intent": "renew account",
-			"topic_interest": "my passport",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "access",
-				"media": "3016435 visitors have accessed the link I found",
-				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/forms.html",
-				"spoken": "Renew a canadian passport",
-				"written": "Renew a canadian passport"
-			}
-		},		
-		{
-			"intent": "create account",
-			"topic_interest": "immigration account",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "access",
-				"media": "4874424 visitors have accessed the link I found",
-				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",
-				"spoken": "Create an account or sign in to Immigration and citizenship with this link",
-				"written": "Create an account or sign in to Immigration and citizenship with this link"
-			}
-		},		
-		{
-			"intent": "become a citizen",
-			"topic_interest": "*",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "access",
-				"media": "3921122 visitors have accessed the link I found",
-				"hyperlink": "https://www.canada.ca/en/services/immigration-citizenship.html",
-				"spoken": "Become a Canadian citizen, Immigration and citizenship",
-				"written": "Become a Canadian citizen, Immigration and citizenship"
-			}
-		},
-		{
-			"intent": "access site",
-			"topic_interest": "all services",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "access",
-				"media": "All Canada.ca Services",
-				"hyperlink": "https://www.canada.ca/en/services.html",
-				"spoken": "Access All Services",
-				"written": "Access All Services"
-			}
-		},
-		{
-			"intent": "access site",
-			"topic_interest": "CRA",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "access",
-				"media": "3190145 weasel visitors have accessed the link I found",
-				"hyperlink": "https://www.canada.ca/en/revenue-agency.html",
-				"spoken": "Access Canada Revenue Agency",
-				"written": "Access Canada Revenue Agency"
-			}
-		},
-		{
-			"intent": "search site",
-			"topic_interest": "CPAC",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search",
-				"media": "Weasel will look",
-				"hyperlink": "http://www.cpac.ca/en/?s={ws}",
-				"spoken": "Search CPAC",
-				"written": "Search CPAC"
-			}
-		},	
-		{
-			"intent": "search site lucky",
-			"topic_interest": "CPAC",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search-lucky",
-				"media": "Weasel will look",
-				"hyperlink": "http://www.cpac.ca/en/?s={ws}",
-				"spoken": "Search CPAC",
-				"written": "Search CPAC"
-			}
-		},
-		{
-			"intent": "search site",
-			"topic_interest": "CRA",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search",
-				"media": "Weasel will look",
-				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
-				"spoken": "Search Canada Revenue Agency",
-				"written": "Search Canada Revenue Agency"
-			}
-		},	
-		{
-			"intent": "search site lucky",
-			"topic_interest": "CRA",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search-lucky",
-				"media": "Weasel will look",
-				"hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
-				"spoken": "Search Canada Revenue Agency",
-				"written": "Search Canada Revenue Agency"
-			}
-		},		
-		{
-			"intent": "search site",
-			"topic_interest": "GEDS",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search",
-				"media": "Weasel will look",
-				"hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
-				"spoken": "Search GEDS",
-				"written": "Search GEDS"
-			}
-		},
-		{
-			"intent": "search site",
-			"topic_interest": "catalogue.da-an.ca",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search",
-				"media": "Weasel will look",
-				"hyperlink": "http://catalogue.da-an.ca/course-result?course_code={ws}",
-				"spoken": "Search CSPS Course catalog",
-				"written": "Search CSPS Course catalog"
-			}
-		},		
-		{
-			"intent": "search site lucky",
-			"topic_interest": "catalogue.da-an.ca",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search-lucky",
-				"media": "Weasel will look",
-				"hyperlink": "http://catalogue.da-an.ca/course-result?course_code={ws}",
-				"spoken": "Search CSPS Course catalog",
-				"written": "Search CSPS Course catalog"
-			}
-		},									
-		{
-			"intent": "search site lucky",
-			"topic_interest": "GEDS",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core","action": "weasel-search",
-				"media": "Weasel will look",
-				"hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
-				"spoken": "Search GEDS",
-				"written": "Search GEDS"
-			}
-		},	
-		{
-			"intent": "visualize",
-			"topic_interest": "AI",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "access",
-				"media": "Weasel will look",
-				"hyperlink": "https://app.powerbi.com/view?r=eyJrIjoiMDYwZjMwODMtZTAyOS00YWZmLWEzNTgtYTJiNjZjYjg5MDllIiwidCI6IjA0NmEyNDRiLWZhZGQtNDA1My04OWVjLTU5Y2IxMTJiMzJhOCIsImMiOjZ9",
-				"spoken": "Report",
-				"written": "Report"
-			}
-		},
-		{
-			"intent": "search site",
-			"topic_interest": "busrides.ca",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search",
-				"media": "Weasel will look",
-				"hyperlink": "https://en.busrides-trajetsenbus.ca/{ws}/",
-				"spoken": "Search busrides.ca",
-				"written": "Search busrides.ca"
-			}
-		},		
-		{
-			"intent": "search site lucky",
-			"topic_interest": "busrides.ca",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search-lucky",
-				"media": "Weasel will look",
-				"hyperlink": "https://en.busrides-trajetsenbus.ca/{ws}/",
-				"spoken": "Search busrides.ca",
-				"written": "Search busrides.ca"
-			}
-		},
-		{
-			"intent": "search site",
-			"topic_interest": "canada.ca",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search",
-				"media": "Weasel will look",
-				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
-				"spoken": "Search Canada.ca",
-				"written": "Search Canada.ca"
-			}
-		},			
-		{
-			"intent": "search site lucky",
-			"topic_interest": "canada.ca",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search-lucky",
-				"media": "Weasel will look",
-				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
-				"spoken": "Search Canada.ca",
-				"written": "Search Canada.ca"
-			}
-		},		
-		{
-			"intent": "access site",
-			"topic_interest": "canada.ca",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "access",
-				"media": "2378528 visitors have accessed the link I found",
-				"hyperlink": "https://www.canada.ca/en.html",
-				"spoken": "Access Canada.ca Home page",
-				"written": "Access Canada.ca Home page"
-			}
-		},
-		{
-			"intent": "learn skill",
-			"topic_interest": "french",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "display",
-				"media": "<iframe width='1280' height='720' src='https://www.youtube.com/embed/AdfwQXJ0ZVM' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-				"hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/new-life-canada/improve-english-french.html",
-				"spoken": "Weasel wants everyone to be bilingual. Lets learn a language.",
-				"written": "Canada has two official languages: English and French. English is the most commonly spoken language in most provinces and territories.\nFrench is the main language spoken in Quebec and in some areas of Ontario, New Brunswick and Manitoba. There are also francophone communities in all provinces and territories across Canada. Quebec has a large minority of residents who speak English."
-			}
-		},	
-		{
-			"intent": "learn skill",
-			"topic_interest": "go",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "display",
-				"media": "<iframe width='863' height='485' src='https://www.youtube.com/embed/XCsL89YtqCs' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-				"hyperlink": [ {"hyperlink":"https://golang.org/doc/code.html"}
-					,{"hyperlink":"https://golang.org/doc/articles/wiki/"}
-					,{"hyperlink":"https://forum.golangbridge.org/t/serving-css-files/2386/7"}
-					,{"hyperlink":"https://curtisvermeeren.github.io/2017/09/14/Golang-Templates-Cheatsheet"}
-					,{"hyperlink":"https://stackoverflow.com/questions/15407719/in-gos-http-package-how-do-i-get-the-query-string-on-a-post-request"}
-					,{"hyperlink":"https://stackoverflow.com/questions/28745161/with-golang-webserver-where-does-the-root-of-the-website-map-onto-the-filesystem/28745280#28745280"}
-					,{"hyperlink":"https://stackoverflow.com/questions/28899675/include-js-file-in-go-template/28899786#28899786"}
-					,{"hyperlink":"https://stackoverflow.com/questions/33027070/variables-inside-templates-in-golang"}
-					,{"hyperlink":"https://stackoverflow.com/questions/23925005/function-declaration-in-golang"}
-					,{"hyperlink":"http://www.gorillatoolkit.org/pkg/mux"}
-					,{"hyperlink":"https://www.ardanlabs.com/blog/2014/03/exportedunexported-identifiers-in-go.html"}
-					,{"hyperlink":"https://www.reddit.com/r/golang/comments/29ay5j/rookie_how_do_i_organize_my_code_into_multiple/"}
-					,{"hyperlink":"https://www.reddit.com/r/golang/comments/1f8ue5/web_app_code_layoutorganization/"}
-					,{"hyperlink":"https://medium.com/golangspec/init-functions-in-go-eac191b3860a"}
-					,{"hyperlink":"https://golang.org/doc/effective_go.html"}
-				],
-				"spoken": "Ready developer one! Go is a language for Programming, Web Applications, and Modern Web Development. Weasel thinks the following links are going to help you write your first Go web application.",
-				"written": "Ready developer one! Go is a language for Programming, Web Applications, and Modern Web Development. Weasel thinks the following links are going to help you write your first Go web application"
-			}
-		},	
-		{
-			"intent": "learn skill",
-			"topic_interest": "ai",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "display",
-				"media": "<iframe width='863' height='485' src='https://www.youtube.com/embed/cKxRvEZd3Mw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-				"hyperlink": [ {"hyperlink":"https://wit.ai/docs"}
-					,{"hyperlink":"https://github.com/wit-ai/pywit"}
-					,{"hyperlink":"https://wit.ai/mightyweasel/Weasel/entities"}
-					,{"hyperlink":"https://rasa.com/"}
-				],
-				"spoken": "Weasel is possible with Machine Learning and Artificial intelligence! AI is a one of the biggest disruptive forces facing humanity today. Weasel thinks the following links are going to help you write your first AI web application.",
-				"written": "Weasel is possible with Machine Learning and Artificial intelligence! AI is a one of the biggest disruptive forces facing humanity today. Weasel thinks the following links are going to help you write your first AI web application"
-			}
-		},	
-		{
-			"intent": "skills required",
-			"topic_interest": "*",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "display",
-				"media": "<iframe width='1280' height='720' src='https://www.youtube.com/embed/Y9FOyoS3Fag' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-				"hyperlink": "https://www.canada.ca/en.html",
-				"spoken": "Digital skills include the ability to find, evaluate, utilize, share, and create content using information technologies and the Internet. Digital skills are any skills related to being digitally literate. Anything from the ability to find out your high-score on your favorite game to coding a website counts as a digital skill.",
-				"written": "Also try weasel query 'learn AI', or 'learn go' for more. However, it is not simply the development of old jobs that make digital skills so important in the modern workplace, but the creation of entirely new jobs. There is a genuine fear of a digital skills gap created by the boom in the digital economy versus the amount of people who are trained to work in it. Specifically, the UK needs 750,000 more people with digital skills to capitalize on jobs that could boost the UK economy by 12 billion pounds.\nThe digital skills gap should not be something to be afraid of. Rather, it is an opportunity for people of all ages – not just young people – to jump into a new sector or to get a better job in their current one. Half of all British IT teachers don’t have a post-A-level qualification that is relevant to IT, and so schools are eager for teachers who have any kind of degree related to computing. Being a person with digital skills, in the current economic climate, has never been more lucrative.\nMoreover, attaining these digital skills has never been easier. School coding clubs and professional training companies are happy to fill the gap left by the public sector in terms of digital skills, but there are also ways in which a person can develop their digital skills individually. There are programs and services you can use to make sure that you make the most out of your computer. Having a computer desktop that you can navigate quickly and efficiently is fast becoming more important than having a tidy desk."
-			}
-		},
-		{
-			"intent": "search site",
-			"topic_interest": "*",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search",
-				"media": "Weasel will look",
-				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
-				"spoken": "Search Canada.ca Catch All",
-				"written": "Search Canada.ca Catch All"
-			}
-		},
-		{
-			"intent": "search site lucky",
-			"topic_interest": "*",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "weasel-search-lucky",
-				"media": "Weasel will look",
-				"hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
-				"spoken": "Search Lucky Canada.ca Catch All",
-				"written": "Search Lucky Canada.ca Catch All"
-			}
-		},	
-		{
-			"intent": "get summary",
-			"topic_interest": "most popular pages",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "get-summary",
-				"media": "json",
-				"hyperlink": "https://gcanalyticsapp.com/static/data/can-live/pages-en.json",
-				"spoken": "Get Most Popular Pages",
-				"written": "Get Most Popular Pages"
-			}
-		},									
-		{
-			"intent": "get summary",
-			"topic_interest": "most popular news",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "get-summary",
-				"media": "json",
-				"hyperlink": "https://gcanalyticsapp.com/static/data/can-live/news-en.json",
-				"spoken": "Get Most Popular Pages",
-				"written": "Get Most Popular Pages"
-			}
-		},	
-		{
-			"intent": "get summary",
-			"topic_interest": "most popular downloads",
-			"impact_on": "*",
-			"key_party": "*",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "get-summary",
-				"media": "json",
-				"hyperlink": "https://gcanalyticsapp.com/static/data/can-live/downloads-en.json",
-				"spoken": "Get Most Popular Pages",
-				"written": "Get Most Popular Pages"
-			}
-		},			
-		{
-			"intent": "!",
-			"topic_interest": "!",
-			"impact_on": "!",
-			"key_party": "!",
-			"answer": {
-				"type": "weasel-answer",
-				"authority":"core",
-				"action": "display",
-				"media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/7H4Zy4fWpmA' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-				"hyperlink":"http://canada.ca",
-				"spoken":"Weasel is sorry.",
-				"written": "Weasel is sorry. It doesn't know the answer to that yet. Maybe it didn't quite understand the question. Weasel is still learning."                
-			}
-		}
-	]
+    "answers": [
+        {
+            "intent": "why is",
+            "topic_interest": "digital",
+            "impact_on": "important to",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "display",
+                "media": "<iframe width='958' height='539' src='https://www.youtube.com/embed/0MZvkWhAoEo' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+                "hyperlink":"https://en.busrides-trajetsenbus.ca/episode-5/",
+                "spoken":"Digital is collaborative, multidisciplinary, open, engaged and authentic. Digital enables citizen-users. With digital we can design services that are convenient, easy to understand and simple to use. The work methods that we usually associate with digital such as experimentation, agile, and open source provide better results for users. They are also more effective in the use of public funds.",
+                "written": "Put users first, make services simpler to use In the early 2000s, the government got 'on the internet'. The intention was to modernize government services, but the follow-through largely resulted in the digitalization of processes that already existed (the form is online in PDF format, you may print it). The world has changed and so have people's expectations. It is time to re-imagine government and our services to meet these high standards.\nDigital provides us with wonderful opportunities to get closer to citizen-users. We can design services with that are convenient, easy to understand and simple to use. For those of us inside government, it is easy to forget that we are not the user. We need to make our services more accessible, understandable and efficient. The recently released Government of Canada digital standards point the way and show how we can make this happen.\nWe have no more excuses. The government is taking big steps towards building technology, techniques and skills that will allow us to meet user needs.\nFind different ways of working for better results\nThe work methods that we usually associate with digital (experimentation, agile, open) provide better results for users. They are also more effective in the use of public funds. They also shed a new light on how we can work: collaboratively, in multidisciplinary teams, open, engaged and authentic.\nDigital is a state of mind: we need to ask different and new questions and find solutions to problems, and involve people with different perspectives. Digital is not only for our IT teams, it's also for teams in charge of policies, legislation, operations and support services.\nYou also told us we need to focus on better using our data, use and support open source projects and ensure government data is open data.\nWe loved hearing your responses and seeing the energy and passion you put into your work. This government has taken a huge leap forwards in the recent years and you are all a part of this. There is a lot of work still to do.\nThe Digital Academy is happy to be here as a partner and support as you continue to chart new courses for government and Canada. Let us know how we can help."                
+            }
+        },
+        {
+            "intent": "why is",
+            "topic_interest": "open-source",
+            "impact_on": "important to",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "display",
+                "media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/CQpUmRdJWRw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+                "hyperlink":"https://github.com/CSPS-EFPC-DAAN",
+                "spoken":"Weasel is open source. Open-source software development, or collaborative development between multiple independent contributors, generates an increasingly more diverse scope of design perspective than any company is capable of developing and sustaining long term on their own.",
+                "written": "Open-source software (OSS) is a type of computer software in which source code is released under a license in which the copyright holder grants users the rights to study, change, and distribute the software to anyone and for any purpose.[1] Open-source software may be developed in a collaborative public manner. According to scientists who have studied it, open-source software is a prominent example of open collaboration.[2] The term is often written without a hyphen as 'open source software'.[3][4][5]\nOpen-source software development, or collaborative development between multiple independent contributors, generates an increasingly more diverse scope of design perspective than any company is capable of developing and sustaining long term.[citation needed] A 2008 report by the Standish Group states that adoption of open-source software models has resulted in savings of about $60 billion (£48 billion) per year to consumers."
+            }
+        },
+        {
+            "intent": "access site",
+            "topic_interest": "my service canada",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "access",
+                "media": "<ul><li><a href='https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx'>https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account/access.html'>https://www.canada.ca/en/employment-social-development/services/my-account/access.html</a></li> <li><a href='https://www.canada.ca/en/employment-social-development/services/my-account.html'>https://www.canada.ca/en/employment-social-development/services/my-account.html</a></li><li><a href='https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html'>https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html</a></li></ul>",
+                "hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/home.jspx",
+                "spoken": "My Service Canada Account",
+                "written": "My Service Canada Account"
+            }
+        },
+        {
+            "intent": "access site",
+            "topic_interest": "latest claim status",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "access",
+                "media": "1725987 visitors have accessed the following link",
+                "hyperlink": "https://srv136.services.gc.ca/sc/msca-mdsc/portal-portail/pro/portal/page/portal/msca/private/faces/oracle/webcenter/portalapp/pages/ei-correspondence.jspx",
+                "spoken": "access latest claim status",
+                "written": "access latest claim status"                
+            }
+        },
+        {
+            "intent": "access site",
+            "topic_interest": "my account for individuals",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core","action": "access",
+                "media": "3016435 visitors have accessed the link I found",
+                "hyperlink": "https://www.canada.ca/en/revenue-agency/services/e-services/e-services-individuals/account-individuals.html",
+                "spoken": "Access My Account for Individuals",
+                "written": "Access My Account for Individuals"
+            }
+        },
+        {
+            "intent": "renew account",
+            "topic_interest": "my passport",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "access",
+                "media": "3016435 visitors have accessed the link I found",
+                "hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/forms.html",
+                "spoken": "Renew a canadian passport",
+                "written": "Renew a canadian passport"
+            }
+        },        
+        {
+            "intent": "create account",
+            "topic_interest": "immigration account",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "access",
+                "media": "4874424 visitors have accessed the link I found",
+                "hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html",
+                "spoken": "Create an account or sign in to Immigration and citizenship with this link",
+                "written": "Create an account or sign in to Immigration and citizenship with this link"
+            }
+        },        
+        {
+            "intent": "become a citizen",
+            "topic_interest": "*",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "access",
+                "media": "3921122 visitors have accessed the link I found",
+                "hyperlink": "https://www.canada.ca/en/services/immigration-citizenship.html",
+                "spoken": "Become a Canadian citizen, Immigration and citizenship",
+                "written": "Become a Canadian citizen, Immigration and citizenship"
+            }
+        },
+        {
+            "intent": "access site",
+            "topic_interest": "all services",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "access",
+                "media": "All Canada.ca Services",
+                "hyperlink": "https://www.canada.ca/en/services.html",
+                "spoken": "Access All Services",
+                "written": "Access All Services"
+            }
+        },
+        {
+            "intent": "access site",
+            "topic_interest": "CRA",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "access",
+                "media": "3190145 weasel visitors have accessed the link I found",
+                "hyperlink": "https://www.canada.ca/en/revenue-agency.html",
+                "spoken": "Access Canada Revenue Agency",
+                "written": "Access Canada Revenue Agency"
+            }
+        },
+        {
+            "intent": "search site",
+            "topic_interest": "CPAC",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search",
+                "media": "Weasel will look",
+                "hyperlink": "http://www.cpac.ca/en/?s={ws}",
+                "spoken": "Search CPAC",
+                "written": "Search CPAC"
+            }
+        },    
+        {
+            "intent": "search site lucky",
+            "topic_interest": "CPAC",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search-lucky",
+                "media": "Weasel will look",
+                "hyperlink": "http://www.cpac.ca/en/?s={ws}",
+                "spoken": "Search CPAC",
+                "written": "Search CPAC"
+            }
+        },
+        {
+            "intent": "search site",
+            "topic_interest": "CRA",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search",
+                "media": "Weasel will look",
+                "hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
+                "spoken": "Search Canada Revenue Agency",
+                "written": "Search Canada Revenue Agency"
+            }
+        },    
+        {
+            "intent": "search site lucky",
+            "topic_interest": "CRA",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search-lucky",
+                "media": "Weasel will look",
+                "hyperlink": "https://www.canada.ca/en/revenue-agency/search.html?_charset_=UTF-8&q={ws}&wb-srch-sub=#wb-land",
+                "spoken": "Search Canada Revenue Agency",
+                "written": "Search Canada Revenue Agency"
+            }
+        },        
+        {
+            "intent": "search site",
+            "topic_interest": "GEDS",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search",
+                "media": "Weasel will look",
+                "hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
+                "spoken": "Search GEDS",
+                "written": "Search GEDS"
+            }
+        },
+        {
+            "intent": "search site",
+            "topic_interest": "catalogue.da-an.ca",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search",
+                "media": "Weasel will look",
+                "hyperlink": "http://catalogue.da-an.ca/course-result?course_code={ws}",
+                "spoken": "Search CSPS Course catalog",
+                "written": "Search CSPS Course catalog"
+            }
+        },        
+        {
+            "intent": "search site lucky",
+            "topic_interest": "catalogue.da-an.ca",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search-lucky",
+                "media": "Weasel will look",
+                "hyperlink": "http://catalogue.da-an.ca/course-result?course_code={ws}",
+                "spoken": "Search CSPS Course catalog",
+                "written": "Search CSPS Course catalog"
+            }
+        },                                    
+        {
+            "intent": "search site lucky",
+            "topic_interest": "GEDS",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core","action": "weasel-search",
+                "media": "Weasel will look",
+                "hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
+                "spoken": "Search GEDS",
+                "written": "Search GEDS"
+            }
+        },    
+        {
+            "intent": "visualize",
+            "topic_interest": "AI",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "access",
+                "media": "Weasel will look",
+                "hyperlink": "https://app.powerbi.com/view?r=eyJrIjoiMDYwZjMwODMtZTAyOS00YWZmLWEzNTgtYTJiNjZjYjg5MDllIiwidCI6IjA0NmEyNDRiLWZhZGQtNDA1My04OWVjLTU5Y2IxMTJiMzJhOCIsImMiOjZ9",
+                "spoken": "Report",
+                "written": "Report"
+            }
+        },
+        {
+            "intent": "search site",
+            "topic_interest": "busrides.ca",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search",
+                "media": "Weasel will look",
+                "hyperlink": "https://en.busrides-trajetsenbus.ca/{ws}/",
+                "spoken": "Search busrides.ca",
+                "written": "Search busrides.ca"
+            }
+        },        
+        {
+            "intent": "search site lucky",
+            "topic_interest": "busrides.ca",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search-lucky",
+                "media": "Weasel will look",
+                "hyperlink": "https://en.busrides-trajetsenbus.ca/{ws}/",
+                "spoken": "Search busrides.ca",
+                "written": "Search busrides.ca"
+            }
+        },
+        {
+            "intent": "search site",
+            "topic_interest": "canada.ca",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search",
+                "media": "Weasel will look",
+                "hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
+                "spoken": "Search Canada.ca",
+                "written": "Search Canada.ca"
+            }
+        },            
+        {
+            "intent": "search site lucky",
+            "topic_interest": "canada.ca",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search-lucky",
+                "media": "Weasel will look",
+                "hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
+                "spoken": "Search Canada.ca",
+                "written": "Search Canada.ca"
+            }
+        },        
+        {
+            "intent": "access site",
+            "topic_interest": "canada.ca",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "access",
+                "media": "2378528 visitors have accessed the link I found",
+                "hyperlink": "https://www.canada.ca/en.html",
+                "spoken": "Access Canada.ca Home page",
+                "written": "Access Canada.ca Home page"
+            }
+        },
+        {
+            "intent": "learn skill",
+            "topic_interest": "french",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "display",
+                "media": "<iframe width='1280' height='720' src='https://www.youtube.com/embed/AdfwQXJ0ZVM' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+                "hyperlink": "https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/new-life-canada/improve-english-french.html",
+                "spoken": "Weasel wants everyone to be bilingual. Lets learn a language.",
+                "written": "Canada has two official languages: English and French. English is the most commonly spoken language in most provinces and territories.\nFrench is the main language spoken in Quebec and in some areas of Ontario, New Brunswick and Manitoba. There are also francophone communities in all provinces and territories across Canada. Quebec has a large minority of residents who speak English."
+            }
+        },    
+        {
+            "intent": "learn skill",
+            "topic_interest": "go",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "display",
+                "media": "<iframe width='863' height='485' src='https://www.youtube.com/embed/XCsL89YtqCs' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+                "hyperlink": [ {"hyperlink":"https://golang.org/doc/code.html"}
+                    ,{"hyperlink":"https://golang.org/doc/articles/wiki/"}
+                    ,{"hyperlink":"https://forum.golangbridge.org/t/serving-css-files/2386/7"}
+                    ,{"hyperlink":"https://curtisvermeeren.github.io/2017/09/14/Golang-Templates-Cheatsheet"}
+                    ,{"hyperlink":"https://stackoverflow.com/questions/15407719/in-gos-http-package-how-do-i-get-the-query-string-on-a-post-request"}
+                    ,{"hyperlink":"https://stackoverflow.com/questions/28745161/with-golang-webserver-where-does-the-root-of-the-website-map-onto-the-filesystem/28745280#28745280"}
+                    ,{"hyperlink":"https://stackoverflow.com/questions/28899675/include-js-file-in-go-template/28899786#28899786"}
+                    ,{"hyperlink":"https://stackoverflow.com/questions/33027070/variables-inside-templates-in-golang"}
+                    ,{"hyperlink":"https://stackoverflow.com/questions/23925005/function-declaration-in-golang"}
+                    ,{"hyperlink":"http://www.gorillatoolkit.org/pkg/mux"}
+                    ,{"hyperlink":"https://www.ardanlabs.com/blog/2014/03/exportedunexported-identifiers-in-go.html"}
+                    ,{"hyperlink":"https://www.reddit.com/r/golang/comments/29ay5j/rookie_how_do_i_organize_my_code_into_multiple/"}
+                    ,{"hyperlink":"https://www.reddit.com/r/golang/comments/1f8ue5/web_app_code_layoutorganization/"}
+                    ,{"hyperlink":"https://medium.com/golangspec/init-functions-in-go-eac191b3860a"}
+                    ,{"hyperlink":"https://golang.org/doc/effective_go.html"}
+                ],
+                "spoken": "Ready developer one! Go is a language for Programming, Web Applications, and Modern Web Development. Weasel thinks the following links are going to help you write your first Go web application.",
+                "written": "Ready developer one! Go is a language for Programming, Web Applications, and Modern Web Development. Weasel thinks the following links are going to help you write your first Go web application"
+            }
+        },    
+        {
+            "intent": "learn skill",
+            "topic_interest": "ai",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "display",
+                "media": "<iframe width='863' height='485' src='https://www.youtube.com/embed/cKxRvEZd3Mw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+                "hyperlink": [ {"hyperlink":"https://wit.ai/docs"}
+                    ,{"hyperlink":"https://github.com/wit-ai/pywit"}
+                    ,{"hyperlink":"https://wit.ai/mightyweasel/Weasel/entities"}
+                    ,{"hyperlink":"https://rasa.com/"}
+                ],
+                "spoken": "Weasel is possible with Machine Learning and Artificial intelligence! AI is a one of the biggest disruptive forces facing humanity today. Weasel thinks the following links are going to help you write your first AI web application.",
+                "written": "Weasel is possible with Machine Learning and Artificial intelligence! AI is a one of the biggest disruptive forces facing humanity today. Weasel thinks the following links are going to help you write your first AI web application"
+            }
+        },    
+        {
+            "intent": "skills required",
+            "topic_interest": "*",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "display",
+                "media": "<iframe width='1280' height='720' src='https://www.youtube.com/embed/Y9FOyoS3Fag' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+                "hyperlink": "https://www.canada.ca/en.html",
+                "spoken": "Digital skills include the ability to find, evaluate, utilize, share, and create content using information technologies and the Internet. Digital skills are any skills related to being digitally literate. Anything from the ability to find out your high-score on your favorite game to coding a website counts as a digital skill.",
+                "written": "Also try weasel query 'learn AI', or 'learn go' for more. However, it is not simply the development of old jobs that make digital skills so important in the modern workplace, but the creation of entirely new jobs. There is a genuine fear of a digital skills gap created by the boom in the digital economy versus the amount of people who are trained to work in it. Specifically, the UK needs 750,000 more people with digital skills to capitalize on jobs that could boost the UK economy by 12 billion pounds.\nThe digital skills gap should not be something to be afraid of. Rather, it is an opportunity for people of all ages – not just young people – to jump into a new sector or to get a better job in their current one. Half of all British IT teachers don’t have a post-A-level qualification that is relevant to IT, and so schools are eager for teachers who have any kind of degree related to computing. Being a person with digital skills, in the current economic climate, has never been more lucrative.\nMoreover, attaining these digital skills has never been easier. School coding clubs and professional training companies are happy to fill the gap left by the public sector in terms of digital skills, but there are also ways in which a person can develop their digital skills individually. There are programs and services you can use to make sure that you make the most out of your computer. Having a computer desktop that you can navigate quickly and efficiently is fast becoming more important than having a tidy desk."
+            }
+        },
+        {
+            "intent": "search site",
+            "topic_interest": "*",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search",
+                "media": "Weasel will look",
+                "hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
+                "spoken": "Search Canada.ca Catch All",
+                "written": "Search Canada.ca Catch All"
+            }
+        },
+        {
+            "intent": "search site lucky",
+            "topic_interest": "*",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "weasel-search-lucky",
+                "media": "Weasel will look",
+                "hyperlink": "https://www.canada.ca/en/sr/srb.html?cdn=canada&st=s&num=10&langs=en&st1rt=1&s5bm3ts21rch=x&q={ws}&_charset_=UTF-8&wb-srch-sub=",
+                "spoken": "Search Lucky Canada.ca Catch All",
+                "written": "Search Lucky Canada.ca Catch All"
+            }
+        },    
+        {
+            "intent": "get summary",
+            "topic_interest": "most popular pages",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "get-summary",
+                "media": "json",
+                "hyperlink": "https://gcanalyticsapp.com/static/data/can-live/pages-en.json",
+                "spoken": "Get Most Popular Pages",
+                "written": "Get Most Popular Pages"
+            }
+        },                                    
+        {
+            "intent": "get summary",
+            "topic_interest": "most popular news",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "get-summary",
+                "media": "json",
+                "hyperlink": "https://gcanalyticsapp.com/static/data/can-live/news-en.json",
+                "spoken": "Get Most Popular Pages",
+                "written": "Get Most Popular Pages"
+            }
+        },    
+        {
+            "intent": "get summary",
+            "topic_interest": "most popular downloads",
+            "impact_on": "*",
+            "key_party": "*",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "get-summary",
+                "media": "json",
+                "hyperlink": "https://gcanalyticsapp.com/static/data/can-live/downloads-en.json",
+                "spoken": "Get Most Popular Pages",
+                "written": "Get Most Popular Pages"
+            }
+        },            
+        {
+            "intent": "!",
+            "topic_interest": "!",
+            "impact_on": "!",
+            "key_party": "!",
+            "answer": {
+                "type": "weasel-answer",
+                "authority":"core",
+                "action": "display",
+                "media": "<iframe width='877' height='493' src='https://www.youtube.com/embed/7H4Zy4fWpmA' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+                "hyperlink":"http://canada.ca",
+                "spoken":"Weasel is sorry.",
+                "written": "Weasel is sorry. It doesn't know the answer to that yet. Maybe it didn't quite understand the question. Weasel is still learning."                
+            }
+        }
+    ]
 }

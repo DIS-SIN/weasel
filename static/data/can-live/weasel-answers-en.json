@@ -261,7 +261,8 @@
             "key_party": "*",
             "answer": {
                 "type": "weasel-answer",
-                "authority":"core","action": "weasel-search",
+                "authority":"core",
+                "action": "weasel-search",
                 "media": "Weasel will look",
                 "hyperlink": "http://www.geds.gc.ca/en/GEDS?pgid=008&sv={ws}&action=submit",
                 "spoken": "Search GEDS",

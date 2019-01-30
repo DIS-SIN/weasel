@@ -1,6 +1,7 @@
 from wit import Wit
 import json
 import requests
+from bs4 import BeautifulSoup
 # Python 2/3 imports changed, the dot is required it seems
 
 weasel_all_selector = "*"

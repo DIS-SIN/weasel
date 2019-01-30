@@ -1,0 +1,4 @@
+Flask
+requests
+wit
+bs4

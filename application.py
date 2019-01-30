@@ -9,4 +9,4 @@ def create_app():
         return redirect(url_for('weasel.render_ermine'))
     return app
 app = create_app()
-app.run(port=5050)
+app.run(host = '0.0.0.0', port=5052)

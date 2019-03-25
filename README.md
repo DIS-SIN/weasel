@@ -13,7 +13,6 @@ Our goal is to get you learning by clearing the weeds and critters in your path.
 But it doesn't end there. With the right training the Weasel can play fetch, even help you renew your passport or checkout your benefits. 
 
 The only limitations are how well we treat the Weasel.
-
 ### Tools and Technology
 
 The experimental apps here are built on the following stack:

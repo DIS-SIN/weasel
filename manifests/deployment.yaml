@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: weasel
+  name: weasel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: weasel
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: weasel
+    spec:
+      containers:
+      - image: dissin/weasel:latest
+        name: weasel
+        ports:
+        - containerPort: 5052
+        resources: {}
+status: {}
+
